@@ -799,6 +799,7 @@ function submit() {
   } else if (code == "") {
     alert("请填写验证码。");
   } else {
+    $("#contactUs").html("提交中，请稍后..");
     $.ajax({
       url: "https://new.400cha.cn/tenant/experience/addExperience",
       data: {
@@ -810,7 +811,11 @@ function submit() {
       dataType: "Json",
       type: "get",
       success: function (e) {
-        alert(e.msg);
+        swal(e.msg, "", "success");
+        $("input[name='name']").val("");
+        $("input[name='number']").val("");
+        $("input[name='code']").val("");
+        $("#contactUs").html("立即提交");
       },
     });
   }

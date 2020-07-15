@@ -421,7 +421,7 @@ a[title="站长统计"] {
 }
 
 .foot .sun-line {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .foot .sun-line p {
@@ -694,7 +694,7 @@ h2.tit::after {
 /*首页套餐*/
 .tc-show .tc-show-item {
   width: 314px;
- /* height: 336px; */
+  /* height: 336px; */
   border: 1px solid #e5e5e5;
   position: relative;
   cursor: pointer;
@@ -777,6 +777,7 @@ h2.tit::after {
   float: left;
   display: block;
   margin-top: 24px;
+  background: url(../img0725/tc.png) no-repeat;
   font-size: 20px;
 }
 
@@ -2593,7 +2594,7 @@ h2.tit::after {
 }
 
 .jiazhi h3 {
-/*  margin-top: 48px; */
+  /*  margin-top: 48px; */
   margin-bottom: 20px;
   height: 30px;
   font-size: 28px;
@@ -2606,8 +2607,8 @@ h2.tit::after {
 }
 
 .jiazhi-1 h3 {
-/*  margin-top: 67px; */
- background-position: 0 -34px;
+  /*  margin-top: 67px; */
+  background-position: 0 -34px;
 }
 
 .jiazhi-2 {
@@ -2616,17 +2617,17 @@ h2.tit::after {
 }
 
 .jiazhi-2 h3 {
- /* margin-top: 80px; */
+  /* margin-top: 80px; */
   background-position: 0 0;
 }
 
 .jiazhi-3 {
   height: 390px;
-/*  margin-bottom: 49px; */
+  /*  margin-bottom: 49px; */
 }
 
 .jiazhi-3 h3 {
-/*  margin-top: 158px; */
+  /*  margin-top: 158px; */
   background-position: 0 -68px;
 }
 
@@ -2636,7 +2637,7 @@ h2.tit::after {
 }
 
 .jiazhi-4 h3 {
-/*  margin-top: 106px; */
+  /*  margin-top: 106px; */
   background-position: 0 -102px;
 }
 
