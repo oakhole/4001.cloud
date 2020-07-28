@@ -3875,7 +3875,7 @@ h2.tit::after {
   right: 0;
 }
 
-.skt-question-text .wrap .question-list .list-item p.a {
+.skt-question-text .wrap .question-list .list-item a.a {
   color: #ff0000;
   font-size: 18px;
   cursor: pointer;

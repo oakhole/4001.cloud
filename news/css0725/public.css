@@ -1,0 +1,598 @@
+/*Reset css*/
+/*
+/* 清除内外边距 */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+fieldset, lengend, button, input, textarea, /* form elements 表单元素 */
+th, td { /* table elements 表格元素 */
+    margin: 0;
+    padding: 0;
+}
+/* 设置默认字体 */
+body,
+button, input, select, textarea { /* for ie */
+    /*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
+    font: 14px/1 Microsoft Yahei,Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+}
+h1 { font-size: 18px; /* 18px / 12px = 1.5 */ }
+h2 { font-size: 16px; }
+h3 { font-size: 14px; }
+h4, h5, h6 { font-size: 100%; }
+address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
+code, kbd, pre, samp, tt { font-family: "Courier New", Courier, monospace; } /* 统一等宽字体 */
+small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+/* 重置列表元素 */
+ul, ol { list-style: none; }
+/* 重置文本格式元素 */
+a { text-decoration: none; }
+a:hover { text-decoration: none; }
+abbr[title], acronym[title] { /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+q:before, q:after { content: ''; }
+/* 重置表单元素 */
+legend { color: #000; } /* for ie6 */
+fieldset, img { border: none; } /* img 搭车：让链接里的 img 无边框 */
+/* 注：optgroup 无法扶正 */
+button, input, select, textarea {
+    font-size: 100%; /* 使得表单元素在 ie 下能继承字体大小 */
+}
+/* 重置表格元素 */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* 重置 hr */
+hr {
+    border: none;
+    height: 1px;
+}
+/* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
+html { overflow-y: scroll; }
+a[title='站长统计'] {
+	display: none !important;
+}
+/*浮动*/
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+/*清除浮动*/
+.cf:before,.cf:after {
+    content:"";
+    display:table;
+}
+.cf:after { clear:both; }
+.cf {
+    *zoom: 1; /*IE/7/6*/
+}
+.mr-0 {
+    margin-right: 0 !important;
+}
+/*内容区*/
+.wrap {
+    width: 980px;
+    margin: 0 auto;
+}
+/*页头 head B*/
+.head {
+    height: 94px;
+}
+.head h1 {
+    text-indent: -1000px;
+    height: 0;
+}
+.head .logo {
+    margin-top: 22px;
+    margin-right: 15px;
+}
+.head .slogan {
+    position: relative;
+    margin-top: 15px;
+    margin-left: 10px;
+    color: #3d3838;
+}
+.head .slogan:before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 44px;
+    background: url(../img0725/suggest-sprite.png) no-repeat left top;
+    position: absolute;
+    left: -9px;
+    top: 12px;
+}
+.head .slogan p {
+    margin-bottom: 8px;
+}
+.head .callMe {
+    margin-top: 26px;
+}
+.head .callMe .icon-phone {
+    width: 47px;
+    height: 47px;
+    margin-right: 5px;
+    background: url(../img0725/suggest-sprite.png) no-repeat 0 -288px;
+}
+.head .callMe .hotline-title {
+    margin-bottom: 4px;
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: bold;
+    color: #333;
+}
+.head .callMe .hotline-num {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    color: #e60012;
+    letter-spacing: -0.6px;
+}
+/*页头 head E*/
+/*导航 nav B*/
+.nav {
+    height: 64px;
+    background: #e60012;
+    box-shadow: 0px 3px 0px 0px rgba(117, 0, 9, 0.9);
+    position: relative;
+    z-index: 10;
+}
+.nav a {
+    position: relative;
+    float: left;
+    width: 14.285%;
+    height: 65px;
+    line-height: 65px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+.nav a span {
+    position: relative;
+    z-index: 1;
+}
+.nav .bg-block {
+    width: 100%;
+    height: 65px;
+    background: #620000;
+    position: absolute;
+    top: 65px;
+    left: 0;
+}
+.nav a sup {
+    position: absolute;
+    top: 16px;
+    z-index: 1;
+    right: 12px;
+    display: block;
+    line-height: 14px;
+}
+.nav a.hot:after {
+    content: "";
+    display: inline-block;
+    width: 23px;
+    height: 13px;
+    position: absolute;
+    top: 11px;
+    right: 20px;
+    background: url(../img0725/suggest-sprite.png) no-repeat -65px -66px;
+}
+/*导航 nav E*/
+/*banner-suggest B*/
+.banner-suggest {
+    width: 100%;
+    height: 204px;
+    background: #c5c5c5 url(../img0725/banner-suggest.jpg) no-repeat center top;
+}
+/*banner-suggest E*/
+/*form B*/
+.check-form {
+    padding-top: 54px;
+    padding-bottom: 54px;
+    color: #222;
+}
+.check-form h3 {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+.check-form .txt {
+    margin-bottom: 20px;
+    line-height: 20px;
+}
+.check-form .yj-box {
+    margin-bottom: 50px;
+}
+.check-form .yj-box .item {
+    float: left;
+    width: 234px;
+    height: 196px;
+    margin-right: 12px;
+    text-align: center;
+    border: 1px solid #e5e5e5;
+}
+.check-form .yj-box .item.item1 {
+    background: #ff0000;
+    background-image: -moz-linear-gradient( 0deg, rgb(255,81,47) 0%, rgb(244,32,47) 100%);
+    background-image: -webkit-linear-gradient( 0deg, rgb(255,81,47) 0%, rgb(244,32,47) 100%);
+    background-image: -ms-linear-gradient( 0deg, rgb(255,81,47) 0%, rgb(244,32,47) 100%);
+    box-shadow: 0px 0px 18px 0px rgba(255, 134, 144, 0.75);
+    border: 1px solid rgb(244,32,47);
+    color: #fff;
+}
+.check-form .yj-box .item.item1 p,.check-form .yj-box .item.item1 div {
+    color: #fff;
+}
+.check-form .yj-box .item .tit {
+    margin-top: 22px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #f4222f;
+}
+.check-form .yj-box .item .icon {
+    width: 44px;
+    height: 51px;
+    margin: 18px auto 24px;
+    background: url(../img0725/suggest-sprite.png) no-repeat;
+}
+.check-form .yj-box .item .erwei {
+    height:102px;
+    width:102px;
+    margin: 5px auto 8px;
+    background: url(../img0725/erw.png) no-repeat center center;
+}
+.check-form .yj-box .item .icon.icon1 {
+    background-position: 0 -105px;
+}
+.check-form .yj-box .item .icon.icon3 {
+    background-position: -73px -289px;
+}
+.check-form .yj-box .item3 .icon.icon2 {
+    background-position: 0 -228px;
+    margin: 18px auto 9px;
+}
+.check-form .yj-box .item p {
+    margin-bottom: 10px;
+}
+.check-form .yj-box .item.item3 p {
+    margin-bottom: 5px;
+}
+.check-form .txt1 {
+    font-size: 16px;
+    line-height: 16px;
+}
+.check-form .fwbr {
+    font-weight: bold;
+    color: #f42734;
+}
+.check-form p span {
+    color: #f42734;
+}
+.check-form .forgood {
+    font-size: 18px;
+}
+.check-form .forgood p {
+    margin-bottom: 25px;
+}
+.check-form .classification {
+    margin-bottom: 50px;
+}
+.check-form .classification .item {
+    float: left;
+    width: 200px;
+    height: 54px;
+    margin-right: 17px;
+    text-align: center;
+    line-height: 54px;
+    border: 1px solid #e5e5e5;
+    cursor: pointer;
+    color: #fe0111;
+}
+.check-form .select {
+    position: relative;
+    /*margin-bottom: 22px;*/
+}
+.check-form .select select {
+    width: 270px;
+    /*height: 54px;*/
+    line-height: 27px;
+    padding: 12px 20px;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    -ms-appearance:none;
+    cursor: pointer;
+    margin-bottom: 50px;
+    background: #fff;
+}
+.check-form .select .sj {
+    width: 37px;
+    height: 49px;
+    background: #fff;
+    position: absolute;
+    left: 230px;
+    top: 2px;
+    pointer-events: none;
+    z-index: 999;
+}
+.check-form .select .sj img {
+    margin-top: 20px;
+}
+.check-form .select option {
+    height: 54px;
+    line-height: 54px;
+}
+.check-form .classification .item.active {
+    background: red;
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#FF512F), to(#F4202F));
+    background-image: linear-gradient(0deg, #FF512F, #F4202F);
+    /*-webkit-box-shadow: 0 0 16px 0px #F5232F;*/
+    /*box-shadow: 0 0 16px 0px #F5232F;*/
+    border: 1px solid #F4202F;
+    color: #fff;
+}
+.check-form ._textarea textarea {
+    width: 940px;
+    max-width: 940px;
+    min-width: 940px;
+    height: 180px;
+    font-size: 16px;
+    min-height: 180px;
+    padding: 20px;
+    margin-bottom: 50px;
+    overflow: auto;
+    line-height: 1.5;
+}
+.check-form ._textarea .img-zj {
+    margin-bottom: 52px;
+}
+.check-form .jubaoren input[type="text"] {
+    width: 200px;
+    height: 42px;
+    padding-left: 20px;
+    margin-right: 15px;
+    margin-bottom: 50px;
+}
+.check-form .gojubao {
+    width: 270px;
+    height: 56px;
+    font-size: 18px;
+    border: 0;
+    color: #fff;
+    background: #ff0000;
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#FF512F), to(#F4202F));
+    background-image: linear-gradient(0deg, #FF512F, #F4202F);
+    /*-webkit-box-shadow: 0 0 16px 0px #F5232F;*/
+    /*box-shadow: 0 0 16px 0px #F5232F;*/
+    cursor: pointer;
+}
+    /*form E*/
+/*foot B*/
+.foot {
+    height: 153px;
+    font-size: 12px;
+    background: #313131;
+    color: #fff;
+}
+.foot a {
+    color: #fff;
+}
+.foot .flink {
+    margin-top: 38px;
+}
+.foot .flink .jumpUrl, .foot .company-message .c {
+    margin-bottom: 20px;
+}
+.foot .company-message .c sup {
+    line-height: 0;
+}
+.foot .flink .jumpUrl a ,.foot .flink .jumpUrl span{
+    float: left;
+}
+.foot .flink .jumpUrl span {
+    margin: 0 5px;
+}
+.foot .box-font-0 {
+    margin-top: -5px;
+    font-size: 0;
+}
+.foot .company-message .c .b1 {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin: 0 2px;
+    font-size: 0;
+    background: url(../img0725/suggest-sprite.png) no-repeat -61px 0;
+}
+.foot .company-message .c .b2 {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin: 0 2px;
+    font-size: 0;
+    background: url(../img0725/suggest-sprite.png) no-repeat -36px -1px;
+}
+.foot .sun-line {
+    margin-top: 50px;
+}
+.foot .sun-line p {
+    line-height: 30px;
+    vertical-align: middle;
+}
+.foot .sun-line .p1 {
+    display: inline-block;
+    /*vertical-align: text-bottom;*/
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: bold;
+    color: #aaa;
+}
+.foot .sun-line .p2 {
+    font-size: 30px;
+}
+/*foot E*/
+.upImgBox {
+    position: relative;
+    width: 218px;
+    height: 218px;
+    border: 1px solid #e5e5e5;
+    margin-bottom: 50px;
+    cursor: pointer;
+    float: left;
+    z-index: 666;
+}
+.uploadImgBtn {
+    height:44px;
+    width:43px;
+    position: relative;
+    background: url("../img0725/suggest-sprite.png") no-repeat 0 -51px;
+    margin-top: 77px;
+    margin-left: 87px;
+    margin-right: 87px;
+}
+.upImgBox p {
+    text-align: center;
+    margin-top: 20px;
+    color: #b3b3b3;
+}
+.uploadImgBtn .uploadImg {
+    position: absolute;
+    left: -88px;
+    top: -80px;
+    width: 220px;
+    height: 220px;
+    opacity: 0;
+    background: red;
+    cursor: pointer;
+    color: transparent;
+    /*visibility: hidden;*/
+    filter:alpha(opacity=0);
+    z-index: -1;
+}
+/*这是一个用做回显的盒子的样式*/
+.pic{
+    float: left;
+    width: 218px;
+    height: 218px;
+    margin-left: 10px;
+    border: 1px solid #e5e5e5;
+    cursor: pointer;
+}
+.pic img {
+    width: 100%;
+    height: 100%;
+}
+.bigImg p {
+    margin-top: 10px;
+}
+/*loading...*/
+.load {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    z-index: 999;
+    display: none;
+}
+.load img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -64px;
+    margin-top: -64px;
+}
+/*loading...*/
+/*客服靠边*/
+#LRfloater0 {
+    top: 270px !important;
+    right: 0 !important;
+}
+/*sidebox add 20180702*/
+.side-box {
+    width: 200px;
+    height: 374px;
+    position: fixed;
+    left: -10px;
+    top: 185px;
+    z-index: 999;
+}
+.side-box .side-box-h {
+    /* width: 226px; */
+    height: 192px;
+    background: url(../img0725/sb1.png) no-repeat top center;
+    z-index: 9999999;
+    background-size: contain;
+    position: relative;
+}
+.side-box .form-box {
+    padding-top: 72px;
+    height: 160px;
+    width: 144px;
+    background: #fef5f4;
+    color: #000;
+    position: absolute;
+    left: 26px;
+    top: 106px;
+    z-index: 9999998;
+}
+.side-box .form-box-css input[type=text] {
+    border-bottom: 1px solid #000;
+    color: #757575;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    background: #fef5f4;
+    height: 24px;
+    line-height: 24px;
+    margin-left: 5px;
+    font-size: 14px;
+    width: 95px;
+}
+.side-box .form-box-css input[type=text]::-ms-clear,.side-box .form-box-css input[type=text]::-ms-reveal{
+    display:none;
+}
+.side-box .form-box-css p {
+    margin-top: 14px;
+    margin-left: 10px;
+}
+.side-box .yzmbox {
+    position: relative;
+}
+.side-box .code-vo-sub {
+    position: absolute;
+    right: 20px;
+    top: 172px;
+    height: 18px;
+    line-height: 18px;
+    width: 38px;
+    text-align: center;
+    background: #d4d4d4;
+    cursor: pointer;
+}
+.side-box .btn-vo-sub {
+    border: none;
+    background: #ff0000;
+    color: #fff;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
