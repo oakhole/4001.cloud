@@ -82,12 +82,10 @@ var showCaleeNumberList = function() {
 		})
 		.done(function(data) {
 			var newData = new Array();
-			console.log(data);
 			for (var i = 0; i < data.length; i++) {
 				var str = data[i].callee_number;
 				newData.push(str.substring(0,3)+"*"+str.substring(4,10));
 			}
-			console.log(newData);
 			$('.spinner').hide();
 			$('#number-list').append(numberListTemplate(newData));
 		})
