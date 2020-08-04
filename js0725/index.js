@@ -683,7 +683,6 @@ function setNumberCount() {
     url: "https://new.400cha.cn/tenant/experience/getRandomInfo",
     type: "get",
     dataType: "Json",
-    async: true,
     success: function (e) {
       console.log(e);
       $("#numberCount").html(e);
@@ -694,12 +693,13 @@ function setNumberCount() {
 function RenderList() {
   setNumberCount();
   var city = randomCity();
+  console.log(city);
   var str = "";
   var date = new Date();
   var maxhour = date.getHours();
   var maxMinute = date.getMinutes();
   for (var i = 0; i < 20; i++) {
-    var num = rand(0, 371);
+    var num = rand(0, 370);
     randCity = city[num].name;
     var number = "400***" + rand(1000, 10000);
     var hour = rand(8, maxhour);
