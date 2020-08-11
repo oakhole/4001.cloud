@@ -820,3 +820,22 @@ function submit() {
     });
   }
 }
+
+// 绑定点击后展开详情页面
+$(function () {
+  // 功能点击事件
+  $(document).on("click", ".func-group .item", function () {
+    var detail_url = $(this).data("url");
+    if (detail_url) {
+      window.open(detail_url);
+    }
+  });
+
+  // 优势点击事件
+  $(document).on("click", ".aboutUL li", function () {
+    var detail_url = $(this).data("url");
+    if (detail_url) {
+      window.open(detail_url);
+    }
+  });
+});

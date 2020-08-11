@@ -5768,3 +5768,7 @@ h2.tit::after {
   -webkit-animation-delay: -0.8s;
   animation-delay: -0.8s;
 }
+
+.aboutUL li {
+  cursor: pointer;
+}
