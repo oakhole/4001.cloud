@@ -5759,6 +5759,7 @@ h2.tit::after {
 	margin: 0 auto;
 }
 
+<<<<<<< HEAD
 .caselist .cc:hover>ul {
 	animation-play-state: paused;
 	cursor: pointer;
@@ -5786,3 +5787,28 @@ h2.tit::after {
 	overflow: hidden;
 	font-size: 16px;
 }
+=======
+.national-400 {
+  width: 100%;
+  height: auto;
+  min-height: 20rem;
+  padding: 50px 60px;
+  border-radius: 3rem;
+  margin-bottom: 5rem;
+  box-shadow: 3px 3px 20px 5px #ffdcdc;
+}
+
+.national-400 a {
+  color: #666666;
+  margin-left: 1rem;
+  line-height: 2;
+}
+
+.national-400 a:hover {
+  color: #000;
+}
+
+.paginator {
+  text-align: center;
+}
+>>>>>>> 6e72a448bdd680fbb6c2f2093a06937463f4fa32

@@ -706,7 +706,7 @@ function RenderList() {
     var newMinute = minute >= 10 ? minute : "0" + minute;
     str += "<tr>";
     str += '<td class="ellipsis">';
-    str += '<img src="./img0725/portrait_default.png"/>';
+    str += '<img src="https://4001.cn/img0725/portrait_default.png"/>';
     str +=
       '<span class="center" title="' +
       randCity +

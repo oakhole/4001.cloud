@@ -11,6 +11,7 @@
 		<link rel="stylesheet" href="css0725/index.css" />
 		<link rel="stylesheet" href="css0725/bootstrap.css">
 		<link rel="stylesheet" href="css0725/table.css" type="text/css" />
+		<link rel="stylesheet" href="https://4001.cn/vendor/layui/css/layui.css">
 		<script src="js0725/city.js" type="text/javascript"></script>
 		<style>
 			.slideBox {
@@ -125,93 +126,12 @@
 					</div>
 				</div>
 				<div class="question-list">
-					<div class="list-item">
-						<a href="news/news1.html" class="a">400电话介绍</a>
-						<div class="arrow-tips">
-							<span class="a-r"><img src="img0725/arrow-right.png" alt="" /></span>
-							<span class="a-w" style="display: none;"><img src="img0725/arrow-bottom.png" alt="" /></span>
-						</div>
-					</div>
-					<div class="list-item">
-						<a href="news/news2.html" class="a">400电话主要特点</a>
-						<div class="arrow-tips">
-							<span class="a-r"><img src="img0725/arrow-right.png" alt="" /></span>
-							<span class="a-w" style="display: none;"><img src="img0725/arrow-bottom.png" alt="" /></span>
-						</div>
-					</div>
-					<div class="list-item">
-						<a href="news/news3.html" class="a">应用市场</a>
-						<div class="arrow-tips">
-							<span class="a-r"><img src="img0725/arrow-right.png" alt="" /></span>
-							<span class="a-w" style="display: none;"><img src="img0725/arrow-bottom.png" alt="" /></span>
-						</div>
-					</div>
-					<div class="list-item">
-						<a href="news/news4.html" class="a">400电话平台</a>
-						<div class="arrow-tips">
-							<span class="a-r"><img src="img0725/arrow-right.png" alt="" /></span>
-							<span class="a-w" style="display: none;"><img src="img0725/arrow-bottom.png" alt="" /></span>
-						</div>
-					</div>
-					<div class="list-item">
-						<a href="news/news5.html" class="a">400电话的优势</a>
-						<div class="arrow-tips">
-							<span class="a-r"><img src="img0725/arrow-right.png" alt="" /></span>
-							<span class="a-w" style="display: none;"><img src="img0725/arrow-bottom.png" alt="" /></span>
-						</div>
-					</div>
-					<div class="list-item">
-						<a href="news/news6.html" class="a">你不知道的400</a>
-						<div class="arrow-tips">
-							<span class="a-r"><img src="img0725/arrow-right.png" alt="" /></span>
-							<span class="a-w" style="display: none;"><img src="img0725/arrow-bottom.png" alt="" /></span>
-						</div>
-					</div>
-					<div class="list-item">
-						<a href="news/news7.html" class="a">企业服务升级，一个重要细节-400电话</a>
-						<div class="arrow-tips">
-							<span class="a-r"><img src="img0725/arrow-right.png" alt="" /></span>
-							<span class="a-w" style="display: none;"><img src="img0725/arrow-bottom.png" alt="" /></span>
-						</div>
-					</div>
-					<div class="list-item">
-						<a href="news/news8.html" class="a">400电话需要去营业厅当面办吗？</a>
-						<div class="arrow-tips">
-							<span class="a-r"><img src="img0725/arrow-right.png" alt="" /></span>
-							<span class="a-w" style="display: none;"><img src="img0725/arrow-bottom.png" alt="" /></span>
-						</div>
-					</div>
-					<div class="list-item">
-						<a href="news/news9.html" class="a">400电话办理适合的行业有哪些？</a>
-						<div class="arrow-tips">
-							<span class="a-r"><img src="img0725/arrow-right.png" alt="" /></span>
-							<span class="a-w" style="display: none;"><img src="img0725/arrow-bottom.png" alt="" /></span>
-						</div>
-					</div>
-					<div class="list-item">
-						<a href="news/news10.html" class="a">在办理400电话贵，你知道贵哪里了吗？</a>
-						<div class="arrow-tips">
-							<span class="a-r"><img src="img0725/arrow-right.png" alt="" /></span>
-							<span class="a-w" style="display: none;"><img src="img0725/arrow-bottom.png" alt="" /></span>
-						</div>
-					</div>
-					<div class="list-item">
-						<a href="news/news11.html" class="a">论靓号的价值</a>
-						<div class="arrow-tips">
-							<span class="a-r"><img src="img0725/arrow-right.png" alt="" /></span>
-							<span class="a-w" style="display: none;"><img src="img0725/arrow-bottom.png" alt="" /></span>
-						</div>
-					</div>
-					<div class="list-item">
-						<a href="news/news12.html" class="a">400电话似海上灯塔，为企业点燃希望</a>
-						<div class="arrow-tips">
-							<span class="a-r"><img src="img0725/arrow-right.png" alt="" /></span>
-							<span class="a-w" style="display: none;"><img src="img0725/arrow-bottom.png" alt="" /></span>
-						</div>
-					</div>
 				</div>
+				<!-- 分页 -->
+				<div id="paginator" class="paginator"></div>
 			</div>
 		</div>
+
 		<div class="wrap" id="tianti-7" style="margin: 60px auto 40px;">
 			<h2 class="tit">我们的优势</h2>
 			<div class="cf tc-show">
@@ -291,6 +211,7 @@
 				</ul>
 			</div>
 		</div>
+
 		<div class="foot">
 			<div class="wrap cf">
 				<div class="fl flink">
@@ -399,17 +320,82 @@
 			</div>
 		</div>
 		<div class="goTo"></div>
+		<script src="https://4001.cn/vendor/layui/layui.all.js"></script>
+		<script src="https://cdn.bootcss.com/handlebars.js/4.1.2/handlebars.min.js"></script>
 		<script src="js0725/jquery.min.js"></script>
 		<script src="js0725/jquery.SuperSlide.2.1.1.js"></script>
 		<script src="js0725/index.js"></script>
+		<script id="industry-news-template" type="text/x-handlebars-template">
+			{{#each rows}}
+			<div class="list-item">
+				<a href="https://4001.cn/cms/post/{{postId}}.html" target="_blank" class="a">{{title}}</a>
+				<div class="arrow-tips">
+					<span class="a-r"><img src="img0725/arrow-right.png" alt="" /></span>
+					<span class="a-w" style="display: none;"><img src="img0725/arrow-bottom.png" alt="" /></span>
+				</div>
+				<div class="content">
+					<span>·</span>
+					<p>
+						{{content}}
+					</p>
+				</div>
+			</div>
+			{{/each}}
+		</script>
 		<script>
 			jQuery(".slideBox").slide({
 				mainCell: ".bd .banner-box",
 				autoPlay: true,
 			});
+
+			var newsListTemplate = Handlebars.compile($("#industry-news-template").html());
+			var newsListCount = 10;
+			// layui 分页组件
+			var laypage = layui.laypage;
+			var currentPage = window.location.href.replace(/^.*#!page=(\d+)$/i, '$1') || 1;
+			function listQa(currentPage, pageSize){
+				$.ajax({
+					url: "https://4001.cn/cms/post/list",
+					type: "POST",
+					dataType: "json",
+					data: {
+						categoryId: 1,
+						postType: "post",
+						publishStatus: "1",
+						pageNum: currentPage,
+						pageSize: pageSize,
+						orderByColumn: "publishTime",
+						isAsc: "desc"
+					},
+				})
+					.done(function (data) {
+						$('div.question-list').html(newsListTemplate(data));
+
+						newsListCount = data.total;
+						laypage.render({
+							elem: "paginator",
+							count: newsListCount, //数据总数，从服务端得到
+							theme: "#ee685d",
+							first: "首页",
+							last: "尾页",
+							limit: 8,
+							layout: ["count", "prev", "page", "next"],
+							hash: "page",
+							curr: currentPage,
+							jump: function (obj, first) {
+								if(!first){
+									listQa(obj.curr, obj.limit);
+								}
+							}
+						});
+					})
+					.fail(function () {})
+					.always(function () {});
+			}
+			listQa(currentPage, 8);
 		</script>
 		<!-- TA start -->
-		<script type="text/javascript" src="http://tajs.qq.com/stats?sId=66573412" charset="UTF-8"></script>
+		<script type="text/javascript" src="//tajs.qq.com/stats?sId=66573412" charset="UTF-8"></script>
 		<!-- TA end -->
 		<!-- WPA start -->
 		<script id="qd2852158656d8945073e754151b81f76c44e9c7966c" src="https://wp.qiye.qq.com/qidian/2852158656/d8945073e754151b81f76c44e9c7966c"

@@ -658,17 +658,17 @@ function rand(min, max) {
 }
 
 function randomCity() {
-	var city = "";
-	$.ajax({
-		url: "js0725/city.js",
-		type: "get",
-		dataType: "Json",
-		async: false,
-		success: function(result) {
-			city = result;
-		},
-	});
-	return city;
+  var city = "";
+  $.ajax({
+    url: "js0725/city.js",
+    type: "get",
+    dataType: "Json",
+    async: false,
+    success: function (result) {
+      city = result;
+    },
+  });
+  return city;
 }
 
 function setNumberCount() {
@@ -815,31 +815,43 @@ function submit() {
 }
 
 // 绑定点击后展开详情页面
-$(function() {
-
+$(function () {
 	init_case(10, 1);
+  var tpl_handle = Handlebars.compile($("#handle-template").html());
+  // 请求获取[全国 400 办理]列表信息
+  $.post(
+    "https://4001.cn/cms/post/list",
+    {
+      postType: "post",
+      categoryId: 2,
+      publishStatus: "1",
+      orderByColumn: "publishTime",
+      isAsc: "desc",
+    },
+    function (data) {
+      $(".national-400").html(tpl_handle(data));
+    }
+  );
+  // 功能点击事件
+  $(document).on("click", ".func-group .item", function () {
+    var detail_url = $(this).data("url");
+    if (detail_url) {
+      window.open(detail_url, "_blank");
+    }
+  });
 
-	// 功能点击事件
-	$(document).on("click", ".func-group .item", function() {
-		var detail_url = $(this).data("url");
-		if (detail_url) {
-			window.open(detail_url);
-		}
-	});
-
-	// 优势点击事件
-	$(document).on("click", ".aboutUL li", function() {
-		var detail_url = $(this).data("url");
-		if (detail_url) {
-			window.open(detail_url);
-		}
-	});
-
+  // 优势点击事件
+  $(document).on("click", ".aboutUL li", function () {
+    var detail_url = $(this).data("url");
+    if (detail_url) {
+      window.open(detail_url, "_blank");
+    }
+  });
 });
 // 初始化客戶案例
 function init_case(pageSize, pageNum) {
 	$.ajax({
-		url: "http://192.168.3.161:8000/cms/post/list",
+		url: "https://4001.cn/cms/post/list",
 		data: {
 			"categoryId": 6,
 			"postType": "post",
