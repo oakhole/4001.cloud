@@ -358,7 +358,9 @@
 						postType: "post",
 						publishStatus: "1",
 						pageNum: currentPage,
-						pageSize: pageSize
+						pageSize: pageSize,
+						orderByColumn: "publishTime",
+						isAsc: "desc"
 					},
 				})
 					.done(function (data) {
