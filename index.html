@@ -1059,7 +1059,14 @@
 		<div class="clearFloat"></div>
 		<div class="wrap">
 			<h2 class="tit">我们的案例</h2>
-			<div class="small-banner small-banner-2 kf"></div>
+			<!--外部嵌套层-->
+			<div class="caselist">
+				<div class="cc">
+					<ul class="ss">
+						
+					</ul>
+				</div>
+			</div>
 		</div>
 		<div class="foot">
 			<div class="wrap cf">
@@ -1179,11 +1186,10 @@
 		<!-- WPA end -->
 
 		<!-- sweetAlert 提示 -->
-		<script src="./js0725/sweetalert.min.js"></script>
+		<script src="./js0725/sweetalert.min.js" type="text/jscript"></script>
 
 		<script>
 			$(function() {
-				console.log($(".tab-con .tab-div"))
 				// 选项卡功能
 				$(".tab ul li").mouseenter(function(e) {
 					console.log(e);
