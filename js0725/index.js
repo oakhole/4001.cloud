@@ -667,7 +667,7 @@ function rand(min, max) {
 function randomCity() {
   var city = "";
   $.ajax({
-    url: "js0725/city.js",
+    url: "https://4001.cn/js0725/city.js",
     type: "get",
     dataType: "Json",
     async: false,
@@ -707,7 +707,7 @@ function RenderList() {
     var newMinute = minute >= 10 ? minute : "0" + minute;
     str += "<tr>";
     str += '<td class="ellipsis">';
-    str += '<img src="./img0725/portrait_default.png"/>';
+    str += '<img src="https://4001.cn/img0725/portrait_default.png"/>';
     str +=
       '<span class="center" title="' +
       randCity +
@@ -823,11 +823,23 @@ function submit() {
 
 // 绑定点击后展开详情页面
 $(function () {
+  var tpl_handle = Handlebars.compile($("#handle-template").html());
+  // 请求获取[全国 400 办理]列表信息
+  $.post(
+    "https://4001.cn/cms/post/list",
+    {
+      postType: "post",
+      categoryId: 2,
+    },
+    function (data) {
+      $(".national-400").html(tpl_handle(data));
+    }
+  );
   // 功能点击事件
   $(document).on("click", ".func-group .item", function () {
     var detail_url = $(this).data("url");
     if (detail_url) {
-      window.open(detail_url);
+      window.open(detail_url, "_blank");
     }
   });
 
@@ -835,7 +847,7 @@ $(function () {
   $(document).on("click", ".aboutUL li", function () {
     var detail_url = $(this).data("url");
     if (detail_url) {
-      window.open(detail_url);
+      window.open(detail_url, "_blank");
     }
   });
 });
