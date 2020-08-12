@@ -830,6 +830,9 @@ $(function () {
     {
       postType: "post",
       categoryId: 2,
+      publishStatus: "1",
+      orderByColumn: "publishTime",
+      isAsc: "desc",
     },
     function (data) {
       $(".national-400").html(tpl_handle(data));
