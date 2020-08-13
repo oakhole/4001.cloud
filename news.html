@@ -8,10 +8,10 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="keywords" content="400,400电话,400电话申请,400电话办理,400业务办理,400电话资费,400电话收费标准,400电话如何申请,400电话怎么申请" />
 		<meta name="description" content="400办理68元/月，开号即送服务功能，自主管理后台。不区分长市话，资费低至8分/分钟。" />
-		<link rel="stylesheet" href="css0725/index.css" />
-		<link rel="stylesheet" href="css0725/bootstrap.css">
-		<link rel="stylesheet" href="css0725/table.css" type="text/css" />
 		<link rel="stylesheet" href="https://4001.cn/vendor/layui/css/layui.css">
+		<link rel="stylesheet" href="css0725/bootstrap.css">
+		<link rel="stylesheet" href="css0725/index.css" />
+		<link rel="stylesheet" href="css0725/table.css" type="text/css" />
 		<script src="js0725/city.js" type="text/javascript"></script>
 		<style>
 			.slideBox {
@@ -61,11 +61,19 @@
     </style>
 	</head>
 	<body data-index="5">
+		<div class="top-nav">
+			<div class="wrap">
+				<div class="row">
+					<div class="col-sm-8">
+						<div style="float: left;">
+							<img src="./img0725/top-logo.png" alt="" style="margin-top: 14px; margin-right: 20px;" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="nav">
 			<div class="wrap">
-				<div style="float: left;">
-					<img src="./img0725/menu-logo.png" alt="" style="margin-top: 14px; margin-right: 20px;" />
-				</div>
 				<div>
 					<a href="./index.html">
 						<span>首页</span>
@@ -83,15 +91,18 @@
 						<span>选号指南</span>
 						<div class="bg-block"></div>
 					</a>
-
+		
 					<a href="./changjianwenti.html">
 						<span>400常见问题</span>
 						<div class="bg-block"></div>
 					</a>
-					
 					<a href="./news.html">
 						<span>行业资讯</span>
 						<div class="bg-block"></div>
+					</a>
+		
+					<a href="https://400cha.cn" target="_blank" style="float: right;">
+						<span style="font-size: 12px;">商户登录</span>
 					</a>
 				</div>
 			</div>
@@ -353,22 +364,23 @@
 			// layui 分页组件
 			var laypage = layui.laypage;
 			var currentPage = window.location.href.replace(/^.*#!page=(\d+)$/i, '$1') || 1;
-			function listQa(currentPage, pageSize){
+
+			function listQa(currentPage, pageSize) {
 				$.ajax({
-					url: "https://4001.cn/cms/post/list",
-					type: "POST",
-					dataType: "json",
-					data: {
-						categoryId: 1,
-						postType: "post",
-						publishStatus: "1",
-						pageNum: currentPage,
-						pageSize: pageSize,
-						orderByColumn: "publishTime",
-						isAsc: "desc"
-					},
-				})
-					.done(function (data) {
+						url: "https://4001.cn/cms/post/list",
+						type: "POST",
+						dataType: "json",
+						data: {
+							categoryId: 1,
+							postType: "post",
+							publishStatus: "1",
+							pageNum: currentPage,
+							pageSize: pageSize,
+							orderByColumn: "publishTime",
+							isAsc: "desc"
+						},
+					})
+					.done(function(data) {
 						$('div.question-list').html(newsListTemplate(data));
 
 						newsListCount = data.total;
@@ -382,15 +394,15 @@
 							layout: ["count", "prev", "page", "next"],
 							hash: "page",
 							curr: currentPage,
-							jump: function (obj, first) {
-								if(!first){
+							jump: function(obj, first) {
+								if (!first) {
 									listQa(obj.curr, obj.limit);
 								}
 							}
 						});
 					})
-					.fail(function () {})
-					.always(function () {});
+					.fail(function() {})
+					.always(function() {});
 			}
 			listQa(currentPage, 8);
 		</script>

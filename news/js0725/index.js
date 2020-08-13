@@ -667,7 +667,7 @@ function rand(min, max) {
 function randomCity() {
   var city = "";
   $.ajax({
-    url: "js0725/city.js",
+    url: "https://4001.cn/js0725/city.js",
     type: "get",
     dataType: "Json",
     async: false,

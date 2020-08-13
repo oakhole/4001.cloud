@@ -67,11 +67,19 @@
 		</script>
 	</head>
 	<body data-index="0">
+		<div class="top-nav">
+			<div class="wrap">
+				<div class="row">
+					<div class="col-sm-8">
+						<div style="float: left;">
+							<img src="./img0725/top-logo.png" alt="" style="margin-top: 14px; margin-right: 20px;" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="nav">
 			<div class="wrap">
-				<div style="float: left;">
-					<img src="./img0725/menu-logo.png" alt="" style="margin-top: 14px; margin-right: 20px;" />
-				</div>
 				<div>
 					<a href="./index.html">
 						<span>首页</span>
@@ -98,6 +106,10 @@
 						<span>行业资讯</span>
 						<div class="bg-block"></div>
 					</a>
+
+					<a href="https://400cha.cn" target="_blank" style="float: right;">
+						<span style="font-size: 12px;">商户登录</span>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -106,14 +118,12 @@
 				<ul>
 					<li></li>
 					<li></li>
-					<li></li>
 				</ul>
 			</div>
 			<div class="bd">
 				<div class="banner-box banner-kf">
 					<div class="banner banner1"></div>
 					<div class="banner banner2"></div>
-					<div class="banner banner3"></div>
 				</div>
 			</div>
 		</div>
@@ -124,7 +134,7 @@
 					<div class="tc-log tc-log-1"></div>
 					<div class="tc-name cf">
 						<span class="jg _68"></span>
-						<span class="dw tc-hot">元/月（合约3年）</span>
+						<span class="dw tc-hot">元/月</span>
 					</div>
 					<div class="tc-fl cf">
 						<div class="tc-1 cf fl">
@@ -166,7 +176,7 @@
 					<div class="tc-log tc-log-2"></div>
 					<div class="tc-name">
 						<span class="jg _118"></span>
-						<span class="dw tc-hot">元/月（合约3年）</span>
+						<span class="dw tc-hot">元/月</span>
 					</div>
 					<div class="tc-fl cf">
 						<div class="tc-1 cf fl">
@@ -207,7 +217,7 @@
 					<div class="tc-log tc-log-3"></div>
 					<div class="tc-name">
 						<span class="jg _188"></span>
-						<span class="dw tc-hot">元/月起（合约3年）</span>
+						<span class="dw tc-hot">元/月起</span>
 					</div>
 					<div class="tc-fl cf">
 						<div class="tc-1 cf fl">
@@ -251,7 +261,7 @@
 					<div class="tc-log tc-log-4"></div>
 					<div class="tc-name cf">
 						<span class="jg _99"></span>
-						<span class="dw tc-hot">元/月（合约3年）</span>
+						<span class="dw tc-hot">元/月</span>
 					</div>
 					<div class="tc-fl cf">
 						<div class="tc-1 cf fl">
@@ -292,7 +302,7 @@
 					<div class="tc-log tc-log-5"></div>
 					<div class="tc-name">
 						<span class="jg _128"></span>
-						<span class="dw tc-hot">元/月（合约3年）</span>
+						<span class="dw tc-hot">元/月</span>
 					</div>
 					<div class="tc-fl cf">
 						<div class="tc-1 cf fl">
@@ -333,7 +343,7 @@
 					<div class="tc-log tc-log-6"></div>
 					<div class="tc-name">
 						<span class="jg _199"></span>
-						<span class="dw tc-hot">元/月起（合约3年）</span>
+						<span class="dw tc-hot">元/月起</span>
 					</div>
 					<div class="tc-fl cf">
 						<div class="tc-1 cf fl">
@@ -1063,16 +1073,16 @@
 			<div class="caselist">
 				<div class="cc">
 					<ul class="ss">
-						
+
 					</ul>
 				</div>
 			</div>
-    </div>
-    <div class="clearFloat"></div>
+		</div>
+		<div class="clearFloat"></div>
 		<div class="wrap">
 			<h2 class="tit">全国 400 办理</h2>
-      <div class="national-400">
-      </div>
+			<div class="national-400">
+			</div>
 		</div>
 		<div class="foot">
 			<div class="wrap cf">
@@ -1190,12 +1200,17 @@
 		<script id="qd2852158656d8945073e754151b81f76c44e9c7966c" src="https://wp.qiye.qq.com/qidian/2852158656/d8945073e754151b81f76c44e9c7966c"
 		 charset="utf-8" async defer></script>
 		<!-- WPA end -->
-
+		<script>
+			jQuery(".slideBox").slide({
+				mainCell: ".bd .banner-box",
+				autoPlay: true
+			});
+		</script>
 		<!-- sweetAlert 提示 -->
 		<script src="./js0725/sweetalert.min.js" type="text/jscript"></script>
 
-    <script src="https://cdn.bootcss.com/handlebars.js/4.1.2/handlebars.min.js"></script>
-    <script id="handle-template" type="text/x-handlebars-template">
+		<script src="https://cdn.bootcss.com/handlebars.js/4.1.2/handlebars.min.js"></script>
+		<script id="handle-template" type="text/x-handlebars-template">
 			{{#each rows}}
         <a href="https://4001.cn/cms/post/{{postId}}.html" target="_blank" rel="noopener noreferrer">{{title}}</a>
       {{/each}}
@@ -1216,8 +1231,8 @@
 			function openZoosUrl(url, data) {
 				window.open('https://url.cn/wkHy3GmM?_type=wpa&qidian=true', '_blank')
 			}
-    </script>
-    
-    
+		</script>
+
+
 	</body>
 </html>
