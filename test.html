@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
+
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
@@ -11,7 +12,7 @@
 		<link rel="stylesheet" href="https://4001.cn/news/css0725/index.css" />
 		<link rel="stylesheet" href="https://4001.cn/news/css0725/bootstrap.css">
 		<link rel="stylesheet" href="https://4001.cn/news/css0725/table.css" type="text/css" />
-		<script src="https://4001.cn/news/js0725/city.js" type="text/javascript"></script>
+		<script src="https://4001.cn/js0725/city.js" type="text/javascript"></script>
 		<style>
 			.slideBox {
         height: 400px;
@@ -59,6 +60,7 @@
       }
     </style>
 	</head>
+
 	<body data-index="9">
 		<div class="top-nav">
 			<div class="wrap">
@@ -123,11 +125,13 @@
 		<div class="wrap" style="margin: 60px auto 40px;">
 			<div class="top">
 				<div class="title">${post.title}</div>
-				<div class="time"><small>时间:</small> $!date.format('yyyy-MM-dd HH:mm',$!{post.publishTime})<small>来源:</small>全国400电话受理中心 <small>作者:</small>${post.author} </div>
+				<div class="time"><small>时间:</small> $!date.format('yyyy-MM-dd HH:mm',$!{post.publishTime})<small>来源:</small>全国400电话受理中心
+					<small>作者:</small>${post.author} </div>
 			</div>
-			<div class="content" style="line-height: 42px;" >
+			<div class="content" style="line-height: 42px;">
 				${post.content}
 			</div>
+			<div class="national-400"></div>
 		</div>
 		<div class="foot">
 			<div class="wrap cf">
@@ -145,7 +149,6 @@
 								var y = new Date();
                 document.write(y.getFullYear());
               </script>
-
 							<a target="_blank" href="http://www.beian.miit.gov.cn">苏ICP备19006211号</a>
 						</div>
 					</div>
@@ -239,7 +242,13 @@
 		<div class="goTo"></div>
 		<script src="https://4001.cn/news/js0725/jquery.min.js"></script>
 		<script src="https://4001.cn/news/js0725/jquery.SuperSlide.2.1.1.js"></script>
-		<script src="https://4001.cn/news/js0725/index.js"></script>
+		<script src="https://4001.cn/js0725/index.js"></script>
+		<script src="https://cdn.bootcss.com/handlebars.js/4.1.2/handlebars.min.js"></script>
+		<script id="handle-template" type="text/x-handlebars-template">
+			{{#each rows}}
+        <a href="https://4001.cn/cms/post/{{postId}}.html" target="_blank" rel="noopener noreferrer">{{title}}</a>
+      {{/each}}
+    </script>
 		<script>
 			jQuery(".slideBox").slide({
 				mainCell: ".bd .banner-box",
@@ -259,4 +268,5 @@
 			}
 		</script>
 	</body>
+
 </html>
