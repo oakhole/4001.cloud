@@ -12,7 +12,6 @@ $(function() {
 			isAsc: "desc",
 		},
 		function(data) {
-			console.log(data);
 			var html = "<table style='width: 100%;font-size: 12px;' border='0'>";
 			for (var i = 0; i < data.total; i++) {
 				if (i % 8 == 0) {
