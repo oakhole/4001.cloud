@@ -1,6 +1,6 @@
 //全局js
-var cbase_url = 'http://192.168.3.161:8000';
-var base_url = '';
+var cbase_url = 'https://400cha.cn';
+var base_url = 'https://4001.cn';
 //jquery 自定义扩展
 (function($) {
 	//    导航栏效果
@@ -161,7 +161,7 @@ function rand(min, max) {
 function randomCity() {
 	var city = "";
 	$.ajax({
-		url: base_url+"./js0725/city.js",
+		url: base_url+"/js0725/city.js",
 		type: "get",
 		dataType: "Json",
 		async: false,

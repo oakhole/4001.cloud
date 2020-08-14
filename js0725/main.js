@@ -1,4 +1,4 @@
-var base_url = 'http://192.168.3.161:8000';
+var base_url = 'https://4001.cn';
 // 绑定点击后展开详情页面
 $(function() {
 	init_case(10, 1);
