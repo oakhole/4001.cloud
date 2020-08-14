@@ -161,7 +161,7 @@ function rand(min, max) {
 function randomCity() {
 	var city = "";
 	$.ajax({
-		url: base_url+"/js0725/city.js",
+		url: "/js0725/city.js",
 		type: "get",
 		dataType: "Json",
 		async: false,
@@ -178,7 +178,6 @@ function setNumberCount() {
 		type: "get",
 		dataType: "Json",
 		success: function(e) {
-			console.log(e);
 			$("#numberCount").html(e);
 		},
 	});
@@ -187,7 +186,6 @@ function setNumberCount() {
 function RenderList() {
 	setNumberCount();
 	var city = randomCity();
-	console.log(city);
 	var str = "";
 	var date = new Date();
 	var maxhour = date.getHours();
@@ -201,7 +199,7 @@ function RenderList() {
 		var newMinute = minute >= 10 ? minute : "0" + minute;
 		str += "<tr>";
 		str += '<td class="ellipsis">';
-		str += '<img src="./img0725/portrait_default.png"/>';
+		str += '<img src="'+base_url+'/img0725/portrait_default.png"/>';
 		str +=
 			'<span class="center" title="' +
 			randCity +
