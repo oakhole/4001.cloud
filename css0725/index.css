@@ -748,7 +748,7 @@ h2.tit::after {
 
 .tc-show .tc-name {
 	height: 68px;
-	margin: 0 25px;
+	margin: 0 10px;
 	border-bottom: 1px solid #e5e5e5;
 }
 
@@ -864,7 +864,7 @@ h2.tit::after {
 
 .tc-show .tc-fl {
 	padding: 24px 0;
-	margin: 0 25px;
+	margin: 0 10px;
 	border-bottom: 1px dashed #e5e5e5;
 }
 
@@ -896,6 +896,8 @@ h2.tit::after {
 	color: #f4222f;
 	margin-bottom: 5px;
 }
+
+
 
 .tc-show .Example-num {
 	padding-top: 24px;
