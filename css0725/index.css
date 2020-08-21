@@ -695,7 +695,7 @@ h2.tit::after {
 	margin: 0 25px 35px;
 }
 
-.tc-show .tc-show-item:hover .tc-btn {
+/* .tc-show .tc-show-item:hover .tc-btn {
 	background: #e70012;
 	background-image: -webkit-gradient(linear,
 		left bottom,
@@ -703,12 +703,10 @@ h2.tit::after {
 		from(#ff512f),
 		to(#f4202f));
 	background-image: linear-gradient(0deg, #ff512f, #f4202f);
-	/*-webkit-box-shadow: 0 0 16px 0px #F5232F;*/
-	/*box-shadow: 0 0 16px 0px #F5232F;*/
 	border-top: #f4202f;
 	transition: all 0.3s;
 	color: #fff;
-}
+} */
 
 .tc-show .tc-show-item.m-RL-16 {
 	margin: 0 19px;
@@ -897,8 +895,6 @@ h2.tit::after {
 	margin-bottom: 5px;
 }
 
-
-
 .tc-show .Example-num {
 	padding-top: 24px;
 }
@@ -921,6 +917,16 @@ h2.tit::after {
 	line-height: 40px;
 	text-align: center;
 	border-top: 1px solid #e5e5e5;
+	background: #e70012;
+	background-image: -webkit-gradient(linear,
+		left bottom,
+		left top,
+		from(#ff512f),
+		to(#f4202f));
+	background-image: linear-gradient(0deg, #ff512f, #f4202f);
+	border-top: #f4202f;
+	transition: all 0.3s;
+	color: #fff;
 }
 
 /*选号码先看号段 B*/
