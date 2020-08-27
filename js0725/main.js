@@ -19,7 +19,8 @@ $(function() {
 					for (var j = 0; j < 8; j++) {
 						var index = i + j;
 						if (index < data.total) {
-							html += "<th><a href='https://4001.cn/cms/post/" + data.rows[index].postId + ".html' target='_blank'>" + data.rows[
+							html += "<th><a href='https://4001.cn/cms/post/" + data.rows[index].postId + ".html' target='_blank'>" + data
+								.rows[
 									index].title +
 								"</a></th>"
 						}
@@ -67,9 +68,9 @@ function init_case(pageSize, pageNum) {
 					"></img></div><div class='case_span'><span>" + JSON.parse(e.rows[i].metaInfo).calleeNumber +
 					"</span></div><div class='case_hide'><p>点击查看案例详情</p></div></li></a>"
 			}
-			html +="</ul>";
-			document.querySelector(".caselist .cc .ss").innerHTML = html + html;
-			var height = document.querySelector(".caselist .cc .ss").offsetWidth;
+			html += "</ul>";
+			document.querySelector(".caselist .cc").innerHTML = html + html;
+			var height = document.querySelector(".caselist .ss").offsetWidth;
 			addKeyFrames('-' + height + 'px'); // 设置keyframes
 			document.querySelector('.caselist .cc').className += ' rowup'; // 添加 rowup
 		},
