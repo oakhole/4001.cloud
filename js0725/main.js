@@ -54,9 +54,7 @@ function init_case(pageSize, pageNum) {
 		data: {
 			"categoryId": 6,
 			"postType": "post",
-			"publishStatus": "1",
-			"pageSize": pageSize,
-			"pageNum": pageNum
+			"publishStatus": "1"
 		},
 		dataType: "Json",
 		type: "POST",
