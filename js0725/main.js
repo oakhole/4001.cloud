@@ -63,7 +63,7 @@ function init_case(pageSize, pageNum) {
 			var total = e.total, //读取到的数据数量
 				html = "<div class='ss'>";
 			for (var i = 0; i < total; i++) {
-				html += "<div><a target='_blank' href='" + base_url + "/cms/post/" + e.rows[i].postId +
+				html += "<div class='item'><a target='_blank' href='" + base_url + "/cms/post/" + e.rows[i].postId +
 					".html'><div class='item-img'><img src=" + e.rows[i].coverImg +
 					"></img></div><div class='case_span'><span>" + JSON.parse(e.rows[i].metaInfo).calleeNumber +
 					"</span></div><div class='case_hide'><p>点击查看案例详情</p></div></div></a>"
