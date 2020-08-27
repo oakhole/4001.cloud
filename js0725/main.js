@@ -77,6 +77,7 @@ function init_case(pageSize, pageNum) {
 
 // 客户案例设置keyframes属性
 function addKeyFrames(y) {
+	console.log(y)
 	var style = document.createElement("style");
 	style.type = 'text/css';
 	var keyFrames =
@@ -101,7 +102,7 @@ function addKeyFrames(y) {
 				            transform: translate3d(A_DYNAMIC_VALUE,0, 0);\
 				        }\
 				    }';
-	style.innerHTML = keyFrames.replace(/A_DYNAMIC_VALUE/g, '-100%');
+	style.innerHTML = keyFrames.replace(/A_DYNAMIC_VALUE/g, y);
 	document.getElementsByTagName('head')[0].appendChild(style);
 	//客户案例悬浮效果
 	$(".caselist .cc ul li").hover(function() {
