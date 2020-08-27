@@ -5711,7 +5711,7 @@ h2.tit::after {
 	overflow: hidden;
 }
 
-.caselist .cc ss {
+.caselist .cc .ss {
 	-webkit-animation: 10s rowup linear infinite normal;
 	animation: 10s rowup linear infinite normal;
 	position: relative;
@@ -5720,7 +5720,7 @@ h2.tit::after {
 	width: 100%;
 }
 
-.caselist .cc ss item {
+.caselist .cc .ss .item {
 	width: 244.5px;
 	height: 175px;
 	overflow: hidden;
@@ -5729,13 +5729,13 @@ h2.tit::after {
 	border-right: 1px solid #e5e5e5;
 }
 
-.caselist .cc ss item .item-img {
+.caselist .cc .ss .item .item-img {
 	height: 130px;
 	position: relative;
 	width: 100%;
 }
 
-.caselist .cc ss item .item-img img {
+.caselist .cc .ss .item .item-img img {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -5744,26 +5744,26 @@ h2.tit::after {
 	margin: auto;
 }
 
-.caselist .cc ss item .case_span {
+.caselist .cc .ss .item .case_span {
 	height: 45px;
 	font-size: 22px;
 	color: #ff7300;
 	margin: 0 auto;
 }
 
-.caselist .cc:hover>ss {
+.caselist .cc:hover> .ss {
 	animation-play-state: paused;
 	cursor: pointer;
 }
 
-.caselist .cc ss item a {
+.caselist .cc .ss .item a {
 	display: block;
 	width: 100%;
 	height: 175px;
 	text-decoration:none;
 }
 
-.caselist .cc ss item .case_hide {
+.caselist .cc .ss .item .case_hide {
 	width: 100%;
 	height: 45px;
 	background: #ff7300;
@@ -5771,7 +5771,7 @@ h2.tit::after {
 	left: 0px;
 }
 
-.caselist .cc ss item .case_hide p {
+.caselist .cc .ss .item .case_hide p {
 	color: #fff;
 	line-height: 40px;
 	height: 45px;
