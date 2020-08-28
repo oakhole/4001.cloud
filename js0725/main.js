@@ -69,7 +69,7 @@ function init_case(pageSize, pageNum) {
 					"</span></div><div class='case_hide'><p>点击查看案例详情</p></div></div></a>"
 			}
 			html += "</div>";
-			document.querySeleci * c").innerHTML = html + html;
+			document.querySelector(".caselist .cc").innerHTML = html + html;
 			var height = i * (document.querySelector(".caselist .ss").offsetWidth/4);
 			addKeyFrames('-' + height + 'px'); // 设置keyframes
 			document.querySelector('.caselist .cc').className += ' rowup'; // 添加 rowup
