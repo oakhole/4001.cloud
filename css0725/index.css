@@ -5712,8 +5712,8 @@ h2.tit::after {
 }
 
 .caselist .cc .ss {
-	-webkit-animation: 20s rowup linear infinite normal;
-	animation: 20s rowup linear infinite normal;
+	-webkit-animation: 10s rowup linear infinite normal;
+	animation: 10s rowup linear infinite normal;
 	position: relative;
 	white-space: nowrap;
 	height: 175px;
