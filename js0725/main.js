@@ -68,10 +68,10 @@ function init_case(pageSize, pageNum) {
 					"></img></div><div class='case_span'><span>" + JSON.parse(e.rows[i].metaInfo).calleeNumber +
 					"</span></div><div class='case_hide'><p>点击查看案例详情</p></div></div></a>"
 			}
-			document.querySelector(".caselist .cc").innerHTML = html + html;
+			document.querySelector(".caselist .cc .ss").innerHTML = html + html;
 			var height = i * (document.querySelector(".caselist .ss").offsetWidth/4);
 			addKeyFrames('-' + height + 'px'); // 设置keyframes
-			document.querySelector('.caselist .cc').className += ' rowup'; // 添加 rowup
+			document.querySelector('.caselist .cc .ss').className += ' rowup'; // 添加 rowup
 		},
 	});
 }
