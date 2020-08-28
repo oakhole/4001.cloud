@@ -70,7 +70,7 @@ function init_case(pageSize, pageNum) {
 			}
 			html += "</div>";
 			document.querySelector(".caselist .cc").innerHTML = html + html;
-			var height = document.querySelector(".caselist .ss").offsetWidth;
+			var height = Math.ceil(i/8) * (document.querySelector(".caselist .ss").offsetWidth);
 			addKeyFrames('-' + height + 'px'); // 设置keyframes
 			document.querySelector('.caselist .cc').className += ' rowup'; // 添加 rowup
 		},
