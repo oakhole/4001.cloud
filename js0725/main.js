@@ -71,8 +71,8 @@ function init_case(pageSize, pageNum) {
 			document.querySelector(".caselist .cc .ss").innerHTML = html + html;
 			var height = i * (document.querySelector(".caselist .ss").offsetWidth/4);
 			addKeyFrames('-' + height + 'px'); // 设置keyframes
-			document.querySelector('.caselist .cc .ss').style.animation =  Math.ceil(i/4)+'s rowup linear infinite normal',
-			document.querySelector('.caselist .cc .ss').style.webkitAnimation =  Math.ceil(i/4)+'s rowup linear infinite normal',
+			document.querySelector('.caselist .cc .ss').style.animation =  Math.ceil(i/4)*10+'s rowup linear infinite normal',
+			document.querySelector('.caselist .cc .ss').style.webkitAnimation =  Math.ceil(i/4)*10+'s rowup linear infinite normal',
 			document.querySelector('.caselist .cc .ss').className += ' rowup'; // 添加 rowup
 		},
 	});
