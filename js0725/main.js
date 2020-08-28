@@ -108,7 +108,7 @@ function addKeyFrames(y) {
 	style.innerHTML = keyFrames.replace(/A_DYNAMIC_VALUE/g, y);
 	document.getElementsByTagName('head')[0].appendChild(style);
 	//客户案例悬浮效果
-	$(".caselist .cc ss item").hover(function() {
+	$(".caselist .cc .ss .item").hover(function() {
 		$(this).find('.case_hide').animate({
 			top: "-45px"
 		}, 500);
