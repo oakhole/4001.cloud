@@ -495,11 +495,11 @@ a[title="站长统计"] {
 }
 
 .banner.banner1 {
-  background: url(../img0725/banner-little1.jpg) no-repeat center top;
+  background: url(/cms/banner/view/1) no-repeat center top;
 }
 
 .banner.banner2 {
-  background: url(../img0725/banner-little2.jpg) no-repeat center top;
+  background: url(/cms/banner/view/2) no-repeat center top;
 }
 
 /*.banner.banner-hd {
