@@ -1,0 +1,304 @@
+li,
+a {
+    -webkit-tap-highlight-color: transparent
+}
+
+.pw-wrap {
+    width: 8.13333rem;
+    background: #fff;
+    position: fixed;
+    z-index: 7;
+    top: 6.89333rem;
+    left: 50%;
+    margin-left: -4.06667rem;
+    -webkit-border-radius: .26667rem;
+    -moz-border-radius: .26667rem;
+    -ms-border-radius: .26667rem;
+    -o-border-radius: .26667rem;
+    border-radius: .26667rem;
+    -webkit-box-shadow: 0 .26667rem .81333rem rgba(6, 7, 31, .17);
+    -moz-box-shadow: 0 .26667rem .81333rem rgba(6, 7, 31, .17);
+    -ms-box-shadow: 0 .26667rem .81333rem rgba(6, 7, 31, .17);
+    -o-box-shadow: 0 .26667rem .81333rem rgba(6, 7, 31, .17);
+    box-shadow: 0 .26667rem .81333rem rgba(6, 7, 31, .17)
+}
+
+.pw-wrap .pw-server {
+    position: absolute;
+    width: 1.33333rem;
+    height: 1.33333rem;
+    left: 50%;
+    z-index: 33;
+    -webkit-border-radius: .66667rem;
+    -moz-border-radius: .66667rem;
+    -ms-border-radius: .66667rem;
+    -o-border-radius: .66667rem;
+    border-radius: .66667rem;
+    margin-left: -.66667rem;
+    margin-top: -.37333rem;
+    -webkit-box-shadow: 0 .29333rem .28rem rgba(187, 187, 187, .45);
+    -moz-box-shadow: 0 .29333rem .28rem rgba(187, 187, 187, .45);
+    -ms-box-shadow: 0 .29333rem .28rem rgba(187, 187, 187, .45);
+    -o-box-shadow: 0 .29333rem .28rem rgba(187, 187, 187, .45);
+    box-shadow: 0 .29333rem .28rem rgba(187, 187, 187, .45)
+}
+
+.pw-wrap .pw-cont {
+    margin-top: 1.6rem;
+    margin-bottom: .53333rem
+}
+
+.pw-wrap .pw-btn-wrap {
+    padding-bottom: .4rem
+}
+
+.pw-wrap .pw-btn-wrap .pw-later {
+    border: 1px solid #4873f8;
+    color: #4873f8
+}
+
+.pw-wrap .pw-btn-wrap input[type="button"]:active {
+    border: none
+}
+
+.pw-wrap .pw-btn-wrap .pw-consult {
+    background: #4873f8;
+    color: #fff
+}
+
+.pw-wrap .pw-btn-wrap a {
+    width: 3.53333rem;
+    height: .88rem;
+    background: #fff;
+    -webkit-border-radius: .13333rem;
+    -moz-border-radius: .13333rem;
+    -ms-border-radius: .13333rem;
+    -o-border-radius: .13333rem;
+    border-radius: .13333rem;
+    color: #4873f8;
+    line-height: .90667rem;
+    display: inline-block;
+    vertical-align: middle;
+    border: 1px solid #4873f8
+}
+
+.kefu-phone {
+    position: fixed;
+    overflow: hidden;
+    bottom: 1.86667rem;
+    right: 4%;
+    margin-top: -1.46667rem;
+    z-index: 99
+}
+
+.kefu-phone a {
+    color: #fff;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    border-radius: 100%;
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: rgba(0, 0, 0, .6);
+    text-align: center;
+    line-height: 1.2rem
+}
+
+.kefu-phone a svg {
+    height: .66667rem;
+    width: .71733rem
+}
+
+.reg-line-phone-wrap {
+    position: fixed;
+    bottom: 0;
+    height: 1.32rem;
+    max-width: 750px;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    margin: 0 auto;
+    background: #FFF;
+    -webkit-box-shadow: 0 0 .8rem 0 rgba(59, 62, 83, .1);
+    -moz-box-shadow: 0 0 .8rem 0 rgba(59, 62, 83, .1);
+    -ms-box-shadow: 0 0 .8rem 0 rgba(59, 62, 83, .1);
+    -o-box-shadow: 0 0 .8rem 0 rgba(59, 62, 83, .1);
+    box-shadow: 0 0 .8rem 0 rgba(59, 62, 83, .1)
+}
+
+.reg-line-phone-wrap>a {
+    font-size: .4rem;
+    color: #4873f8;
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    line-height: 1.33333rem;
+    position: relative;
+    font-weight: 700
+}
+
+.reg-consulte-line:after {
+    content: "|";
+    height: .4rem;
+    width: 2px;
+    color: #6788ff;
+    position: absolute;
+    right: 1px
+}
+
+.reg-icon {
+    width: .50667rem;
+    height: .50667rem;
+    background: url("../img/index/bt_icon.png");
+    background-size: 100% auto;
+    vertical-align: middle;
+    margin-right: .16rem
+}
+
+.reg-lineIcon {
+    background-position: 0 0
+}
+
+.reg-phoneIcon {
+    background-position: 0 -.64rem
+}
+
+.icondianhuaicon:before {
+    font-size: .66667rem;
+    vertical-align: middle
+}
+
+.iconkefuicon:before,
+.iconxiazaiicon:before {
+    font-size: .46667rem;
+    margin-right: .16rem;
+    vertical-align: -.05333rem
+}
+
+i {
+    -webkit-tap-highlight-color: rgba(255, 0, 0, 0)
+}
+
+.header {
+    position: absolute;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 1.33333rem;
+    line-height: 1.33333rem
+}
+
+.header .nav {
+    color: #2c3a64
+}
+
+.header .nav .iconlogo {
+    font-size: .6rem
+}
+
+.header .nav .navIcon {
+    font-size: .53333rem
+}
+
+.header .list {
+    background-color: #fff;
+    display: none;
+    box-shadow: 0 -.26667rem .53333rem 0 #fff, 0 .26667rem .53333rem 0 rgba(0, 0, 0, .1)
+}
+
+.header .list a {
+    display: block;
+    height: 1.46667rem;
+    line-height: 1.46667rem;
+    margin: 0 .4rem;
+    border-bottom: 1px solid #eee;
+    color: #333;
+    font-size: .4rem
+}
+
+.header .list .g-flex {
+    display: -webkit-flex;
+    display: flex
+}
+
+.header .list .nav-second {
+    background-color: #f4f7ff;
+    padding-left: .4rem
+}
+
+.header .list li:last-child a {
+    border: none
+}
+
+.footer {
+    background: #0d1327;
+    margin-bottom: 1.32rem
+}
+
+.footer h5 {
+    font-size: .4rem;
+    color: #82828f;
+    line-height: .53333rem;
+    margin-top: .90667rem
+}
+
+.footer .top {
+    width: 8.93333rem;
+    margin: 0 auto 1.06667rem
+}
+
+.footer .top:first-child {
+    margin-bottom: 0
+}
+
+.footer ul>li {
+    float: left
+}
+
+.footer ul>li a {
+    display: block;
+    color: #fff;
+    font-size: .34667rem;
+    width: 2.97778rem;
+    margin-top: .32rem
+}
+
+.footer .bottom {
+    border-top: 1px solid rgba(255, 255, 255, .17);
+    padding: .53333rem 0 .8rem;
+    margin: 0 .4rem
+}
+
+.footer .bottom a {
+    font-size: .29333rem;
+    color: #82828c;
+    letter-spacing: 0;
+    text-align: center;
+    line-height: .53333rem
+}
+
+.footer .bottom p {
+    text-align: center;
+    margin-top: .1rem
+}
+
+.footer .bottom p a {
+    color: #b4b4c1
+}
+
+.button {
+    display: inline-block;
+    width: 4.26667rem;
+    height: 1.06667rem;
+    font-size: .42667rem;
+    line-height: 1.06667rem;
+    background: #4f7afd;
+    color: #fff;
+    box-shadow: 0 .26667rem .66667rem 0 rgba(79, 122, 253, .5);
+    border-radius: .53333rem
+}

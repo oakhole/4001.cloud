@@ -13,6 +13,7 @@
 
 		<link rel="stylesheet" href="./css/base.css" />
 		<link rel="stylesheet" href="./css/single.css?8901dadaas2666" />
+		<link rel="stylesheet" href="./css/swiper-bundle.min.css">
 		<script src="./js/rem.js"></script>
 	</head>
 	<body style="background: #fff !important;">
@@ -36,6 +37,34 @@
 					<span class="sp1">全国400售后支撑</span><br />
 					<span class="sp2">400-118-3721</span>
 				</a>
+			</div>
+		</section>
+		<section class="swiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<a href="callCenter.html">
+						<h2 >呼叫中心</h2>
+						<img  src="./images/m/cc.jpg" />
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="fujintui.html">
+						<h2 >附近推</h2>
+						<img src="./images/m/fugou.jpg" />
+					</a>
+				</div>
+				<div class="swiper-slide">
+					<a href="">
+						<h2 >400</h2>
+						<img  src="./images/m/400.jpg" />
+					</a>	
+				</div>
+				<div class="swiper-slide">
+					<a href="xiaoke.html">
+						<h2 >销氪</h2>
+						<img src="./images/m/xiaoke.jpg" />
+					</a>	
+				</div>
 			</div>
 		</section>
 		<section class="tuijian">
@@ -522,6 +551,16 @@
 			</div>
 		</div>
 		<script src="./js/jquery-1.10.1.min.js"></script>
+		<script src="./js/swiper-bundle.min.js"></script>
+		<script>
+			new Swiper ('.swiper', {
+				direction: "horizontal",
+				loop: true,
+				slidesPerView: "auto",
+				centeredSlides: true,
+				spaceBetween: 20,
+			})
+		</script>
 		<section class="Customer clearfix">
 			<div class="c clearfix">
 				<a href="tel:400-7777-400">
