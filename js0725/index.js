@@ -89,8 +89,58 @@ var base_url = 'https://4001.cn';
 	});
 	//默认参数
 	var defaluts = {};
+	$(".downSelect-item").on('click',function(){
+		window.document.location = $(this).data("select-link");
+	});
+	
+	$(".left-item").on('mouseover', function() {
+		$(this).siblings().removeClass("left-item-hover");
+		$(this).addClass("left-item-hover");
+		$(this).siblings().find("img").each(function(index, item) {
+			$(item).attr('src', $(item).data('orig-src'));
+		});
+		$(this).find("img").attr('src', $(this).find("img").data('hover-src'));
+		$(".product-img img").attr("src", $(this).data("product-img"));
+		$(".product-img").data("product-link", $(this).data("product-link"));
+	});
+	
+	$(".product-img").on("click", function() {
+		window.location.href = $(this).data("product-link");
+	});
 })(jQuery);
 
+// 更多产品滑动切换图片
+// $(function() {
+// 	var item = document.getElementsByClassName("left-item");
+// 	var productImg = document.getElementsByClassName("productImg");
+// 	var itemImg = document.getElementsByClassName("product-img");
+// 	var newImgSrc = '';
+// 	for (var i = 0; i < item.length; i++) {
+// 		item[i].index = i;
+// 		item[i].onmouseover = function() {
+// 			for (var i = 0; i < item.length; i++) {
+// 				itemImg[i].style.display = 'none';
+// 				item[i].style.background = '#FC442F';
+// 				item[i].style.color = 'white';
+// 				console.log(i);
+// 			}
+// 			itemImg[this.index].style.display = 'block';
+// 			item[this.index].style.background = 'white';
+// 			item[this.index].style.color = '#FC442F';
+// 			item[this.index].style.border = '1px solid #FD614F';
+// 		}
+// 	}
+// });
+
+// function forItem() {
+// 	var imgSrc = productImg[this.index].getAttribute("src");
+// 	var srcIndex = imgSrc.indexOf(".");
+// 	var preFix = imgSrc.slice(0, srcIndex);
+// 	var sufFix = imgSrc.slice(srcIndex);
+// 	newImgSrc = preFix.concat("2", sufFix);
+// 	productImg[this.index].src = newImgSrc;
+// 	console.log(newImgSrc);
+// }
 
 $(function() {
 	//    导航栏效果
@@ -125,6 +175,7 @@ $(function() {
 		}
 	});
 });
+
 
 $(window).ready(function() {
 	//文档和图片全部加载完 执行
@@ -174,7 +225,7 @@ function randomCity() {
 
 function setNumberCount() {
 	$.ajax({
-		url: cbase_url+"/tenant/experience/getRandomInfo",
+		url: cbase_url + "/tenant/experience/getRandomInfo",
 		type: "get",
 		dataType: "Json",
 		success: function(e) {
@@ -199,7 +250,7 @@ function RenderList() {
 		var newMinute = minute >= 10 ? minute : "0" + minute;
 		str += "<tr>";
 		str += '<td class="ellipsis">';
-		str += '<img src="'+base_url+'/img0725/portrait_default.png"/>';
+		str += '<img src="' + base_url + '/img0725/portrait_default.png"/>';
 		str +=
 			'<span class="center" title="' +
 			randCity +
@@ -260,7 +311,7 @@ var uuid = "";
 $(function() {
 	uuid = uu() + uu() + uu() + uu() + uu() + uu();
 	var src =
-		cbase_url+"/tenant/experience/getRandomCode?uuid=" + uuid;
+		cbase_url + "/tenant/experience/getRandomCode?uuid=" + uuid;
 
 	$("#uuid").attr("src", src);
 });
@@ -287,7 +338,7 @@ function submit() {
 	} else {
 		$("#contactUs").html("提交中，请稍后..");
 		$.ajax({
-			url: cbase_url+"tenant/experience/addExperience",
+			url: cbase_url + "tenant/experience/addExperience",
 			data: {
 				name: name,
 				phone: phone,
@@ -306,7 +357,3 @@ function submit() {
 		});
 	}
 }
-
-
-
-
