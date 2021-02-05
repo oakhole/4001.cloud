@@ -1,0 +1,765 @@
+.box {
+  background-color: #f1f2f8;
+}
+.box .navigation {
+  background: url('//imgw.pospal.cn/LandingPage/wxNearPush/images/rectangle18.png');
+  background-size: 100%;
+  height: 10vw;
+  width: 100%;
+  position: fixed;
+  padding: 0 3.067vw;
+  top: 0;
+  z-index: 999;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.box .navigation .left {
+  display: flex;
+  align-items: center;
+  font-size: 3.2vw;
+  color: #fff;
+}
+.box .navigation .left img {
+  width: 8.267vw;
+}
+.box .navigation .right {
+  width: 21.333vw;
+  height: 7.467vw;
+  border-radius: 26.667vw;
+  border: 0.267vw solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.2vw;
+  color: #ffff;
+}
+.box .banner {
+  height: 128vw;
+  width: 100%;
+  background: url('//imgw.pospal.cn/LandingPage/wxNearPush/images/phone_bg.png');
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20.533vw;
+  position: relative;
+}
+.box .banner .logo {
+  width: 23.067vw;
+  position: absolute;
+  left: 7.067vw;
+  top: 49.2vw;
+}
+.box .banner .title-one {
+  position: absolute;
+  left: 6.133vw;
+  top: 63.733vw;
+  font-size: 9.6vw;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+}
+.box .banner .title-two {
+  position: absolute;
+  left: 6.133vw;
+  top: 77.067vw;
+  font-size: 9.6vw;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 auto;
+}
+.box .banner .title-two span {
+  color: #07c160;
+}
+.box .banner .content {
+  position: absolute;
+  left: 6.133vw;
+  top: 90.4vw;
+  width: 40.8vw;
+  font-size: 4.267vw;
+  font-weight: 400;
+  color: #fff;
+  margin-top: 6.133vw;
+}
+.box .banner .content :last-child {
+  letter-spacing: 0.133vw;
+}
+.box .banner .info-image {
+  width: 73.733vw;
+  margin-top: 7.6vw;
+}
+.box .get-contact {
+  box-shadow: 0 0 2.667vw 2.667vw #00000010;
+  background-color: #f5f5f5;
+  width: 100%;
+  padding: 9.467vw 0 14.4vw 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.box .get-contact .title {
+  color: #07C160;
+  font-size: 6.4vw;
+  margin-bottom: 4vw;
+}
+.box .get-contact .subhead {
+  color: #888;
+  font-size: 3.733vw;
+  margin-bottom: 4vw;
+}
+.box .get-free {
+  width: 100%;
+  height: 21.2vw;
+  background: url("//imgw.pospal.cn/LandingPage/wxNearPush/images/get-free.png");
+  background-size: cover;
+  position: relative;
+  margin: 4vw 0;
+  position: fixed;
+  z-index: 100;
+  bottom: 2.667vw;
+}
+.box .get-free img {
+  position: absolute;
+  top: 4.267vw;
+  left: 10.267vw;
+  width: 4.667vw;
+  height: 4.667vw;
+}
+.box .get-free .phone {
+  color: #999;
+  font-size: 3.2vw;
+  position: absolute;
+  left: 8.667vw;
+  top: 9.867vw;
+}
+.box .get-free .free {
+  color: #fff;
+  font-size: 4vw;
+  position: absolute;
+  left: 34.8vw;
+  letter-spacing: 0.667vw;
+  top: 7.067vw;
+}
+.box .three-steps {
+  margin-top: 5.067vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.box .three-steps .top {
+  background: url("//imgw.pospal.cn/LandingPage/wxNearPush/images/threeStepsPhone.png");
+  width: 76vw;
+  height: 17.6vw;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-size: 6.4vw;
+  color: #484C4E;
+  margin-bottom: 5.733vw;
+}
+.box .three-steps .top span {
+  margin-bottom: -1.333vw;
+}
+.box .three-steps .step {
+  width: 81.467vw;
+  height: 61.467vw;
+  background: url("//imgw.pospal.cn/LandingPage/wxNearPush/images/step-bg.png");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 4vw;
+}
+.box .three-steps .step .content-img {
+  margin-top: 7.733vw;
+  height: 29.333vw;
+}
+.box .three-steps .step .serial {
+  position: absolute;
+  color: #CDF3DF;
+  font-size: 9.6vw;
+  left: 4.133vw;
+  top: 37.333vw;
+}
+.box .three-steps .step .step-top {
+  color: #07C160;
+  font-size: 4.8vw;
+  position: absolute;
+  left: 11.067vw;
+  top: 41.6vw;
+  font-weight: bold;
+}
+.box .three-steps .step .content {
+  color: #666;
+  font-size: 3.2vw;
+  position: absolute;
+  left: 20.8vw;
+  top: 49.6vw;
+}
+.box .marketing {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 36vw;
+}
+.box .marketing .top {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: url("//imgw.pospal.cn/LandingPage/wxNearPush/images/marketing-phone.png");
+  background-size: cover;
+  width: 76vw;
+  height: 22vw;
+  font-size: 6.4vw;
+  color: #484c4e;
+  margin-bottom: 18.667vw;
+}
+.box .marketing .top div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: -10.667vw;
+}
+.box .marketing .subhead {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10.933vw;
+}
+.box .marketing .subhead p {
+  font-size: 3.2vw;
+  color: #484c4e;
+}
+.box .marketing .marketing-body {
+  width: 100%;
+}
+.box .marketing .marketing-body .header {
+  padding: 0 10.267vw;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3.733vw;
+}
+.box .marketing .marketing-body .center {
+  background: url('//imgw.pospal.cn/LandingPage/wxNearPush/images/close_loop_img_phone.png');
+  background-size: cover;
+  width: 50.533vw;
+  height: 55.333vw;
+  margin: auto;
+  position: relative;
+}
+.box .marketing .marketing-body .center #one {
+  position: absolute;
+  top: 4vw;
+  left: 24.667vw;
+  font-size: 4.8vw;
+  color: #cdf3df;
+}
+.box .marketing .marketing-body .center #outline {
+  font-size: 4vw;
+  color: #fff;
+  position: absolute;
+  top: 11.6vw;
+  left: 8.8vw;
+}
+.box .marketing .marketing-body .center #two {
+  position: absolute;
+  top: 26.667vw;
+  left: 37.333vw;
+  font-size: 4.8vw;
+  color: #cdf3df;
+}
+.box .marketing .marketing-body .center #lineon {
+  position: absolute;
+  top: 12.533vw;
+  left: 34.667vw;
+  font-size: 4.8vw;
+  color: #fff;
+}
+.box .marketing .marketing-body .center #three {
+  position: absolute;
+  top: 26.667vw;
+  left: 11.333vw;
+  font-size: 4.8vw;
+  color: #cdf3df;
+}
+.box .marketing .marketing-body .center #flow {
+  position: absolute;
+  top: 33.2vw;
+  left: 21.733vw;
+  font-size: 4.8vw;
+  color: #fff;
+}
+.box .marketing .marketing-body .end {
+  margin-bottom: 33.067vw;
+}
+.box .marketing-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.box .marketing-cell img {
+  width: 5.2vw;
+  margin-bottom: 1.067vw;
+}
+.box .marketing-cell .title {
+  color: #07C160;
+  font-size: 4vw;
+  margin-bottom: 2vw;
+}
+.box .marketing-cell .message {
+  color: #484C4E;
+  font-size: 3.2vw;
+}
+.box .free-get {
+  margin-top: 6.267vw;
+  margin-bottom: 5.067vw;
+  position: relative;
+  width: 100%;
+  height: 21.2vw;
+  background: url("//imgw.pospal.cn/LandingPage/wxNearPush/images/free-get-bg.png");
+  background-size: cover;
+}
+.box .free-get img {
+  width: 4.667vw;
+  position: absolute;
+  left: 10.267vw;
+  top: 4.267vw;
+}
+.box .free-get .phone {
+  color: #999;
+  font-size: 4vw;
+  position: absolute;
+  left: 8.667vw;
+  top: 9.867vw;
+}
+.box .free-get .free-project {
+  font-size: 4.8vw;
+  color: #FFF;
+  position: absolute;
+  top: 6.667vw;
+  left: 34.8vw;
+  letter-spacing: 0.667vw;
+}
+.box .to-appointment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 3.2vw 0 6.667vw 0;
+}
+.box .to-appointment .message {
+  font-size: 3.733vw;
+  font-weight: 400;
+  color: #777777;
+  margin-top: 4vw;
+  margin-bottom: 4.8vw;
+}
+.box .to-appointment .to-appointment-buttom {
+  position: fixed;
+  bottom: 4vw;
+  z-index: 1000;
+  width: 96vw;
+  height: 14.667vw;
+  box-shadow: 0vw 1.333vw 1.867vw 0 rgba(0, 0, 0, 0.2);
+  background-color: #ff6727;
+  border-radius: 13.333vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.box .to-appointment .to-appointment-buttom .title {
+  font-size: 4.8vw;
+  font-weight: 500;
+  color: #fff;
+}
+.box .to-appointment .to-appointment-buttom .content {
+  font-size: 2.667vw;
+  font-weight: 400;
+  color: #FEDED0;
+}
+.box .show-video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.box .show-video .tips {
+  margin-top: 4.133vw;
+  font-size: 3.2vw;
+  font-weight: 400;
+  color: #999;
+}
+.box .why {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 24.533vw;
+  margin-bottom: 22.667vw;
+}
+.box .why .title {
+  margin-bottom: 9.467vw;
+  height: 17.067vw;
+  width: 85.467vw;
+  background: url("../images/mobile/形状\ 11@2x.png");
+  background: url('//imgw.pospal.cn/LandingPage/wxNearPush/images/share11.png');
+  background-position: 50% 0;
+  background-size: auto 14.267vw;
+  background-repeat: no-repeat;
+  color: #484C4E;
+  font-size: 4.267vw;
+  font-weight: bold;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.box .why .info {
+  width: 82.667vw;
+  height: 34.667vw;
+  background: url('//imgw.pospal.cn/LandingPage/wxNearPush/images/share10.png');
+  background-size: 100%;
+  position: relative;
+  margin-bottom: 2.667vw;
+}
+.box .why .info .info-title {
+  font-size: 4.8vw;
+  color: #07c160;
+  font-weight: bold;
+  position: absolute;
+  left: 20.133vw;
+  top: 8.4vw;
+}
+.box .why .info .content:nth-child(2) {
+  color: #666;
+  font-size: 3.2vw;
+  font-weight: 500;
+  position: absolute;
+  left: 20.133vw;
+  top: 16vw;
+}
+.box .why .info .content:nth-child(3) {
+  color: #666;
+  font-size: 3.2vw;
+  font-weight: 500;
+  position: absolute;
+  left: 20.133vw;
+  top: 20.667vw;
+}
+.box .why__footer {
+  width: 80vw;
+  height: 26.667vw;
+  background: url('//imgw.pospal.cn/LandingPage/wxNearPush/images/mobileFontBGG.png');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.2vw;
+  color: #fff;
+  background-size: 100%;
+}
+.box .click-friends {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 24.533vw;
+}
+.box .click-friends .title {
+  margin-bottom: 9.467vw;
+  height: 17.067vw;
+  width: 85.467vw;
+  background: url('//imgw.pospal.cn/LandingPage/wxNearPush/images/share11.png');
+  background-position: 50% 0;
+  background-size: auto 14.267vw;
+  background-repeat: no-repeat;
+  color: #484C4E;
+  font-size: 4.267vw;
+  font-weight: bold;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.box .click-friends .show-message {
+  width: 80vw;
+  height: 45.6vw;
+  position: relative;
+  display: flex;
+}
+.box .click-friends .show-message .body {
+  width: 38.667vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.box .click-friends .show-message .body p {
+  font-weight: 400;
+  color: #333;
+  font-size: 3.2vw;
+  margin-top: 1.6vw;
+}
+.box .click-friends .show-message .message {
+  width: 53.333vw;
+  height: 17.333vw;
+  background: url('//imgw.pospal.cn/LandingPage/wxNearPush/images/rectangle10.png');
+  background-size: 100%;
+  position: relative;
+}
+.box .click-friends .show-message .message .message-title {
+  display: flex;
+  align-items: center;
+  color: #07c160;
+  font-size: 3.2vw;
+}
+.box .click-friends .show-message .message .message-title img {
+  width: 3.2vw;
+}
+.box .click-friends .show-message .message .message-content {
+  font-size: 3.2vw;
+}
+.box .click-friends .show-message #logo {
+  position: absolute;
+  left: 32.667vw;
+  top: 6.667vw;
+}
+.box .click-friends .show-message #logo .message-title {
+  position: absolute;
+  left: 6.667vw;
+  top: 3.333vw;
+}
+.box .click-friends .show-message #logo .message-content {
+  position: absolute;
+  left: 6.667vw;
+  top: 8vw;
+}
+.box .click-friends .show-message #copywriting {
+  position: absolute;
+  left: 32.667vw;
+  top: 24vw;
+}
+.box .click-friends .show-message #copywriting .message-title {
+  position: absolute;
+  left: 6.667vw;
+  top: 3.333vw;
+}
+.box .click-friends .show-message #copywriting .message-content {
+  position: absolute;
+  left: 6.667vw;
+  top: 8vw;
+}
+.box .click-friends .show-coupon {
+  width: 80vw;
+  height: 45.6vw;
+  margin-top: 5.067vw;
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.box .click-friends .show-coupon .body {
+  width: 38.667vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.box .click-friends .show-coupon .body p {
+  font-weight: 400;
+  color: #333;
+  font-size: 3.2vw;
+  margin-top: 1.6vw;
+}
+.box .click-friends .show-coupon .get-coupon {
+  position: absolute;
+  width: 53.333vw;
+  height: 14.667vw;
+  right: 32vw;
+  top: 16vw;
+  background: url('//imgw.pospal.cn/LandingPage/wxNearPush/images/rectangle8.png');
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box .click-friends .show-coupon .get-coupon p {
+  font-size: 3.2vw;
+  margin-left: -6vw;
+}
+.box .click-friends .show-coupon .get-coupon p img {
+  width: 3.2vw;
+}
+.box .click-friends .show-coupon .get-coupon p span {
+  color: #07c160;
+}
+.box .coupon {
+  margin-top: 27.2vw;
+  margin-bottom: 28.933vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.box .coupon .coupon-list:last-child {
+  margin-top: 4.533vw;
+}
+.box .coupon .title {
+  margin-bottom: 9.467vw;
+  height: 17.067vw;
+  width: 85.467vw;
+  background: url('//imgw.pospal.cn/LandingPage/wxNearPush/images/share11.png');
+  background-position: 50% 0;
+  background-size: auto 14.267vw;
+  background-repeat: no-repeat;
+  color: #484C4E;
+  font-size: 4.267vw;
+  font-weight: bold;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.box .coupon .coupon-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box .coupon .coupon-list .coupon-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 3.2vw;
+}
+.box .coupon .coupon-list .coupon-info img {
+  width: 26.667vw;
+}
+.box .coupon .coupon-list .coupon-info p {
+  margin-top: 2.667vw;
+  color: #333;
+  font-weight: 400;
+  font-size: 3.2vw;
+}
+.box .capture-customer {
+  width: 100%;
+  height: 168.4vw;
+  background: url('//imgw.pospal.cn/LandingPage/wxNearPush/images/bgFooterMobile.png');
+  background-size: 100%;
+  padding-top: 8.4vw;
+}
+.box .capture-customer .body {
+  width: 86vw;
+  height: 96.267vw;
+  margin: 0 auto;
+  background: url('//imgw.pospal.cn/LandingPage/wxNearPush/images/group20.png');
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.box .capture-customer .body .title {
+  font-size: 6.4vw;
+  color: #07c160;
+  font-weight: bold;
+  margin-top: 9.333vw;
+}
+.box .capture-customer .body .tips {
+  margin-top: 2.8vw;
+  color: #333;
+  font-size: 3.2vw;
+  font-weight: 500;
+  margin-bottom: 2.667vw;
+}
+.box .capture-customer .to-call {
+  width: 78.667vw;
+  height: 30.533vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 6.533vw auto 0 auto;
+}
+.box .capture-customer .to-call .info {
+  z-index: 2;
+}
+.box .capture-customer .to-call .info .title {
+  font-size: 5.333vw;
+  color: #07c160;
+  font-weight: bold;
+  margin-bottom: 2.4vw;
+}
+.box .capture-customer .to-call .info__content {
+  font-size: 3.733vw;
+  font-weight: 400;
+  color: #fff;
+}
+.box .capture-customer .to-call .logo {
+  margin-left: -2.667vw;
+  width: 30.267vw;
+  z-index: 1;
+}
+.box .capture-customer .number {
+  width: 78.667vw;
+  margin: 0 auto;
+  font-size: 8vw;
+  padding-left: 4vw;
+  color: #07c160;
+}
+.box .capture-customer .time {
+  padding-left: 4vw;
+  width: 78.667vw;
+  margin: 0 auto;
+  font-size: 3.2vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #fff;
+}
+.box .capture-customer .time img {
+  width: 2.4vw;
+  margin-right: 1.333vw;
+}
+.box .capture-customer .time span {
+  color: #07c160;
+}
+.body-footer {
+  width: 56vw;
+  height: 13.333vw;
+  border-radius: 13.333vw;
+  background-color: #ff6727;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4.8vw;
+  color: #fff;
+  font-weight: 400;
+}
+.form-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.333vw;
+}
+.form-data .form-control {
+  margin-bottom: 2.667vw;
+  width: 64vw;
+  height: 10.667vw;
+  font-size: 3.2vw;
+}
+.form-data .form-control :last-child {
+  margin-bottom: 0;
+}
+.form-data .form-control-top {
+  margin-bottom: 4vw;
+  width: 84.133vw;
+  height: 13.333vw;
+  font-size: 4vw;
+}
+.form-data .form-control-top :last-child {
+  margin-bottom: 0;
+}

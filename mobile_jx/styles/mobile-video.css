@@ -1,0 +1,299 @@
+.psVideo {
+  width: 93.333vw;
+  height: 53.333vw;
+  margin: 0 auto;
+  text-align: center;
+  transition: all 0.5s;
+  position: relative;
+  box-shadow: 1.067vw 1.067vw 3.2vw 0 rgba(132, 146, 165, 0.17);
+  border-radius: 1.6vw;
+}
+.psVideo-curtain {
+  width: 93.333vw;
+  height: 53.333vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+  border-radius: 1.6vw;
+}
+.psVideo-slogan {
+  position: absolute;
+  width: 100%;
+  left: auto;
+  right: auto;
+  top: 5.333vw;
+  color: #fff;
+}
+.psVideo-slogan .slogan {
+  font-size: 6.4vw;
+  font-weight: bold;
+}
+.psVideo-slogan .content {
+  margin-top: 2.933vw;
+  font-size: 2.667vw;
+  font-weight: 500;
+}
+.my-psVideo {
+  width: 93.333vw;
+  height: 53.333vw;
+  position: relative;
+  margin: 0 auto;
+  cursor: pointer;
+  box-shadow: 1.067vw 1.067vw 3.2vw 0 rgba(132, 146, 165, 0.17);
+  border-radius: 1.6vw;
+  z-index: 5;
+}
+.psVideo-play-one {
+  width: 13.6vw;
+  height: 13.6vw;
+  background: url(//imgw.pospal.cn/LandingPage/wxNearPush/images/iconPlay.png) no-repeat;
+  border-radius: 100%;
+  background-size: cover;
+  position: absolute;
+  top: 23.867vw;
+  left: 39.867vw;
+  display: block;
+  cursor: pointer;
+}
+/* .psVideo-play-one:hover {
+  background: url(../images/hover-play.jpg) no-repeat;
+  border-radius: 100%;
+  background-size: cover;
+} */
+.my-psVideo:hover {
+  box-shadow: 1.6vw 1.6vw 2.667vw 0 rgba(163, 178, 201, 0.32);
+}
+.psVideo-play-footer {
+  position: absolute;
+  width: 100%;
+  height: 4.8vw;
+  bottom: 0;
+}
+.psVideo-shade {
+  position: absolute;
+  height: 8vw;
+  width: 100%;
+  bottom: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+  transition: opacity 0.3s;
+  border-radius: 1.6vw;
+}
+.psVideo-shade-on {
+  opacity: 1;
+}
+.psVideo-shade-off {
+  opacity: 0;
+}
+.psVideo-play-footer .psVideo-play-btn {
+  width: 3.067vw;
+  height: 3.067vw;
+  float: left;
+  margin-left: 3%;
+  cursor: pointer;
+  z-index: 3;
+}
+.psVideo-stop {
+  background: url(//imgw.pospal.cn/iconPlay/wxNearPush/images/stop.png) no-repeat;
+  background-size: cover;
+}
+.psVideo-play {
+  background: url(//imgw.pospal.cn/iconPlay/wxNearPush/images/play.png) no-repeat;
+  background-size: cover;
+}
+.psVideo-time {
+  float: left;
+  font-size: 2vw;
+  line-height: 3.067vw;
+  color: #fff;
+  margin-left: 1.333vw;
+  z-index: 2;
+}
+.psVideo-right-btn {
+  float: right;
+  margin-right: 3%;
+  z-index: 4;
+}
+.psVideo-btn {
+  width: 3.067vw;
+  height: 3.067vw;
+  margin-left: 2.667vw;
+  float: right;
+  cursor: pointer;
+}
+.sound {
+  position: relative;
+  background: url(//imgw.pospal.cn/iconPlay/wxNearPush/images/sound.png) no-repeat;
+  background-size: cover;
+}
+.jinyin {
+  position: relative;
+  background: url(//imgw.pospal.cn/iconPlay/wxNearPush/images/jinyin.png) no-repeat;
+  background-size: cover;
+}
+.psVideo-progress {
+  width: 95%;
+  background: #fff;
+  height: 0.267vw;
+  position: absolute;
+  bottom: 6.667vw;
+  left: 2.5%;
+  cursor: pointer;
+  transition: bottom 0.1s;
+  border-radius: 0.4vw;
+}
+.psVideo-progress:hover {
+  height: 0.8vw;
+  bottom: 6.4vw;
+}
+.psVideo-progress .psVideo-timeBar {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: block;
+  z-index: 2;
+  width: 0;
+  background: #202020;
+  border-radius: 0.4vw;
+}
+#soundBtn:hover .sound-list,
+#soundBtn:hover .konge {
+  display: block;
+}
+.sound-list {
+  display: none;
+  position: absolute;
+  width: 4vw;
+  height: 11.333vw;
+  bottom: 5.333vw;
+  left: -0.8vw;
+  border-radius: 0.4vw;
+  text-align: center;
+  background: #000;
+}
+.konge {
+  display: none;
+  position: absolute;
+  width: 4vw;
+  height: 2.267vw;
+  bottom: 3.067vw;
+  left: -0.8vw;
+  text-align: center;
+  z-index: 4;
+}
+.sound-number {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  height: 2.667vw;
+  padding-top: 0.667vw;
+  line-height: 2.667vw;
+  font-size: 2vw;
+  color: #fff;
+}
+.volume {
+  position: relative;
+  margin: auto;
+  margin-top: 0.667vw;
+  width: 0.933vw;
+  height: 6.667vw;
+  border-radius: 0.267vw;
+  background: aqua;
+  overflow: hidden;
+}
+.volumeBar {
+  display: block;
+  width: 100%;
+  height: 5.333vw;
+  position: absolute;
+  background-color: #fff;
+  z-index: 2;
+}
+.psVideo-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -4vw;
+  margin-left: -4.667vw;
+  width: 9.333vw;
+  height: 8vw;
+  z-index: 30;
+}
+.psVideo-loading span {
+  display: inline-block;
+  width: 1.333vw;
+  height: 0;
+  position: absolute;
+  background: rgba(96, 191, 242, 0.53);
+  top: 50%;
+  margin-top: 0;
+  left: 0;
+}
+.psVideo-loading span:nth-child(1) {
+  animation: span1 1s linear infinite;
+}
+.psVideo-loading span:nth-child(2) {
+  height: 4vw;
+  top: 50%;
+  margin-top: -2vw;
+  margin-left: 2.667vw;
+  animation: span2 1s linear infinite;
+}
+.psVideo-loading span:nth-child(3) {
+  height: 8vw;
+  top: 50%;
+  margin-top: -4vw;
+  margin-left: 5.333vw;
+  animation: span3 1s linear infinite;
+}
+@keyframes span1 {
+  0% {
+    height: 0;
+    margin-top: 0;
+  }
+  50% {
+    height: 6.667vw;
+    margin-top: -3.333vw;
+  }
+  100% {
+    height: 0;
+    margin-top: 0;
+  }
+}
+@keyframes span2 {
+  0% {
+    height: 4vw;
+    margin-top: -2vw;
+  }
+  25% {
+    height: 8vw;
+    margin-top: -4vw;
+  }
+  50% {
+    height: 4vw;
+    margin-top: -2vw;
+  }
+  75% {
+    height: 0;
+    margin-top: 0;
+  }
+  100% {
+    height: 4vw;
+    margin-top: -2vw;
+  }
+}
+@keyframes span3 {
+  0% {
+    height: 8vw;
+    margin-top: -4vw;
+  }
+  50% {
+    height: 0;
+    margin-top: 0;
+  }
+  100% {
+    height: 8vw;
+    margin-top: -4vw;
+  }
+}

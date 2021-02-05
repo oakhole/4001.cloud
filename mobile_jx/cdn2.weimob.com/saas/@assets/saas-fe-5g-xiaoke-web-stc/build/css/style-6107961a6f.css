@@ -1,0 +1,148 @@
+header {
+    height: 9.33333rem;
+    background: url("../img/index/banner.png?20200601") no-repeat center;
+    background-size: 100% 100%;
+    text-align: center;
+    color: #2c3a64
+}
+
+header h2 {
+    font-size: 1.04rem;
+    margin-top: 1.90667rem;
+    line-height: 1.46667rem
+}
+
+header h5 {
+    letter-spacing: .06227rem;
+    line-height: .78667rem;
+    font-weight: 400
+}
+
+header p {
+    margin-top: .16rem;
+    color: #515e84;
+    line-height: .64rem
+}
+
+.xiaoke-title {
+    font-size: .53333rem;
+    color: #555;
+    letter-spacing: 1px;
+    line-height: .77333rem
+}
+
+.xiaoke {
+    width: 10rem;
+    margin: 0 auto
+}
+
+.xiaoke ul {
+    padding: .4rem .26667rem 1.17333rem .26667rem
+}
+
+.xiaoke li {
+    width: 4.2rem;
+    height: 4.89333rem;
+    background: #FFF;
+    box-shadow: 0 .13333rem .53333rem 0 rgba(111, 118, 140, .1);
+    border-radius: .32rem;
+    margin-top: .53333rem
+}
+
+.xiaoke .img {
+    width: 100%;
+    margin-top: .18667rem;
+    height: 2.66667rem;
+    background: url("../img/index/1L_icon.png") no-repeat;
+    background-size: 100% auto
+}
+
+.xiaoke .img1 {
+    background-position: 0 0
+}
+
+.xiaoke .img2 {
+    background-position: 0 -2.8rem
+}
+
+.xiaoke .img3 {
+    background-position: 0 -5.6rem
+}
+
+.xiaoke .img4 {
+    background-position: 0 -8.4rem
+}
+
+.xiaoke-img {
+    width: 100%
+}
+
+.xiaoke-footer {
+    height: 7.6rem
+}
+
+.xiaoke-footer ul {
+    padding: 0 .8rem
+}
+
+.xiaoke-footer ul p {
+    font-size: .26667rem;
+    color: #191919;
+    line-height: .4rem;
+    margin-top: .21333rem
+}
+
+.xiaoke-bottom {
+    height: 5.2rem;
+    background: url("../img/index/9L_bg.png");
+    background-size: 100% auto;
+    color: #fff;
+    text-align: left;
+    padding: 0 .53333rem
+}
+
+.xiaoke-bottom h4 {
+    margin-top: 2.30667rem
+}
+
+.xiaoke-ipc {
+    padding: .58667rem 0;
+    background: #0d1327;
+    margin-bottom: 1.32rem
+}
+
+.xiaoke-ipc p:first-child {
+    font-size: .29333rem;
+    color: #82828c;
+    line-height: .53333rem
+}
+
+.xiaoke-ipc p:last-child a {
+    margin-top: .13333rem;
+    font-size: .29333rem;
+    color: #b4b4c1;
+    line-height: .53333rem
+}
+
+.bg {
+    background: #fbfcff
+}
+
+.b-img {
+    width: 2rem;
+    height: 2rem;
+    background: url("../img/index/8L_icon.png");
+    background-size: 100% auto
+}
+
+.b-img1 {
+    background-position: 0 0
+}
+
+.b-img2 {
+    background-position: 0 -2.13333rem
+}
+
+.b-img3 {
+    background-position: 0 -4.26667rem
+}
