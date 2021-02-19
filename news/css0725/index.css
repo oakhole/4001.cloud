@@ -324,6 +324,7 @@ a[title="站长统计"] {
   text-align: center;
   color: #fff;
   overflow: hidden;
+  text-decoration: none;
 }
 
 .nav a span {
