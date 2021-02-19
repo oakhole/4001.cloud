@@ -1141,11 +1141,116 @@ header .web-name {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+ 
 }
 
 .swiper .swiper-wrapper .swiper-slide img{
   height: 6.74rem;
-  width: 4.8rem
+  width: 4.8rem;
+  
+}
+
+.swiper .swiper-wrapper .swiper-slide a {
+	position: relative;
+}
+
+.swiper .swiper-wrapper .swiper-slide .ul-s {
+	position: absolute;
+	bottom: .2rem;
+	left: .3rem;
+	font-size: .25rem;
+	line-height: .35rem;
+	color: #007DDB;
+}
+
+.swiper .swiper-wrapper .swiper-slide .ul-a {
+	position: absolute;
+	top: 1.2rem;
+	left: .3rem;
+}
+
+.swiper .swiper-wrapper .swiper-slide .ul-a h4{
+	font-size: .25rem;
+	color: #007DDB;
+	padding: .05rem;
+
+}
+
+.swiper .swiper-wrapper .swiper-slide .ul-a p{
+	font-size: .20rem;
+	line-height: .25rem;
+	color: #333;
+	padding: .05rem;
+}
+
+
+
+.swiper .swiper-wrapper .swiper-slide .ul-s li {
+	padding: .1rem 0;
+	font-weight: 700;
+}
+
+.swiper .swiper-wrapper .swiper-slide .ul-s li b {
+	padding-right: .05rem;
+}
+
+.swiper .swiper-wrapper .swiper-slide .ul-b {
+	position: absolute;
+	top: 1.2rem;
+	left: .3rem;
+}
+
+.swiper .swiper-wrapper .swiper-slide .ul-b h4{
+	font-size: .25rem;
+	color: #007DDB;
+	padding: .14rem;
+
+}
+
+.swiper .swiper-wrapper .swiper-slide .ul-b .li-one {
+	margin-top: .50rem;
+	
+}
+
+.swiper .swiper-wrapper .swiper-slide .ul-b p{
+	font-size: .20rem;
+	line-height: .30rem;
+	color: #333;
+	padding: .05rem;
+}
+
+.swiper .swiper-wrapper .swiper-slide .ul-b li b {
+	padding-right: .05rem;
+}
+
+.swiper .swiper-wrapper .swiper-slide .ul-c {
+	position: absolute;
+	top: 1.3rem;
+	left: 0.1rem;
+	
+}
+.swiper .swiper-wrapper .swiper-slide .ul-c h4{
+	font-size: .25rem;
+	color: #ccc;
+	padding: .14rem;
+
+}
+
+.swiper .swiper-wrapper .swiper-slide h2 {
+	color: #000000;
+	
+}
+
+.swiper .swiper-wrapper .swiper-slide a {
+	-webkit-tap-highlight-color: transparent;
+}
+
+.swiper .swiper-wrapper .swiper-slide .ul-c p{
+	margin-top: .2rem;
+	font-size: .20rem;
+	line-height: .40rem;
+	color: #ccc;
+	padding: .05rem;
 }
 
 .swiper .swiper-wrapper .swiper-slide.swiper-slide-active img {
@@ -1165,3 +1270,7 @@ header .web-name {
   -khtml-opacity: .5;
   opacity: .5;
 }
+
+
+
+

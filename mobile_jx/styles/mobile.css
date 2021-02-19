@@ -200,7 +200,7 @@
   font-size: 3.2vw;
   position: absolute;
   left: 20.8vw;
-  top: 49.6vw;
+  top: 48vw;
 }
 .box .marketing {
   width: 100%;
@@ -763,3 +763,4 @@
 .form-data .form-control-top :last-child {
   margin-bottom: 0;
 }
+ 
