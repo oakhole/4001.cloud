@@ -90,6 +90,7 @@ var base_url = 'https://4001.cn';
 	//默认参数
 	var defaluts = {};
 	$(".downSelect-item").on('click',function(){
+		console.log(1111111)
 		window.document.location = $(this).data("select-link");
 	});
 	

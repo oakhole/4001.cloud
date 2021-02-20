@@ -5829,38 +5829,6 @@ h2.tit::after {
 	padding-top: 30px;
 }
 
-/* 头部下拉*/
-.downSelect {
-	display: none;
-	width: 130px;
-	height: 300px;
-	background-color: #e60011;
-}
-
-.hIndex :hover .downSelect {
-	display: block;
-}
-
-.downSelect-item {
-	width: 100%;
-	height: 25%;
-	border-bottom: 1px solid #FD614F;
-	display: flex;
-	align-items: center;
-	justify-content: left;
-}
-
-.down-item-img {
-	width: 40%;
-	height: 100%;
-}
-
-.down-item-txt {
-	width: 60%;
-	height: 100%;
-	float: left;
-	text-align: left;
-}
 
 /* 更多产品 */
 .product {
@@ -5895,4 +5863,50 @@ h2.tit::after {
 	width: 70%;
 	height: 333px;
 	display: none;
+}
+
+/* 头部下拉*/
+.downSelect {
+	display: none;
+	width: 130px;
+	height: 300px;
+	background-color: #e60011;
+}
+
+.nav .hIndex :hover .downSelect {
+	display: block;
+}
+
+.xiao_nav .hIndex :hover .downSelect {
+	display: block;
+}
+
+/* .nav .hIndex :hover{
+	background-color: #000000;
+} */
+
+.downSelect-item {
+	width: 100%;
+	height: 25%;
+	border-bottom: 1px solid #FD614F;
+	display: flex;
+	align-items: center;
+	justify-content: left;
+}
+
+.down-item-img {
+	width: 40%;
+	height: 100%;
+}
+
+.downImg {
+	width: 16px;
+	height: 16px;
+}
+
+.down-item-txt {
+	width: 60%;
+	height: 100%;
+	float: left;
+	text-align: left;
 }
