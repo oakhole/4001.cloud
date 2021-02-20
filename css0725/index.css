@@ -369,6 +369,7 @@ a[title="站长统计"] {
 	margin-bottom: 80px;
 }
 
+
 .foot a {
 	color: #fff;
 }
@@ -493,11 +494,11 @@ a[title="站长统计"] {
 }
 
 .banner.banner1 {
-	background: url(/cms/banner/view/0) no-repeat center top;
+	background: url(cms/banner/view/0) no-repeat center top;
 }
 
 .banner.banner2 {
-	background: url(/cms/banner/view/1) no-repeat center top;
+	background: url(cms/banner/view/1) no-repeat center top;
 }
 
 /*.banner.banner-hd {
@@ -5837,6 +5838,10 @@ h2.tit::after {
 	display: block;
 }
 
+.xiao_nav .hIndex :hover .downSelect {
+	display: block;
+}
+
 /* .nav .hIndex :hover{
 	background-color: #000000;
 } */
@@ -5852,7 +5857,6 @@ h2.tit::after {
 
 .down-item-img {
 	width: 40%;
-	height: 100%;
 }
 
 .downImg {
@@ -5975,7 +5979,7 @@ h2.tit::after {
 
 .show_cell {
 	width: 1020px;
-	margin: 204px auto 224px auto;
+	margin: 0px auto 224px auto;
 }
 
 .show_cell .left_card {
@@ -6085,4 +6089,81 @@ h2.tit::after {
 .all_txt {
 	font-size: 16px;
 	line-height: 22px;
+}
+
+/*页头 head E*/
+/*导航 公用头部 B*/
+.xiao_nav {
+	height: 64px;
+	background: #e60011;
+	box-shadow: 0px 3px 0px 0px rgba(117, 0, 9, 0.9);
+	position: relative;
+	z-index: 10;
+}
+
+.xiao_nav a {
+	position: relative;
+	float: left;
+	width: 12%;
+	height: 64px;
+	line-height: 65px;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	color: black;
+	overflow: hidden;
+}
+
+.xiao_nav a :hover{
+	color: red;
+}
+
+.xiao_nav a span {
+	position: relative;
+	z-index: 1;
+}
+
+.xiao_nav .bg-block {
+	width: 100%;
+	height: 64px;
+	background: #b5000d;
+	position: absolute;
+	top: 64px;
+	left: 0;
+}
+
+.xiao_nav a sup {
+	position: absolute;
+	top: 16px;
+	z-index: 1;
+	right: 12px;
+	display: block;
+	line-height: 14px;
+}
+
+.xiao_nav a.hot:after {
+	content: "";
+	display: inline-block;
+	width: 23px;
+	height: 13px;
+	position: absolute;
+	top: 11px;
+	right: 20px;
+	background: url(../img0725/suggest-sprite.png) no-repeat -65px -66px;
+}
+
+.more_button {
+    width: 150px;
+    height: 40px;
+    border: 1px solid #4f7afd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 20px;
+	background-color: #4f7afd;
+	color: white;
+	/* margin-top: 20px; */
+	box-shadow: 0 0.2rem 0.5rem 0 rgb(79 122 253 / 50%);
 }
