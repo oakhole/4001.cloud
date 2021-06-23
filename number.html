@@ -13,6 +13,7 @@
 		<link rel="stylesheet" href="css0725/bootstrap.css">
 		<link rel="stylesheet" href="css0725/index.css?69818" />
 		<link href="https://libs.baidu.com/fontawesome/4.0.3/css/font-awesome.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css0725/number.css" />
 		<link rel="stylesheet" href="css0725/table.css" type="text/css" />
 		<script src="js0725/city.js" type="text/javascript"></script>
 	</head>
@@ -285,7 +286,7 @@
 						<span>实用功能</span>
 					</a>
 					<a href="number.html">
-						<span>选号指南</span>
+						<span>快速开通</span>
 					</a>
 
 					<a href="./changjianwenti.html">
@@ -318,7 +319,7 @@
 		<div class="wrap">
 			<div class="hide_box"></div>
 			<div class="shang_box">
-				<a class="shang_close" href="javascript:void(0)" onClick="dashangToggle()" title="关闭"><img
+				<a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()" title="关闭"><img
 						src="./img0725/saoma/close.jpg" alt="取消" /></a>
 				<div class="shang_tit">
 					<p>打开微信扫一扫,开通号码</p>
@@ -339,6 +340,67 @@
 						<em>号码筛选</em>
 					</h3>
 				</div>
+				<div class="mainbox" style="border: 1px solid #ddd;border-bottom: none;">
+					<div class="number-search" style="padding-left: 10px;">
+						<ul class="list-search clearfix">
+							<li>
+								<input class="text" type="text" size="1" value="4" disabled="disabled">
+							</li>
+							<li>
+								<input class="text" type="text" size="1" value="0" disabled="disabled">
+							</li>
+							<li>
+								<input class="text" type="text" size="1" value="0" disabled="disabled">
+							</li>
+							<li class="break">
+								—
+							</li>
+							<li>
+								<input class="text" type="text" size="1" name="numberName" id="n_3" value=""
+									maxlength="1" onmousedown="$(this).val('').focus();" onkeyup="Check_Type1(this,4);">
+							</li>
+							<li>
+								<input class="text" type="text" size="1" name="numberName" id="n_4" value=""
+									maxlength="1" onmousedown="$(this).val('').focus();" onkeyup="Check_Type1(this,5);">
+							</li>
+							<li>
+								<input class="text" type="text" size="1" name="numberName" id="n_5" value=""
+									maxlength="1" onmousedown="$(this).val('').focus();" onkeyup="Check_Type1(this,6);">
+							</li>
+							<li class="break">
+								—
+							</li>
+							<li>
+								<input class="text" type="text" size="1" name="numberName" id="n_6" value=""
+									maxlength="1" onmousedown="$(this).val('').focus();" onkeyup="Check_Type1(this,7);">
+							</li>
+							<li>
+								<input class="text" type="text" size="1" name="numberName" id="n_7" value=""
+									maxlength="1" onmousedown="$(this).val('').focus();" onkeyup="Check_Type1(this,8);">
+							</li>
+							<li>
+								<input class="text" type="text" size="1" name="numberName" id="n_8" value=""
+									maxlength="1" onmousedown="$(this).val('').focus();" onkeyup="Check_Type1(this,9);">
+							</li>
+							<li>
+								<input class="text" type="text" size="1" name="numberName" id="n_9" value=""
+									maxlength="1" onmousedown="$(this).val('').focus();" onkeyup="Check_Type1(this,0);">
+							</li>
+							<li class="last-2">
+								<button class="btn btn-search" name="n_1" id="n_1" onclick="searchNumber()">
+									搜索
+								</button>
+							</li>
+							<li class="last">
+								<button class="btn btn-reset" name="n_0" id="n_0" onclick="reset()">
+									重置
+								</button>
+								<input type="hidden" name="number" id="number">
+							</li>
+						</ul>
+					</div>
+
+				</div>
 				<div class="attribute-box">
 					<div class="attr-list">
 						<div class="sl-wrap cl">
@@ -355,7 +417,7 @@
 						<div class="sl-wrap cl">
 							<div class="sl-key">普通行业</div>
 							<div class="sl-value valueList" data-key="epstype">
-								<ul class="cl">
+								<ul class="cl" style="color: #666;">
 									<li data-val="" class="curr">全部</li>
 									<li data-val="518">518（我要发）</li>
 									<li data-val="158">158（要我发）</li>
@@ -455,7 +517,10 @@
 				<div class="sortbar sortbar400">
 					<div class="sort-row">
 						<div id="page-block">
-							<div class="page-wrap close-click"></div>
+							<div class="page-wrap close-click">
+								<a onclick="showCaleeNumberList()" class="ico-f5" style="margin-top:5px;"><img
+										style="width: 20px;height: 20px;" src="img0725/ico.png">换一批</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -482,7 +547,7 @@
 						<span class="s1">
 							{{this.number}}
 						</span>
-						
+
 					</div>
 					<div class="p-price">
 						<span style="color: red;font-weight: bold;">
@@ -490,8 +555,8 @@
 						</span>
 					</div>
 					<div class="p-operate">
-						<a onclick="openNumber({{this.number}})" class="btn-buy" target="_blank">
-							预约
+						<a onclick="openNumber({{this.number}})" class="btn-buy" style="cursor: pointer;">
+							在线预开通
 						</a>
 					</div>
 					<!--   <div class="p-mask"></div> -->
@@ -503,7 +568,7 @@
 			<div class="wrap cf">
 				<div class="fl flink">
 					<div class="jumpUrl cf">
-						<a href="./number.html">选号指南</a><span>|</span>
+						<a href="./number.html">快速开通</a><span>|</span>
 						<a href="./allfunction.html">实用功能</a><span>|</span>
 						<a href="./changjianwenti.html">常见问题</a><span>|</span>
 						<a href="./index.html#conectUs">联系我们</a><span>
@@ -649,6 +714,41 @@
 				mainCell: ".bd .banner-box",
 				autoPlay: true
 			});
+
+			function reset() {
+				$(".list-search li input[name='numberName']").val("");
+				$("#number").val("");
+			}
+
+			//判断是否0-9
+			function Check_Type1(d, n) {
+				var re = /^[0-9]$/,
+					v = $(d);
+				if (v.val() != "") {
+					console.log();
+					if (v.val() == '*') {
+						$("#n_" + n).focus().select();
+					} else if (!re.test(v.val())) {
+						v.focus();
+					} else {
+						$("#n_" + n).focus().select();
+					}
+				}
+				if (n == 4) {
+					Check_Type();
+				}
+			}
+
+			function Check_Type() {
+				var t = $("#n_3"),
+					tv = t.val();
+				if (tv != "1" && tv != "7") {
+					alert("第四位请输入1或7!");
+
+					return false;
+				}
+				$("#n_4").focus().select();
+			}
 		</script>
 		<script>
 			function openZoosUrl(url, data) {

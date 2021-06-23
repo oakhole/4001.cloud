@@ -1,5 +1,5 @@
 var BASE_URL = "https://logocloud.cn";
-var CORAL_URL = "http://localhost/api";
+var CORAL_URL = "http://192.168.3.161/api";
 
 function obj2url() {
 	var get = "";
@@ -54,22 +54,24 @@ var numberListTemplate = Handlebars.compile($("#entry-template").html());
  * 展现号码列表
  * @param  {map} data  数据集合
  */
-var showCaleeNumberList = function() {
+function showCaleeNumberList(pattern) {
+	console.log(pattern);
 	$("#number-list li").remove();
 	$(".spinner").show();
 
 	var month_fee = $('[data-key="month_fee"] .curr').data("val");
-	var pattern = $('[data-key="epstype"] .curr').data("val");
-	$('[data-key="epstype"] .curr').each(function() {
-		if ($(this).data("val")) {
-			pattern = $(this).data("val");
+	if (!pattern) {
+		pattern = $('[data-key="epstype"] .curr').data("val");
+		$('[data-key="epstype"] .curr').each(function() {
+			if ($(this).data("val")) {
+				pattern = $(this).data("val");
+			}
+		});
+
+		if ($(".m8 input").val()) {
+			pattern = $(".m8 input").val();
 		}
-	});
-
-	if ($(".m8 input").val()) {
-		pattern = $(".m8 input").val();
 	}
-
 	var isEnd = 1;
 
 	$.ajax({
@@ -87,7 +89,10 @@ var showCaleeNumberList = function() {
 			for (var i = 0; i < data.length; i++) {
 				var str = data[i].callee_number;
 				var month_fee = data[i].month_fee;
-				newData.push({'number':str,'month_fee':month_fee});
+				newData.push({
+					'number': str,
+					'month_fee': month_fee
+				});
 			}
 			console.log(newData);
 			$(".spinner").hide();
@@ -96,6 +101,36 @@ var showCaleeNumberList = function() {
 		.fail(function() {})
 		.always(function() {});
 };
+
+
+
+function searchNumber() {
+	var t = $("#n_3"),
+		tv = t.val(),
+		ov, s = true,
+		i;
+	// if (tv != "1" && tv != "7") {
+	//     alert("第四位请输入1或7!");
+	//     t.focus();
+	//     return false;
+	// }
+	if (tv == "") {
+		tv += "*";
+	}
+	for (i = 4; i < 10; i++) {
+		ov = $("#n_" + i).val();
+		if (i == 3 && ov == "") {
+			tv += "*";
+		} else if (ov != "") {
+			tv += ov;
+		} else {
+			tv += "*";
+		}
+	}
+	const number = '400' + tv;
+	console.log(number);
+	showCaleeNumberList(number);
+}
 
 $(function() {
 	wap_judge();
@@ -110,13 +145,17 @@ $(function() {
 	});
 });
 // 开通号码
-var paying = "";
+var paying = 0;
 var timeId = "";
 var openId = "";
+var number = "";
+//设置轮询次数
+var s = 0;
 
 function openNumber(e) {
+	paying = 0;
 	dashangToggle();
-	var number = e;
+	number = e;
 	console.log(number);
 	$(this).addClass('checked').siblings('.pay_item').removeClass('checked');
 	$.get(CORAL_URL + "/oauth/wx/qrCode?args=" + number,
@@ -127,40 +166,58 @@ function openNumber(e) {
 			$(".shang_payimg img").attr("src", src);
 		});
 	timeId = setInterval(() => {
-		checkPaymentDone(number);
-	}, 5000);
+		if (paying == 1) {
+			clearInterval(timeId);
+		} else if (paying == 0) {
+			checkPaymentDone(number);
+		};
+	}, 3000)
+}
+
+function checkPaymentDone(number) {
+	$.get(CORAL_URL + '/oauth/wx/isLogin/' + number).then(response => {
+		if (response.code == 0) {
+			paying = 1;
+			openId = response.data.openId;
+			document.getElementById("caption").innerHTML = "扫码成功";
+			$.get(CORAL_URL + '/tenant/bookRepo/occupy?calleeNumber=' + number + '&companyName=' + openId)
+				.then(res => {
+					dashangToggle();
+					logout();
+					if (res.code == 0) {
+						document.getElementById("caption").innerHTML = "扫描微信二维码";
+						const url = 'https://kt.4001.cn/?openId=' + openId + "&number=" + number;
+						//打开新的页面
+						newWin(url,"openURL")
+						// window.history.back(-1);
+					} else {
+						alert(res.msg);
+						document.getElementById("caption").innerHTML = "扫描微信二维码";
+					}
+				});
+		};
+	})
+}
+//打开表单
+function newWin(url, id) {
+	var a = document.createElement('a');
+	a.setAttribute('href', url);
+	a.setAttribute('target', '_blank');
+	a.setAttribute('id', id);
+	// 防止反复添加
+	if (!document.getElementById(id)) document.body.appendChild(a);
+	a.click();
 }
 
 function dashangToggle() {
+	clearInterval(this.timeId);
+	paying = 0;
 	$(".hide_box").fadeToggle();
 	$(".shang_box").fadeToggle();
 }
 
-function checkPaymentDone(number, timeId) {
-	$.get(CORAL_URL + '/oauth/wx/isLogin/' + number).then(response => {
+function logout() {
+	$.get(CORAL_URL + '/oauth/wx/logout/' + number).then(response => {
 		console.log(response);
-		if (response.code == 0) {
-			clearTimeout(this.timeId);
-			openId = response.data.openId;
-			document.getElementById("caption").innerHTML = "扫码成功";
-			paying = 'success';
-			if (paying == 'success') {
-				paying = 'false';
-				$.get(CORAL_URL + '/tenant/bookRepo/occupy?calleeNumber=' + number + '&companyName=' + openId)
-					.then(res => {
-						if (res.code == 0) {
-							dashangToggle();
-							document.getElementById("caption").innerHTML = "扫描微信二维码";
-							window.open('http://localhost:8010?openId=' + openId + "&number=" + number,
-								"_blank");
-							// window.history.back(-1);
-						} else {
-							alert(res.msg);
-							dashangToggle();
-							document.getElementById("caption").innerHTML = "扫描微信二维码";
-						}
-					});
-			};
-		};
-	})
+	});
 }

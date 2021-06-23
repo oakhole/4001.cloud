@@ -1606,7 +1606,7 @@ h2.tit::after {
 }
 
 /* 爆款套餐 E */
-/* 选号指南B */
+/* 快速开通B */
 .cheats .des {
 	margin: 25px 0 15px;
 	line-height: 24px;
@@ -1836,7 +1836,7 @@ h2.tit::after {
 	background: url(../img0725/hot2.png);
 }
 
-/* 选号指南E */
+/* 快速开通E */
 /*  */
 .more-bt {
 	padding: 0 5px;
@@ -5100,7 +5100,7 @@ h2.tit::after {
 	margin: 5px 2px 6px 0;
 	height: 22px;
 	line-height: 20px;
-	color: black;
+	color: #666;
 	cursor: pointer;
 }
 
@@ -5473,8 +5473,8 @@ h2.tit::after {
 	position: relative;
 	float: left;
 	height: 100px;
-	border-bottom: 1px solid #eee;
-	border-left: 1px solid #eee;
+	/* border-bottom: 1px solid #eee;
+	border-left: 1px solid #eee; */
 	margin-left: -1px;
 	margin-bottom: -1px;
 	overflow: hidden;
