@@ -179,35 +179,46 @@ function checkPaymentDone(number) {
 		if (response.code == 0) {
 			paying = 1;
 			openId = response.data.openId;
-			document.getElementById("caption").innerHTML = "扫码成功";
 			$.get(CORAL_URL + '/tenant/bookRepo/occupy?calleeNumber=' + number + '&companyName=' + openId)
 				.then(res => {
-					dashangToggle();
 					logout();
 					if (res.code == 0) {
-						document.getElementById("caption").innerHTML = "扫描微信二维码";
-						const url = 'https://kt.4001.cn/?openId=' + openId + "&number=" + number;
-						//打开新的页面
-						newWin(url,"openURL")
+						document.getElementById("caption").innerHTML = "扫码成功,请点击开通!";
+						document.getElementById("caption").style.color = "red";
+						var url = 'https://kt.4001.cn/?openId=' + openId + "&number=" + number;
+						var a = document.getElementById("openA");
+						a.href = url;
+						var div = document.getElementById("disPlay");
+						div.style.display = "block";
+						// //打开新的页面
+						// newWin(url,"openURL")
 						// window.history.back(-1);
 					} else {
 						alert(res.msg);
 						document.getElementById("caption").innerHTML = "扫描微信二维码";
+						dashangToggle();
 					}
 				});
 		};
 	})
 }
-//打开表单
-function newWin(url, id) {
-	var a = document.createElement('a');
-	a.setAttribute('href', url);
-	a.setAttribute('target', '_blank');
-	a.setAttribute('id', id);
-	// 防止反复添加
-	if (!document.getElementById(id)) document.body.appendChild(a);
-	a.click();
+
+function clickOpen() {
+	document.getElementById("caption").innerHTML = "扫描微信二维码";
+	var div = document.getElementById("disPlay");
+	div.style.display = "none";
+	dashangToggle();
 }
+// //打开表单
+// function newWin(url, id) {
+// 	var a = document.createElement('a');
+// 	a.setAttribute('href', url);
+// 	a.setAttribute('target', '_blank');
+// 	a.setAttribute('id', id);
+// 	// 防止反复添加
+// 	if (!document.getElementById(id)) document.body.appendChild(a);
+// 	a.click();
+// }
 
 function dashangToggle() {
 	clearInterval(this.timeId);

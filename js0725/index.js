@@ -89,16 +89,13 @@ var base_url = 'https://4001.cn';
 	});
 	//默认参数
 	var defaluts = {};
-	$(".downSelect-item").on('click',function(){
-		window.document.location = $(this).data("select-link");
-	});
-	
 	$(".downSelect_item").on('click',function(){
 		window.document.location = $(this).data("select-link");
 	});
 	
 	$(".left-item").on('mouseover', function() {
 		$(this).siblings().removeClass("left-item-hover");
+		
 		$(this).addClass("left-item-hover");
 		$(this).siblings().find("img").each(function(index, item) {
 			$(item).attr('src', $(item).data('orig-src'));

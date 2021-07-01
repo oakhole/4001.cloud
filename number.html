@@ -181,7 +181,7 @@
 		.pay_explain {
 			text-align: center;
 			margin: 10px auto;
-			font-size: 12px;
+			font-size: 16px;
 			color: #545454;
 		}
 
@@ -328,11 +328,15 @@
 					<img alt="扫码" title="扫一扫" />
 				</div>
 				<div id="caption" class="pay_explain">扫描微信二维码</div>
+				<div id="disPlay" style="text-align: center;display: none;">
+					<a id="openA" onclick="clickOpen()" target="_blank" class="lianxi">点击开通</a>
+				</div>
 				<div class="shang_info">
 					<p>二维码加载失败请联系客服人员</p>
 				</div>
+				
 			</div>
-			<h2 class="tit">选择行业号码</h2>
+			<h2 class="tit">选择开通号码</h2>
 			<div class="">
 				<div class="s-title" style="background-color: #ef4047; color: #ffffff;">
 					<h3>
@@ -399,7 +403,6 @@
 							</li>
 						</ul>
 					</div>
-
 				</div>
 				<div class="attribute-box">
 					<div class="attr-list">
@@ -525,6 +528,9 @@
 					</div>
 				</div>
 				<div class="num-page xh-num-list">
+					<div style="margin-top: 20px;text-align: center;">
+						开通提醒：当前页面快速开通为400预开通，具体开通结果请等待系统通知，如有疑问请致电客服电话400-777-400。
+					</div>
 					<ul class="num-list" id="number-list">
 						<div class="spinner">
 							<div class="rect1"></div>
@@ -710,45 +716,45 @@
 		</script>
 		<!-- WPA end -->
 		<script>
-			jQuery(".slideBox").slide({
-				mainCell: ".bd .banner-box",
-				autoPlay: true
-			});
-
-			function reset() {
-				$(".list-search li input[name='numberName']").val("");
-				$("#number").val("");
-			}
-
-			//判断是否0-9
-			function Check_Type1(d, n) {
-				var re = /^[0-9]$/,
-					v = $(d);
-				if (v.val() != "") {
-					console.log();
-					if (v.val() == '*') {
-						$("#n_" + n).focus().select();
-					} else if (!re.test(v.val())) {
-						v.focus();
-					} else {
-						$("#n_" + n).focus().select();
-					}
-				}
-				if (n == 4) {
-					Check_Type();
+		jQuery(".slideBox").slide({
+			mainCell: ".bd .banner-box",
+			autoPlay: true
+		});
+		
+		function reset() {
+			$(".list-search li input[name='numberName']").val("");
+			$("#number").val("");
+		}
+		
+		//判断是否0-9
+		function Check_Type1(d, n) {
+			var re = /^[0-9]$/,
+				v = $(d);
+			if (v.val() != "") {
+				console.log();
+				if (v.val() == '*') {
+					$("#n_" + n).focus().select();
+				} else if (!re.test(v.val())) {
+					v.focus();
+				} else {
+					$("#n_" + n).focus().select();
 				}
 			}
-
-			function Check_Type() {
-				var t = $("#n_3"),
-					tv = t.val();
-				if (tv != "1" && tv != "7") {
-					alert("第四位请输入1或7!");
-
-					return false;
-				}
-				$("#n_4").focus().select();
+			if (n == 4) {
+				Check_Type();
 			}
+		}
+		
+		function Check_Type() {
+			var t = $("#n_3"),
+				tv = t.val();
+			if (tv != "1" && tv != "7") {
+				alert("第四位请输入1或7!");
+		
+				return false;
+			}
+			$("#n_4").focus().select();
+		}
 		</script>
 		<script>
 			function openZoosUrl(url, data) {
