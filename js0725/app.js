@@ -1,5 +1,5 @@
 var BASE_URL = "https://logocloud.cn";
-var CORAL_URL = "http://192.168.3.161/api";
+var CORAL_URL = "https://kt.4001.cn/api";
 
 function obj2url() {
 	var get = "";
