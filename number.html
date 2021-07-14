@@ -334,7 +334,7 @@
 				<div class="shang_info">
 					<p>二维码加载失败请联系客服人员</p>
 				</div>
-				
+
 			</div>
 			<h2 class="tit">选择开通号码</h2>
 			<div class="">
@@ -527,9 +527,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="num-page xh-num-list">
+				<div class="num-page xh-num-list" style="min-height: 350px;">
 					<div style="margin-top: 20px;text-align: center;">
-						开通提醒：当前页面快速开通为400预开通，具体开通结果请等待系统通知，如有疑问请致电客服电话400-777-400。
+						开通提醒：当前页面快速开通为400预开通，具体开通结果请等待系统通知，如有疑问请致电客服电话400-7777-400。
 					</div>
 					<ul class="num-list" id="number-list">
 						<div class="spinner">
@@ -540,11 +540,45 @@
 							<div class="rect5"></div>
 						</div>
 					</ul>
+
 				</div>
 				<div id="page-bar">
 					<div class="page-wrap close-click"></div>
 				</div>
 			</div>
+		</div>
+		<div class="wrap process" style="margin-bottom: 60px;">
+		 
+		  <div class="process-group" style="margin-top: 40px;">
+		    <div class="item">
+		      <div class="idx idx1"></div>
+		      <div class="tex">
+		        <div class="tit">增加在线开通流程说明</div>
+		        <p>选择合适号码，微信扫码关注公众号进行预占</p>
+		      </div>
+		    </div>
+		    <div class="item">
+		      <div class="idx idx2"></div>
+		      <div class="tex">
+		        <div class="tit">填写资料，实名认证</div>
+		        <p>提交企业材料，进行营业执照认证、法人短信认证</p>
+		      </div>
+		    </div>
+		    <div class="item">
+		      <div class="idx idx3"></div>
+		      <div class="tex">
+		        <div class="tit">确认资费，生成合同</div>
+		        <p>确认号码资费情况，生成合同，线下签约</p>
+		      </div>
+		    </div>
+		    <div class="item">
+		      <div class="idx idx4"></div>
+		      <div class="tex">
+		        <div class="tit">号码开通，功能测试</div>
+		        <p>开通号码，配置坐席等功能</p>
+		      </div>
+		    </div>
+		  </div>
 		</div>
 		<script id="entry-template" type="text/x-handlebars-template">
 			{{#each this}}
@@ -586,7 +620,7 @@
 								var y = new Date();
 								document.write(y.getFullYear());
 							</script>
-
+							
 							<a target="_blank" href="https://beian.miit.gov.cn/">苏ICP备19006211号-2</a>
 						</div>
 					</div>
@@ -716,45 +750,45 @@
 		</script>
 		<!-- WPA end -->
 		<script>
-		jQuery(".slideBox").slide({
-			mainCell: ".bd .banner-box",
-			autoPlay: true
-		});
-		
-		function reset() {
-			$(".list-search li input[name='numberName']").val("");
-			$("#number").val("");
-		}
-		
-		//判断是否0-9
-		function Check_Type1(d, n) {
-			var re = /^[0-9]$/,
-				v = $(d);
-			if (v.val() != "") {
-				console.log();
-				if (v.val() == '*') {
-					$("#n_" + n).focus().select();
-				} else if (!re.test(v.val())) {
-					v.focus();
-				} else {
-					$("#n_" + n).focus().select();
+			jQuery(".slideBox").slide({
+				mainCell: ".bd .banner-box",
+				autoPlay: true
+			});
+
+			function reset() {
+				$(".list-search li input[name='numberName']").val("");
+				$("#number").val("");
+			}
+
+			//判断是否0-9
+			function Check_Type1(d, n) {
+				var re = /^[0-9]$/,
+					v = $(d);
+				if (v.val() != "") {
+					console.log();
+					if (v.val() == '*') {
+						$("#n_" + n).focus().select();
+					} else if (!re.test(v.val())) {
+						v.focus();
+					} else {
+						$("#n_" + n).focus().select();
+					}
+				}
+				if (n == 4) {
+					Check_Type();
 				}
 			}
-			if (n == 4) {
-				Check_Type();
+
+			function Check_Type() {
+				var t = $("#n_3"),
+					tv = t.val();
+				if (tv != "1" && tv != "7") {
+					alert("第四位请输入1或7!");
+
+					return false;
+				}
+				$("#n_4").focus().select();
 			}
-		}
-		
-		function Check_Type() {
-			var t = $("#n_3"),
-				tv = t.val();
-			if (tv != "1" && tv != "7") {
-				alert("第四位请输入1或7!");
-		
-				return false;
-			}
-			$("#n_4").focus().select();
-		}
 		</script>
 		<script>
 			function openZoosUrl(url, data) {

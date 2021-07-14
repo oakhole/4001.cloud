@@ -1,5 +1,6 @@
 var BASE_URL = "https://logocloud.cn";
-var CORAL_URL = "https://kt.4001.cn/api";
+// var CORAL_URL = "https://kt.4001.cn/api";
+var CORAL_URL = "http://192.168.3.161/api";
 
 function obj2url() {
 	var get = "";
@@ -88,9 +89,10 @@ function showCaleeNumberList(pattern) {
 			var newData = new Array();
 			for (var i = 0; i < data.length; i++) {
 				var str = data[i].callee_number;
+				var newStr = str.substring(0,3) + "*" + str.substr(4,10);
 				var month_fee = data[i].month_fee;
 				newData.push({
-					'number': str,
+					'number': newStr,
 					'month_fee': month_fee
 				});
 			}
