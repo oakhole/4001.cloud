@@ -1,5 +1,5 @@
 //全局js
-var cbase_url = 'https://400cha.cn';
+var cbase_url = 'http://localhost:8000/';
 var base_url = 'https://4001.cn';
 //jquery 自定义扩展
 (function($) {
@@ -206,92 +206,92 @@ if ($(".zjia").length > 0) {
 }
 
 // 侧边栏左侧随机今日办理号码
-function rand(min, max) {
-	return Math.floor(Math.random() * (max - min)) + min;
-}
+// function rand(min, max) {
+// 	return Math.floor(Math.random() * (max - min)) + min;
+// }
 
-function randomCity() {
-	var city = "";
-	$.ajax({
-		url: "/js0725/city.js",
-		type: "get",
-		dataType: "Json",
-		async: false,
-		success: function(result) {
-			city = result;
-		},
-	});
-	return city;
-}
+// function randomCity() {
+// 	var city = "";
+// 	$.ajax({
+// 		url: "/js0725/city.js",
+// 		type: "get",
+// 		dataType: "Json",
+// 		async: false,
+// 		success: function(result) {
+// 			city = result;
+// 		},
+// 	});
+// 	return city;
+// }
 
-function setNumberCount() {
-	$.ajax({
-		url: cbase_url + "/tenant/experience/getRandomInfo",
-		type: "get",
-		dataType: "Json",
-		success: function(e) {
-			$("#numberCount").html(e);
-		},
-	});
-}
+// function setNumberCount() {
+// 	$.ajax({
+// 		url: cbase_url + "/tenant/experience/getRandomInfo",
+// 		type: "get",
+// 		dataType: "Json",
+// 		success: function(e) {
+// 			$("#numberCount").html(e);
+// 		},
+// 	});
+// }
 
-function RenderList() {
-	setNumberCount();
-	var city = randomCity();
-	var str = "";
-	var date = new Date();
-	var maxhour = date.getHours();
-	var maxMinute = date.getMinutes();
-	for (var i = 0; i < 20; i++) {
-		var num = rand(0, 370);
-		randCity = city[num].name;
-		var number = "400***" + rand(1000, 10000);
-		var hour = rand(8, maxhour);
-		var minute = rand(0, maxMinute);
-		var newMinute = minute >= 10 ? minute : "0" + minute;
-		str += "<tr>";
-		str += '<td class="ellipsis">';
-		str += '<img src="' + base_url + '/img0725/portrait_default.png"/>';
-		str +=
-			'<span class="center" title="' +
-			randCity +
-			'" style="margin-left: 10px;">' +
-			randCity +
-			"</span>";
-		str += "</td>";
-		str += '<td class="ellipsis" title="' + number + '">' + number + "</td>";
-		str +=
-			'<td class="ellipsis" title="' +
-			hour +
-			"点" +
-			newMinute +
-			'分">' +
-			hour +
-			"点" +
-			newMinute +
-			"分</td>";
-		str += " </tr>";
-	}
-	return str;
-}
+// function RenderList() {
+// 	setNumberCount();
+// 	var city = randomCity();
+// 	var str = "";
+// 	var date = new Date();
+// 	var maxhour = date.getHours();
+// 	var maxMinute = date.getMinutes();
+// 	for (var i = 0; i < 20; i++) {
+// 		var num = rand(0, 370);
+// 		randCity = city[num].name;
+// 		var number = "400***" + rand(1000, 10000);
+// 		var hour = rand(8, maxhour);
+// 		var minute = rand(0, maxMinute);
+// 		var newMinute = minute >= 10 ? minute : "0" + minute;
+// 		str += "<tr>";
+// 		str += '<td class="ellipsis">';
+// 		str += '<img src="' + base_url + '/img0725/portrait_default.png"/>';
+// 		str +=
+// 			'<span class="center" title="' +
+// 			randCity +
+// 			'" style="margin-left: 10px;">' +
+// 			randCity +
+// 			"</span>";
+// 		str += "</td>";
+// 		str += '<td class="ellipsis" title="' + number + '">' + number + "</td>";
+// 		str +=
+// 			'<td class="ellipsis" title="' +
+// 			hour +
+// 			"点" +
+// 			newMinute +
+// 			'分">' +
+// 			hour +
+// 			"点" +
+// 			newMinute +
+// 			"分</td>";
+// 		str += " </tr>";
+// 	}
+// 	return str;
+// }
 
 (function($) {
 	var box = document.getElementById("bm_content");
 	var l1 = document.getElementById("tb1");
 	var l2 = document.getElementById("tb2");
-	autoScroll();
+	// autoScroll();
 
-	function autoScroll() {
-		var product = RenderList();
-		l1.innerHTML = product;
-		if (l1.offsetHeight > box.offsetHeight) {
-			l2.innerHTML = l1.innerHTML; //克隆list1的数据，使得list2和list1的数据一样
-			scrollMove = setInterval(scrollup, 30); //数值越大，滚动速度越慢
-			box.onmouseover = function() {
-				clearInterval(scrollMove);
-			};
-		}
-	}
+	// function autoScroll() {
+	// 	var product = RenderList();
+	// 	l1.innerHTML = product;
+	// 	if (l1.offsetHeight > box.offsetHeight) {
+	// 		l2.innerHTML = l1.innerHTML; //克隆list1的数据，使得list2和list1的数据一样
+	// 		scrollMove = setInterval(scrollup, 30); //数值越大，滚动速度越慢
+	// 		box.onmouseover = function() {
+	// 			clearInterval(scrollMove);
+	// 		};
+	// 	}
+	// }
 
 	function scrollup() {
 		//滚动条距离顶部的值恰好等于list1的高度时，达到滚动临界点，此时将让scrollTop=0,让list1回到初始位置，实现无缝滚动
@@ -326,7 +326,7 @@ function uu() {
  */
 function submit() {
 	var name = $("input[name='name']").val();
-	var phone = $("input[name='number']").val();
+	var phone = $("input[name='youPhoneNumber']").val();
 	var code = $("input[name='code']").val();
 	if (name == "") {
 		alert("请填写姓名。");

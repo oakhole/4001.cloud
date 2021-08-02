@@ -787,7 +787,7 @@ function uu() {
  */
 function submit() {
   var name = $("input[name='name']").val();
-  var phone = $("input[name='number']").val();
+  var phone = $("input[name='youPhoneNumber']").val();
   var code = $("input[name='code']").val();
   if (name == "") {
     alert("请填写姓名。");
