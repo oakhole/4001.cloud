@@ -129,7 +129,7 @@ let longPollingLogin = function () {
 
 let refreshOccupiedNumberTable = function () {
   // 刷新已预占号码数据
-  $.get("http://localhost:8000/tenant/bookRepo/occupied?calleeNumber=&companyName=" + wxUser.openId, function (res) {
+  $.get("https://400cha.cn/tenant/bookRepo/occupied?calleeNumber=&companyName=" + wxUser.openId, function (res) {
     $("#tableOccupied").bootstrapTable("load", res.data);
     $("#occupiedNumberModal").modal();
   });
