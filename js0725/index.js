@@ -90,6 +90,10 @@ var base_url = "https://4001.cn";
   $(".downSelect_item").on("click", function () {
     window.document.location = $(this).data("select-link");
   });
+  
+  $(".downSelect-item").on("click", function () {
+    window.document.location = $(this).data("select-link");
+  });
 
   $(".left-item").on("mouseover", function () {
     $(this).siblings().removeClass("left-item-hover");
