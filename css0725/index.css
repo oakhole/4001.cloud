@@ -5669,6 +5669,15 @@ h2.tit::after {
 	font-size: 10px;
 }
 
+.spinner2 {
+	margin: 100px auto;
+	width: 100%;
+	height: 60px;
+	text-align: center;
+	font-size: 10px;
+	display: none;
+}
+
 /**
  *请求号码时出触发的加载样式
  */
