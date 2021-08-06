@@ -1,4 +1,4 @@
-var BASE_URL = "https://400cha.cn";
+var BASE_URL = "https://logocloud.cn";
 var CORAL_URL = "https://4001.cn/api";
 // var CORAL_URL = "http://192.168.3.161/api";
 
