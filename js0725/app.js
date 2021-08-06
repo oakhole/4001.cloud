@@ -97,10 +97,10 @@ function showCaleeNumberList(pattern) {
 				});
 			}
 			console.log(newData);
-			if(newData.length == 0){
+			if (newData.length == 0) {
 				$(".spinner").hide();
 				$(".spinner2").show();
-			}else{
+			} else {
 				$(".spinner").hide();
 				$(".spinner2").hide();
 				$("#number-list").append(numberListTemplate(newData));
@@ -133,22 +133,12 @@ let longPollingLogin = function() {
 	});
 };
 
-<<<<<<< HEAD
 let refreshOccupiedNumberTable = function() {
 	// 刷新已预占号码数据
-	$.get("http://localhost:8000/tenant/bookRepo/occupied?calleeNumber=&companyName=" + wxUser.openId, function(
-	res) {
+	$.get("https://400cha.cn/tenant/bookRepo/occupied?calleeNumber=&companyName=" + wxUser.openId, function(res) {
 		$("#tableOccupied").bootstrapTable("load", res.data);
 		$("#occupiedNumberModal").modal();
 	});
-=======
-let refreshOccupiedNumberTable = function () {
-  // 刷新已预占号码数据
-  $.get("https://400cha.cn/tenant/bookRepo/occupied?calleeNumber=&companyName=" + wxUser.openId, function (res) {
-    $("#tableOccupied").bootstrapTable("load", res.data);
-    $("#occupiedNumberModal").modal();
-  });
->>>>>>> d3a3b2adc0ba0fd7c8c28b731a724a1ea3402b20
 };
 
 /**
