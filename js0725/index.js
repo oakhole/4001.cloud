@@ -342,6 +342,7 @@ function submit() {
         }
         $("input[name='name']").val("");
         $("input[name='number']").val("");
+        $("input[name='youPhoneNumber']").val("");
         $("input[name='code']").val("");
         $("#contactUs").html("立即提交");
       },
