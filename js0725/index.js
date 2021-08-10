@@ -90,7 +90,7 @@ var base_url = "https://4001.cn";
   $(".downSelect_item").on("click", function () {
     window.document.location = $(this).data("select-link");
   });
-  
+
   $(".downSelect-item").on("click", function () {
     window.document.location = $(this).data("select-link");
   });
@@ -325,7 +325,7 @@ function submit() {
   } else {
     $("#contactUs").html("提交中，请稍后..");
     $.ajax({
-      url: cbase_url + "tenant/experience/addExperience",
+      url: cbase_url + "/tenant/experience/addExperience",
       data: {
         name: name,
         phone: phone,
