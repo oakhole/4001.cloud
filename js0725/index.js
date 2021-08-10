@@ -335,7 +335,11 @@ function submit() {
       dataType: "Json",
       type: "get",
       success: function (e) {
-        swal(e.msg, "", "success");
+        if (e.code === 0) {
+          swal(e.msg, "", "success");
+        } else {
+          swal(e.msg, "", "error");
+        }
         $("input[name='name']").val("");
         $("input[name='number']").val("");
         $("input[name='code']").val("");
