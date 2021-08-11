@@ -350,6 +350,71 @@
 				</h3>
 			</div>
 
+			<div class="mainbox" style="border: 1px solid #ddd;border-bottom: none;">
+				<div class="number-search" style="padding-left: 10px;">
+					<ul class="list-search clearfix">
+						<li>
+							<input class="text" type="text" size="1" value="4" disabled="disabled">
+						</li>
+						<li>
+							<input class="text" type="text" size="1" value="0" disabled="disabled">
+						</li>
+						<li>
+							<input class="text" type="text" size="1" value="0" disabled="disabled">
+						</li>
+						<li class="break">
+							—
+						</li>
+						<li>
+							<input class="text" type="text" size="1" name="numberName" id="n_3" value="*" maxlength="1"
+								onmousedown="$(this).val('').focus();" onkeyup="Check_Type1(this,4);"
+								disabled="disabled">
+						</li>
+						<li>
+							<input class="text" type="text" size="1" name="numberName" id="n_4" value="*" maxlength="1"
+								onmousedown="$(this).val('').focus();" onkeyup="Check_Type1(this,5);"
+								disabled="disabled">
+						</li>
+						<li>
+							<input class="text" type="text" size="1" name="numberName" id="n_5" value="*" maxlength="1"
+								onmousedown="$(this).val('').focus();" onkeyup="Check_Type1(this,6);"
+								disabled="disabled">
+						</li>
+						<li class="break">
+							—
+						</li>
+						<li>
+							<input class="text" type="text" size="1" name="numberName" id="n_6" value="" maxlength="1"
+								onmousedown="$(this).val('').focus();" onkeyup="Check_Type1(this,7);">
+						</li>
+						<li>
+							<input class="text" type="text" size="1" name="numberName" id="n_7" value="" maxlength="1"
+								onmousedown="$(this).val('').focus();" onkeyup="Check_Type1(this,8);">
+						</li>
+						<li>
+							<input class="text" type="text" size="1" name="numberName" id="n_8" value="" maxlength="1"
+								onmousedown="$(this).val('').focus();" onkeyup="Check_Type1(this,9);">
+						</li>
+						<li>
+							<input class="text" type="text" size="1" name="numberName" id="n_9" value="" maxlength="1"
+								onmousedown="$(this).val('').focus();" onkeyup="Check_Type1(this,0);">
+						</li>
+						<li class="last-2">
+							<button class="btn btn-search" name="n_1" id="n_1" onclick="searchNumber()">
+								搜索
+							</button>
+						</li>
+						<li class="last">
+
+							<button class="btn btn-reset" name="n_0" id="n_0" onclick="reset()">
+								重置
+							</button>
+							<input type="hidden" name="number" id="number">
+						</li>
+					</ul>
+				</div>
+			</div>
+
 			<div class="attribute-box">
 				<div class="attr-list">
 					<div class="sl-wrap cl">
@@ -510,7 +575,7 @@
 				<div class="idx idx1"></div>
 				<div class="tex">
 					<div class="tit">选择号码，预占开通</div>
-					<p>选择心仪号码，提交联系人联系方式进行预占</p>
+					<p>选择合适号码，微信扫码关注公众号进行预占</p>
 				</div>
 			</div>
 			<div class="item">
