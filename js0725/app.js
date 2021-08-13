@@ -196,7 +196,7 @@ var numberOperateFormatter = function (value, row, index) {
 };
 
 $(function () {
-  wap_judge();
+  // wap_judge();
   showCaleeNumberList();
   $(".valueList").on("click", "li", function () {
     $(".m8 input").val("");
