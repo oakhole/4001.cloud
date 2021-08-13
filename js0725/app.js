@@ -224,81 +224,41 @@ var number = "";
 var s = 0;
 
 function openNumber(e) {
-	paying = 0;
-	dashangToggle();
-	number = e;
-	console.log(number);
-	$(this).addClass("checked").siblings(".pay_item").removeClass("checked");
-	$.get(CORAL_URL + "/oauth/wx/qrCode?args=" + number, function(data) {
-		var ticket = data.data.ticket;
-		// 二维码图片地址
-		var src = "https://mp.weixin.qq.com/cgi-bin/showqrcode?ticket=" + ticket;
-		$(".shang_payimg img").attr("src", src);
-	});
-	timeId = setInterval(() => {
-		if (paying == 1) {
-			clearInterval(timeId);
-		} else if (paying == 0) {
-			checkPaymentDone(number);
-		}
-	}, 3000);
-}
-
-function checkPaymentDone(number) {
-	$.get(CORAL_URL + "/oauth/wx/isLogin/" + number).then((response) => {
-		if (response.code == 0) {
-			paying = 1;
-			openId = response.data.openId;
-			$.get(CORAL_URL + "/tenant/bookRepo/occupy?calleeNumber=" + number + "&companyName=" + openId).then(
-				(res) => {
-					logout();
-					if (res.code == 0) {
-						document.getElementById("caption").innerHTML = "扫码成功,请点击开通!";
-						document.getElementById("caption").style.color = "red";
-						var url = "https://kt.4001.cn/?openId=" + openId + "&number=" + number;
-						var a = document.getElementById("openA");
-						a.href = url;
-						var div = document.getElementById("disPlay");
-						div.style.display = "block";
-						// //打开新的页面
-						// newWin(url,"openURL")
-						// window.history.back(-1);
-					} else {
-						alert(res.msg);
-						document.getElementById("caption").innerHTML = "扫描微信二维码";
-						dashangToggle();
-					}
-				});
-		}
-	});
-}
-
-function clickOpen() {
-	document.getElementById("caption").innerHTML = "扫描微信二维码";
-	var div = document.getElementById("disPlay");
-	div.style.display = "none";
+	$("#calleeNumber").val(e);
 	dashangToggle();
 }
-// //打开表单
-// function newWin(url, id) {
-// 	var a = document.createElement('a');
-// 	a.setAttribute('href', url);
-// 	a.setAttribute('target', '_blank');
-// 	a.setAttribute('id', id);
-// 	// 防止反复添加
-// 	if (!document.getElementById(id)) document.body.appendChild(a);
-// 	a.click();
-// }
+
 
 function dashangToggle() {
-	clearInterval(this.timeId);
-	paying = 0;
 	$(".hide_box").fadeToggle();
 	$(".shang_box").fadeToggle();
 }
 
-function logout() {
-	$.get(CORAL_URL + "/oauth/wx/logout/" + number).then((response) => {
-		console.log(response);
-	});
+function submitNumber() {
+	const calleeNumber = $("#calleeNumber").val();
+	const compamyName = $("#contact").val();
+	const contactPhone = $("#contactPhone").val();
+	const contact = $("#contact").val();
+	if (compamyName == "" || contactPhone == "" || contact == "") {
+		alert("请填写表单内容");
+	} else if (contactPhone.length != 11) {
+		alert("请填写正确的手机号")
+	} else {
+		const openId = compamyName + "," + contactPhone + "," + contact;
+		$.get(CORAL_URL + "/tenant/bookRepo/occupy?calleeNumber=" + calleeNumber + "&companyName=" + openId).then(
+			(res) => {
+				var url = "https://4001.cn/kt?openId=" + openId + "&number=" + calleeNumber;
+				if (res.code == 0) {
+					// //打开新的页面
+					// newWin(url,"openURL")
+					dashangToggle();
+					window.open(url, "_blank");
+					// window.history.back(-1);
+				} else {
+					alert(res.msg);
+					document.getElementById("caption").innerHTML = "扫描微信二维码";
+					dashangToggle();
+				}
+			});
+	}
 }
