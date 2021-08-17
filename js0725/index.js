@@ -294,14 +294,18 @@ function RenderList() {
 // 获取验证码
 var uuid = "";
 $(function() {
-	uuid = uu() + uu() + uu() + uu() + uu() + uu();
-	var src = cbase_url + "/tenant/experience/getRandomCode?uuid=" + uuid;
-
-	$("#uuid").attr("src", src);
+	randCode();
 });
 
 function uu() {
 	return (((1 + Math.random()) * 0x10000) | 0).toString(16).substring(1);
+}
+
+function randCode(){
+	uuid = uu() + uu() + uu() + uu() + uu() + uu();
+	var src = cbase_url + "/tenant/experience/getRandomCode?uuid=" + uuid;
+	
+	$("#uuid").attr("src", src);
 }
 
 /**
@@ -342,6 +346,7 @@ function submit() {
 				$("input[name='youPhoneNumber']").val("");
 				$("input[name='code']").val("");
 				$("#contactUs").html("立即提交");
+				randCode();
 			},
 		});
 	}
