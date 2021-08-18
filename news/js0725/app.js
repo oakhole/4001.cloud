@@ -192,7 +192,7 @@ function searchNumber() {
 // 已预占号码操作
 var numberOperateFormatter = function (value, row, index) {
   var openId = row.companyName.replace("4001.cn 预占: ", "");
-  return '<a target="_blank" href="https://kt.4001.cn?uid=' + row.certification.certifyId + "&number=" + row.calleeNumber + "&openId=" + openId + '">重新提交</a>';
+  return '<a target="_blank" href="https://4001.cn/kt?uid=' + row.certification.certifyId + "&number=" + row.calleeNumber + "&openId=" + openId + '">重新提交</a>';
 };
 
 $(function () {
@@ -253,7 +253,7 @@ function checkPaymentDone(number) {
         if (res.code == 0) {
           document.getElementById("caption").innerHTML = "扫码成功,请点击开通!";
           document.getElementById("caption").style.color = "red";
-          var url = "https://kt.4001.cn/?openId=" + openId + "&number=" + number;
+          var url = "https://4001.cn/kt?openId=" + openId + "&number=" + number;
           var a = document.getElementById("openA");
           a.href = url;
           var div = document.getElementById("disPlay");
