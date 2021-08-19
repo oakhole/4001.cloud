@@ -178,15 +178,21 @@ var number = "";
 var s = 0;
 
 function openNumber(e) {
-  $("#calleeNumber").val(e);
-  $.get("https://400cha.cn/tenant/certification/price/" + e, function (res) {
-    const priceInfo = res.guidePrice + "元/年";
-    const chargeCost = res.chargeCost + "元/分";
-    $("#numberInfo").html(e);
-    $("#priceInfo").html(priceInfo);
-    $("#chargeCost").html(chargeCost);
+  $.get("https://400cha.cn/tenant/book/isBooked?calleeNumber=" + e, function (res) {
+    if (res.code === 0) {
+      $("#calleeNumber").val(e);
+      $.get("https://400cha.cn/tenant/certification/price/" + e, function (res) {
+        const priceInfo = res.guidePrice + "元/年";
+        const chargeCost = res.chargeCost + "元/分";
+        $("#numberInfo").html(e);
+        $("#priceInfo").html(priceInfo);
+        $("#chargeCost").html(chargeCost);
+      });
+      $("#myModal").modal("toggle");
+    } else {
+      swal("该号码已被预占，请选择其他号码", "", "error", { button: "确认" });
+    }
   });
-  $("#myModal").modal("toggle");
 }
 
 function dashangToggle() {
