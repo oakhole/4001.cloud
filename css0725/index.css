@@ -122,6 +122,7 @@ acronym[title] {
 	cursor: help;
 }
 
+
 q:before,
 q:after {
 	content: "";
@@ -164,6 +165,17 @@ hr {
 html {
 	overflow-y: scroll;
 }
+
+button:focus {
+	outline: none;
+}
+
+/*for IE*/
+
+button::-moz-focus-inner {
+	border-color: transparent;
+}
+
 
 /*浮动*/
 .fl {
@@ -6236,5 +6248,6 @@ h2.tit::after {
 	padding: 12px 20px;
 	font-size: 14px;
 	border-radius: 4px;
-	background-color: #ef4047;;
+	background-color: #ef4047;
+	;
 }
