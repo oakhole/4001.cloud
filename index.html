@@ -593,7 +593,7 @@
 	<script id="tplJingxuanlianghao" type="text/x-handlebars-template">
 		{{#each rows}}
 			<li>
-				<section>{{calleeNumber}}</section>
+				<section>{{privateCalleeNumber}}</section>
 				<section>
 					<a class="leyu" onclick="openNumber('{{calleeNumber}}')">立即开通</a>
 				</section>
@@ -616,21 +616,33 @@
 
 			$.get('https://4001.cn/api/tenant/book/findBookListFromTag?pageNum=1&pageSize=18&memo=0', function (res) {
 				if (res.code === 0) {
+					res.rows.map(row => {
+						row.privateCalleeNumber = row.calleeNumber.replace(/400\d(\d{6})/, '400*$1');
+					});
 					$('#jingxuanlianghao0').html(tplJingxuanlianghao(res));
 				}
 			});
 			$.get('https://4001.cn/api/tenant/book/findBookListFromTag?pageNum=1&pageSize=18&memo=1', function (res) {
 				if (res.code === 0) {
+					res.rows.map(row => {
+						row.privateCalleeNumber = row.calleeNumber.replace(/400\d(\d{6})/, '400*$1');
+					});
 					$('#jingxuanlianghao1').html(tplJingxuanlianghao(res));
 				}
 			});
 			$.get('https://4001.cn/api/tenant/book/findBookListFromTag?pageNum=1&pageSize=18&memo=2', function (res) {
 				if (res.code === 0) {
+					res.rows.map(row => {
+						row.privateCalleeNumber = row.calleeNumber.replace(/400\d(\d{6})/, '400*$1');
+					});
 					$('#jingxuanlianghao2').html(tplJingxuanlianghao(res));
 				}
 			});
 			$.get('https://4001.cn/api/tenant/book/findBookListFromTag?pageNum=1&pageSize=18&memo=3', function (res) {
 				if (res.code === 0) {
+					res.rows.map(row => {
+						row.privateCalleeNumber = row.calleeNumber.replace(/400\d(\d{6})/, '400*$1');
+					});
 					$('#jingxuanlianghao3').html(tplJingxuanlianghao(res));
 				}
 			});
