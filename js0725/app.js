@@ -226,13 +226,14 @@ function submitNumber() {
         $("#contact").val("");
         $("#contactPhone").val("");
         $("#myModal").modal("toggle");
-        swal("预占成功", "", "success");
+        swal("预占成功", "", "success", { button: false });
         setTimeout(() => {
+          swal.close();
           window.open(url, "_blank");
         }, 2000);
       } else {
         $("#myModal").modal("toggle");
-        swal(res.msg, "", "error");
+        swal("该号码已被预占，请选择其他号码", "", "error", { button: "确认" });
       }
     });
   }
