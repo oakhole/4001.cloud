@@ -88,149 +88,6 @@
 		position: fixed;
 		display: none;
 	}
-
-	.shang_box {
-		width: 540px;
-		height: 300px;
-		padding: 10px;
-		background-color: #fff;
-		border-radius: 10px;
-		position: fixed;
-		z-index: 1000;
-		left: 50%;
-		top: 50%;
-		margin-left: -280px;
-		margin-top: -280px;
-		border: 1px dotted #dedede;
-		display: none;
-	}
-
-	.shang_box img {
-		border: none;
-		border-width: 0;
-	}
-
-	.dashang {
-		display: block;
-		width: 100px;
-		margin: 5px auto;
-		height: 25px;
-		line-height: 25px;
-		padding: 10px;
-		background-color: #E74851;
-		color: #fff;
-		text-align: center;
-		text-decoration: none;
-		border-radius: 10px;
-		font-weight: bold;
-		font-size: 16px;
-		transition: all 0.3s;
-	}
-
-	.dashang:hover {
-		opacity: 0.8;
-		padding: 15px;
-		font-size: 18px;
-	}
-
-	.shang_close {
-		float: right;
-		display: inline-block;
-	}
-
-	.shang_logo {
-		display: block;
-		text-align: center;
-		margin: 20px auto;
-	}
-
-	.shang_tit {
-		width: 100%;
-		height: 75px;
-		text-align: center;
-		line-height: 66px;
-		color: #a3a3a3;
-		font-size: 16px;
-		background: url('./img0725/saoma/cy-reward-title-bg.jpg');
-		font-family: 'Microsoft YaHei';
-		margin-top: 7px;
-		margin-right: 2px;
-	}
-
-	.shang_tit p {
-		color: #a3a3a3;
-		text-align: center;
-		font-size: 16px;
-	}
-
-	.shang_payimg {
-		width: 140px;
-		padding: 10px;
-		border: 6px solid #EA5F00;
-		margin: 0 auto;
-		border-radius: 3px;
-		height: 140px;
-		box-sizing：content-box;
-		-webkit-box-sizing: content-box;
-	}
-
-	.shang_payimg img {
-		display: block;
-		text-align: center;
-		width: 140px;
-		height: 140px;
-		box-sizing：content-box;
-		-webkit-box-sizing: content-box;
-	}
-
-	.pay_explain {
-		text-align: center;
-		margin: 10px auto;
-		font-size: 16px;
-		color: #545454;
-	}
-
-	.radiobox {
-		width: 16px;
-		height: 16px;
-		background: url('./img0725/saoma/radio2.jpg');
-		display: block;
-		float: left;
-		margin-top: 5px;
-		margin-right: 14px;
-	}
-
-	.checked .radiobox {
-		background: url('./img0725/saoma/radio1.jpg');
-	}
-
-	.shang_payselect {
-		text-align: center;
-		margin: 0 auto;
-		margin-top: 40px;
-		cursor: pointer;
-		height: 60px;
-		width: 280px;
-	}
-
-	.shang_payselect .pay_item {
-		display: inline-block;
-		margin-right: 10px;
-		float: left;
-	}
-
-	.shang_info {
-		clear: both;
-	}
-
-	.shang_info p,
-	.shang_info a {
-		color: #C3C3C3;
-		text-align: center;
-		font-size: 12px;
-		text-decoration: none;
-		line-height: 2em;
-	}
 </style>
 
 <body data-index="3">
@@ -297,39 +154,88 @@
 	</div>
 	<div class="wrap">
 		<div class="hide_box"></div>
-		<div class="shang_box">
-			<a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()" title="关闭"><img
-					src="./img0725/saoma/close.jpg" alt="取消" /></a>
-			<div class="shang_tit">
-				<p>请填写预开通信息</p>
+		<!-- 预占表单 -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="occupidModal"
+			aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+							&times;
+						</button>
+						<h4 style="text-align: center;" class="modal-title" id="occupidModal">
+							预占号码
+						</h4>
+					</div>
+					<div class="modal-body">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="panel-title">号码信息</h3>
+							</div>
+							<div class="panel-body">
+								<form class="form-horizontal" role="form">
+									<input type="hidden" name="calleeNumber" id="calleeNumber" />
+									<input type="hidden" name="submitType" id="submitType">
+									<div class="form-group">
+										<label class="col-sm-2 control-label">号码</label>
+										<div class="col-sm-10">
+											<span id="numberInfo" class="spanText"></span>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="contact" class="col-sm-2 control-label">价格</label>
+										<div class="col-sm-10">
+											<span id="priceInfo" class="spanText"></span>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="contactPhone" class="col-sm-2 control-label">通信资费</label>
+										<div class="col-sm-10">
+											<span id="chargeCost" class="spanText"></span>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="panel panel-default">
+							<div class="panel-heading">
+								<h3 class="panel-title">联系人信息</h3>
+							</div>
+							<div class="panel-body">
+								<form class="form-horizontal" role="form">
+									<div class="form-group">
+										<label for="companyName" class="col-sm-2 control-label">公司名称</label>
+										<div class="col-sm-10">
+											<input type="text" class="form-control" id="companyName"
+												placeholder="请输入公司名称">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="contact" class="col-sm-2 control-label">联系人</label>
+										<div class="col-sm-10">
+											<input type="text" class="form-control" id="contact" placeholder="请输入联系人">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="contactPhone" class="col-sm-2 control-label">手机号码</label>
+										<div class="col-sm-10">
+											<input type="text" class="form-control" id="contactPhone"
+												placeholder="请输入手机号码">
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+						</button>
+						<button onclick="submitNumber()" type="button" class="btn btn-primary">
+							提交
+						</button>
+					</div>
+				</div>
 			</div>
-			<form class="form-horizontal" role="form">
-				<input type="hidden" name="calleeNumber" id="calleeNumber" />
-				<input type="hidden" name="submitType" id="submitType">
-				<div class="form-group">
-					<label for="companyName" class="col-sm-2 control-label">公司名称</label>
-					<div class="col-sm-10">
-						<input type="text" class="form-control" id="companyName" placeholder="请输入名字">
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="contact" class="col-sm-2 control-label">联系人</label>
-					<div class="col-sm-10">
-						<input type="text" class="form-control" id="contact" placeholder="请输入名字">
-					</div>
-				</div>
-				<div class="form-group">
-					<label for="contactPhone" class="col-sm-2 control-label">手机号码</label>
-					<div class="col-sm-10">
-						<input type="text" class="form-control" id="contactPhone" placeholder="请输入名字">
-					</div>
-				</div>
-				<div class="form-group">
-					<div class="col-sm-offset-2 col-sm-10" style="text-align: right;">
-						<button type="button" onclick="submitNumber()" class="btn btn-primary">提交</button>
-					</div>
-				</div>
-			</form>
 		</div>
 		<h2 class="tit">好记的 400 号码</h2>
 		<div class="">

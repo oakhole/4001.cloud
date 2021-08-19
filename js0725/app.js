@@ -114,7 +114,7 @@ function showCaleeNumberList(pattern) {
  * 查询已预占号码列表
  */
 function showOccupiedNumberList() {
-	dashangToggle();
+  dashangToggle();
 }
 
 function searchNumber() {
@@ -178,16 +178,15 @@ var number = "";
 var s = 0;
 
 function openNumber(e) {
-	$("#calleeNumber").val(e);
-	$.get("https://400cha.cn/tenant/certification/price/" + e, function(
-		res) {
-		const priceInfo = res.guidePrice + "元/年"
-		const chargeCost = res.chargeCost + "元/分"
-		$("#numberInfo").html(e);
-		$("#priceInfo").html(priceInfo);
-		$("#chargeCost").html(chargeCost);
-	});
-	$('#myModal').modal('toggle')
+  $("#calleeNumber").val(e);
+  $.get("https://400cha.cn/tenant/certification/price/" + e, function (res) {
+    const priceInfo = res.guidePrice + "元/年";
+    const chargeCost = res.chargeCost + "元/分";
+    $("#numberInfo").html(e);
+    $("#priceInfo").html(priceInfo);
+    $("#chargeCost").html(chargeCost);
+  });
+  $("#myModal").modal("toggle");
 }
 
 function dashangToggle() {
@@ -196,44 +195,45 @@ function dashangToggle() {
 }
 
 function searchNumberBy() {
-
-	var phone = $("#searchValue").val();
-	if (phone.length != 11) {
-		alert("请填写正确的手机号码");
-	} else {
-		// 刷新已预占号码数据
-		$.get("https://400cha.cn/tenant/bookRepo/occupied?tableKind=4001网站&companyName=" + phone, function(
-			res) {
-			dashangToggle();
-			$("#tableOccupied").bootstrapTable("load", res.data);
-			$("#occupiedNumberModal").modal();
-		});
-	}
+  var phone = $("#searchValue").val();
+  if (phone.length != 11) {
+    alert("请填写正确的手机号码");
+  } else {
+    // 刷新已预占号码数据
+    $.get("https://400cha.cn/tenant/bookRepo/occupied?tableKind=4001网站&companyName=" + phone, function (res) {
+      dashangToggle();
+      $("#tableOccupied").bootstrapTable("load", res.data);
+      $("#occupiedNumberModal").modal();
+    });
+  }
 }
 
 function submitNumber() {
-	const calleeNumber = $("#calleeNumber").val();
-	const compamyName = $("#companyName").val();
-	const contact = $("#contact").val();
-	const contactPhone = $("#contactPhone").val();
-	if (compamyName == "" || contactPhone == "" || contact == "") {
-		alert("请填写表单内容");
-	} else if (contactPhone.length != 11) {
-		alert("请填写正确的手机号")
-	} else {
-		const openId = compamyName + "," + contact + "," + contactPhone;
-		$.get(CORAL_URL + "/tenant/bookRepo/occupy?calleeNumber=" + calleeNumber + "&companyName=" + openId).then(
-			(res) => {
-				var url = "https://4001.cn/kt?openId=" + openId + "&number=" + calleeNumber;
-				if (res.code == 0) {
-					$("#companyName").val("");
-					$("#contact").val("");
-					$("#contactPhone").val("");
-					$('#myModal').modal('toggle')
-					window.open(url, "_blank");
-				} else {
-					$('#myModal').modal('toggle')
-				}
-			});
-	}
+  const calleeNumber = $("#calleeNumber").val();
+  const compamyName = $("#companyName").val();
+  const contact = $("#contact").val();
+  const contactPhone = $("#contactPhone").val();
+  if (compamyName == "" || contactPhone == "" || contact == "") {
+    alert("请填写表单内容");
+  } else if (contactPhone.length != 11) {
+    alert("请填写正确的手机号");
+  } else {
+    const openId = compamyName + "," + contact + "," + contactPhone;
+    $.get(CORAL_URL + "/tenant/bookRepo/occupy?calleeNumber=" + calleeNumber + "&companyName=" + openId).then((res) => {
+      var url = "https://4001.cn/kt?openId=" + openId + "&number=" + calleeNumber;
+      if (res.code == 0) {
+        $("#companyName").val("");
+        $("#contact").val("");
+        $("#contactPhone").val("");
+        $("#myModal").modal("toggle");
+        swal("预占成功", "", "success");
+        setTimeout(() => {
+          window.open(url, "_blank");
+        }, 2000);
+      } else {
+        $("#myModal").modal("toggle");
+        swal(res.msg, "", "error");
+      }
+    });
+  }
 }

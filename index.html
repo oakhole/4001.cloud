@@ -500,45 +500,91 @@
 	<div class="goTo"></div>
 
 	<!-- 预占表单 -->
-	<div class="shang_box">
-		<a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()" title="关闭"><img
-				src="./img0725/saoma/close.jpg" alt="取消" /></a>
-		<div class="shang_tit">
-			<p>请填写预开通信息</p>
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="occupidModal" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						&times;
+					</button>
+					<h4 style="text-align: center;" class="modal-title" id="occupidModal">
+						预占号码
+					</h4>
+				</div>
+				<div class="modal-body">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">号码信息</h3>
+						</div>
+						<div class="panel-body">
+							<form class="form-horizontal" role="form">
+								<input type="hidden" name="calleeNumber" id="calleeNumber" />
+								<input type="hidden" name="submitType" id="submitType">
+								<div class="form-group">
+									<label class="col-sm-2 control-label">号码</label>
+									<div class="col-sm-10">
+										<span id="numberInfo" class="spanText"></span>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="contact" class="col-sm-2 control-label">价格</label>
+									<div class="col-sm-10">
+										<span id="priceInfo" class="spanText"></span>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="contactPhone" class="col-sm-2 control-label">通信资费</label>
+									<div class="col-sm-10">
+										<span id="chargeCost" class="spanText"></span>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">联系人信息</h3>
+						</div>
+						<div class="panel-body">
+							<form class="form-horizontal" role="form">
+								<div class="form-group">
+									<label for="companyName" class="col-sm-2 control-label">公司名称</label>
+									<div class="col-sm-10">
+										<input type="text" class="form-control" id="companyName" placeholder="请输入公司名称">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="contact" class="col-sm-2 control-label">联系人</label>
+									<div class="col-sm-10">
+										<input type="text" class="form-control" id="contact" placeholder="请输入联系人">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="contactPhone" class="col-sm-2 control-label">手机号码</label>
+									<div class="col-sm-10">
+										<input type="text" class="form-control" id="contactPhone" placeholder="请输入手机号码">
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+					</button>
+					<button onclick="submitNumber()" type="button" class="btn btn-primary">
+						提交
+					</button>
+				</div>
+			</div>
 		</div>
-		<form class="form-horizontal" role="form">
-			<input type="hidden" name="calleeNumber" id="calleeNumber" />
-			<input type="hidden" name="submitType" id="submitType">
-			<div class="form-group">
-				<label for="companyName" class="col-sm-2 control-label">公司名称</label>
-				<div class="col-sm-10">
-					<input type="text" class="form-control" id="companyName" placeholder="请输入名字">
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="contact" class="col-sm-2 control-label">联系人</label>
-				<div class="col-sm-10">
-					<input type="text" class="form-control" id="contact" placeholder="请输入名字">
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="contactPhone" class="col-sm-2 control-label">手机号码</label>
-				<div class="col-sm-10">
-					<input type="text" class="form-control" id="contactPhone" placeholder="请输入名字">
-				</div>
-			</div>
-			<div class="form-group">
-				<div class="col-sm-offset-2 col-sm-10" style="text-align: right;">
-					<button type="button" onclick="submitNumber()" class="btn btn-primary">提交</button>
-				</div>
-			</div>
-		</form>
 	</div>
 
 	<script src="./js0725/jquery.min.js"></script>
 	<script src="./js0725/jquery.SuperSlide.2.1.1.js"></script>
 	<script src="./js0725/index.js"></script>
 	<script src="./js0725/main.js"></script>
+	<script src="js0725/app.js"></script>
 
 	<script>
 		var _hmt = _hmt || [];
@@ -579,7 +625,7 @@
 	</script>
 	<!-- sweetAlert 提示 -->
 	<script src="./js0725/sweetalert.min.js" type="text/jscript"></script>
-
+	<script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<script src="https://cdn.bootcss.com/handlebars.js/4.1.2/handlebars.min.js"></script>
 	<script id="handle-template" type="text/x-handlebars-template">
 			{{#each rows}}
