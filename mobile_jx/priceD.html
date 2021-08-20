@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>
+        400电话【400号码办理】企业400申请上4001.cn无选号费，快速开通只需一天，百万优质400号码任你选。
+    </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="400,400电话,400电话申请,400电话办理,400业务办理,400电话资费,400电话收费标准,400电话如何申请,400电话怎么申请" />
+    <meta name="description" content="400办理68元/月，开号即送服务功能，自主管理后台。不区分长市话，资费低至8分/分钟。" />
+
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/single.css?8901dadaas2666" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://weui.io/style/weui.css">
+    <script src="./js/rem.js"></script>
+</head>
+
+<body style="background: #fff !important;">
+    <header class="header clearfix">
+        <a class="logo fl" href="#"><img src="./images/single/logo.png" alt="乐格云" /></a>
+        <div class="web-name fl"></div>
+    </header>
+    <section class="banner">
+        <img src="./images/single/banner.png"
+            onclick="window.open('https://1761229.s4.udesk.cn/im_client/?web_plugin_id=11665')" />
+    </section>
+    <!-- 右侧边栏在线联系 -->
+    <!-- <div class="m-kf">
+        <img src="./images/single/m-kf.png"
+            onclick="window.open('https://1761229.s4.udesk.cn/im_client/?web_plugin_id=11665')" />
+    </div> -->
+
+    <!-- 推荐号码库 -->
+    <section class="tuijian" style="margin-top: -40px;">
+        <div class="mtcs">
+            <div class="tc" style="box-shadow: none; margin-bottom: 1rem;">
+                <div class="bottom">
+                    <div class="numShow">
+                        <div class="num-itmes clearfix" id="loadedNumbers">
+                        </div>
+                        <!--加载提示框-->
+                        <div id="loading"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 预占表单 -->
+    <div class="js_dialog" id="occcupyDiv" style="display: none;">
+        <div class="weui-mask"></div>
+        <div id="occcupyDialog" class="weui-half-screen-dialog" style="max-height: 90%;">
+            <div class="weui-half-screen-dialog__hd">
+                <div class="weui-half-screen-dialog__hd__side">
+                    <button class="weui-icon-btn" id="closeDialog">关闭<i class="weui-icon-close-thin"></i></button>
+                </div>
+                <div class="weui-half-screen-dialog__hd__main">
+                    <strong class="weui-half-screen-dialog__title">预占号码</strong>
+                </div>
+            </div>
+            <div class="weui-half-screen-dialog__bd">
+                <div class="weui-form" style="margin-top: -2em;">
+                    <div class="weui-form__control-area" style="margin: 0 0 48px 0;">
+                        <div class="weui-cells__group weui-cells__group_form">
+                            <div class="weui-cells__title">预占号码信息</div>
+                            <div class="weui-cells weui-cells_form" style="font-size: 12px;">
+                                <div class="weui-cell weui-cell_active">
+                                    <div class="weui-cell__hd"><label class="weui-label">400 号码</label></div>
+                                    <div class="weui-cell__bd">
+                                        <input id="calleeNumber" class="weui-input" readonly />
+                                    </div>
+                                </div>
+                                <div class="weui-cell weui-cell_active">
+                                    <div class="weui-cell__hd"><label class="weui-label">价格</label></div>
+                                    <div class="weui-cell__bd">
+                                        <input id="price" name="price" class="weui-input" />
+                                    </div>
+                                </div>
+                                <div class="weui-cell weui-cell_active">
+                                    <div class="weui-cell__hd"><label class="weui-label">通信资费</label></div>
+                                    <div class="weui-cell__bd">
+                                        <input id="chargeCost" name=" chargeCost" value="0.1元/分钟" class="weui-input" />
+                                    </div>
+                                </div>
+                                <div class="weui-cell weui-cell_active">
+                                    <div class="weui-cell__hd"><label class="weui-label">套餐</label></div>
+                                    <div class="weui-cell__bd">
+                                        <input id="suiteType" name=" suiteType" value="" class="weui-input" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="weui-cells__title" style="margin-top: 1.2em;">联系人信息</div>
+                            <div class="weui-cells weui-cells_form" style="font-size: 12px;">
+                                <div class="weui-cell weui-cell_active">
+                                    <div class="weui-cell__hd"><label class="weui-label">公司名称</label></div>
+                                    <div class="weui-cell__bd">
+                                        <input id="js_input" name="companyName" class="weui-input"
+                                            placeholder="请输入公司名称（必填）" />
+                                    </div>
+                                </div>
+                                <div class="weui-cell weui-cell_active">
+                                    <div class="weui-cell__hd"><label class="weui-label">联系人名称</label></div>
+                                    <div class="weui-cell__bd">
+                                        <input id="js_input" name="contactor" class="weui-input"
+                                            placeholder="请输入称呼（必填）" />
+                                    </div>
+                                </div>
+                                <div class="weui-cell weui-cell_active">
+                                    <div class="weui-cell__hd"><label class="weui-label">联系方式</label></div>
+                                    <div class="weui-cell__bd">
+                                        <input id="js_input" name="mobile" class="weui-input" placeholder="请输入联系方式（必填）"
+                                            type="number" pattern="[0-9]*" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weui-form__opr-area">
+                        <a class="weui-btn weui-btn_primary" id="submitOccupy">提交</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- text toast -->
+    <div id="errorToast" style="display: none;">
+        <div class="weui-mask_transparent"></div>
+        <div class="weui-toast weui-toast_text">
+            <p class="weui-toast__content">该号码已被预占，请选择其他号码</p>
+        </div>
+    </div>
+
+    <script src="./js/jquery-1.10.1.min.js"></script>
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="https://res.wx.qq.com/t/wx_fed/cdn_libs/res/weui/1.2.3/weui.min.js"></script>
+    <script src="https://cdn.bootcss.com/handlebars.js/4.1.2/handlebars.min.js"></script>
+    <script id="suiteNumberList" type="text/x-handlebars-template">
+		{{#each rows}}
+			<div class="fl num" onclick="openOccupyPage('{{calleeNumber}}', '{{memo}}')">
+				{{privateCalleeNumber}}
+			</div>
+		{{/each}}
+	</script>
+    <script src="./js/loadNumbers.js"></script>
+    <script>
+        const price = '4800';
+        const suiteType = '集团套餐';
+        $(function () {
+            getSuiteNumberListFromPrice(1, 60, price);
+        });
+    </script>
+    <section class="Customer clearfix">
+        <div class="c clearfix">
+            <a href="tel:400-7777-400">
+                <div class="iconA bg-sp-1"></div>
+                <p>400-7777-400</p>
+            </a>
+        </div>
+        <div class="k clearfix">
+            <div class="iconB bg-sp-k1"></div>
+            <p>
+                <a style="color: #fff;" href="https://1761229.s4.udesk.cn/im_client/?web_plugin_id=11665"
+                    target="_blank">在线咨询</a>
+            </p>
+        </div>
+    </section>
+</body>
+
+</html>

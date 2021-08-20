@@ -4,109 +4,179 @@ KISSY CSS Reset
 特色：1.适应中文 2.基于最新主流浏览器
 */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 /* 清除内外边距 */
 body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
 dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
 pre, /* text formatting elements 文本格式元素 */
 fieldset,button, input, textarea, /* form elements 表单元素 */
-th, td { /* table elements 表格元素 */
-    margin: 0;
-    padding: 0;
+th, td {
+  /* table elements 表格元素 */
+  margin: 0;
+  padding: 0;
 }
 
 /* 设置默认字体 */
 body,
-button, input, select, textarea { /* for ie */
-    /*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
-    font: .24rem/.24rem  Microsoft Yahei,Tahoma, Helvetica, Arial, sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+button,
+input,
+select,
+textarea {
+  /* for ie */
+  /*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
+  font: 0.24rem/0.24rem Microsoft Yahei, Tahoma, Helvetica, Arial, sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
 }
 
-h1 { font-weight: normal;font-size: 18px;line-height: 18px; /* 18px / 12px = 1.5 */ }
-h2 { font-weight: normal;font-size: .34rem;line-height: .4rem; text-align: center}
-h3 { font-weight: normal;font-size: .28rem;line-height: .28rem; }
-h4, h5, h6 { font-size: 100%; }
+h1 {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 18px; /* 18px / 12px = 1.5 */
+}
+h2 {
+  font-weight: normal;
+  font-size: 0.34rem;
+  line-height: 0.4rem;
+  text-align: center;
+}
+h3 {
+  font-weight: normal;
+  font-size: 0.28rem;
+  line-height: 0.28rem;
+}
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
 
-address, cite, dfn, em, var,i,em { font-style: normal; } /* 将斜体扶正 */
-code, kbd, pre, samp, tt { font-family: "Courier New", Courier, monospace; } /* 统一等宽字体 */
-small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+address,
+cite,
+dfn,
+em,
+var,
+i,
+em {
+  font-style: normal;
+} /* 将斜体扶正 */
+code,
+kbd,
+pre,
+samp,
+tt {
+  font-family: "Courier New", Courier, monospace;
+} /* 统一等宽字体 */
+small {
+  font-size: 12px;
+} /* 小于 12px 的中文很难阅读，让 small 正常化 */
 
 /* 重置列表元素 */
-ul, ol { list-style: none; }
-
-/* 重置文本格式元素 */
-a { text-decoration: none; }
-a:hover { text-decoration: none}
-
-abbr[title], acronym[title] { /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
-    border-bottom: 1px dotted;
-    cursor: help;
+ul,
+ol {
+  list-style: none;
 }
 
-q:before, q:after { content: ''; }
+/* 重置文本格式元素 */
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+
+abbr[title],
+acronym[title] {
+  /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+q:before,
+q:after {
+  content: "";
+}
 
 /* 重置表单元素 */
-legend { color: #000; } /* for ie6 */
-fieldset, img { border: none; } /* img 搭车：让链接里的 img 无边框 */
+legend {
+  color: #000;
+} /* for ie6 */
+fieldset,
+img {
+  border: none;
+} /* img 搭车：让链接里的 img 无边框 */
 /* 注：optgroup 无法扶正 */
-button, input, select, textarea {
-    font-size: 100%; /* 使得表单元素在 ie 下能继承字体大小 */
+button,
+input,
+select,
+textarea {
+  font-size: 100%; /* 使得表单元素在 ie 下能继承字体大小 */
 }
 
 /* 重置表格元素 */
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* 重置 hr */
 hr {
-    border: none;
-    height: 1px;
+  border: none;
+  height: 1px;
 }
 
 /* 让非ie浏览器默认也显示垂直滚动条，防止因滚动条引起的闪烁 */
-html { overflow-y: scroll; }
+html {
+  overflow-y: scroll;
+}
 /*清除图片边框*/
 img {
-    border: 0;
-    vertical-align: middle;
+  border: 0;
+  vertical-align: middle;
 }
 .fl {
-    float: left;
+  float: left;
 }
 .fr {
-    float: right;
+  float: right;
 }
 /*清除浮动*/
-.clearfix:before, .clearfix:after {
-    content: "";
-    display: table;
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
 }
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 .clearfix {
-    *zoom: 1; /*IE/7/6*/
+  *zoom: 1; /*IE/7/6*/
 }
 /*bx:962px*/
-		a[title='站长统计'] {
-			display: none;
-		}
+a[title="站长统计"] {
+  display: none;
+}
 /*head ed*/
 
 .banner-video {
-    width: 100%;
-    height: 3.6rem;
-    background-color: #96191d;
-    background-image: url(../images/video-banner.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    overflow: hidden;
-    
+  width: 100%;
+  height: 3.6rem;
+  background-color: #96191d;
+  background-image: url(../images/video-banner.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
 }
 .banner-video video {
-    height: 3.6rem;
+  height: 3.6rem;
+}
+
+#loading {
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+}
+
+.weui-cells {
+  font-size: 12px;
 }
