@@ -84,9 +84,9 @@ function openOccupyPage(calleeNumber, guidePrice) {
   // 首先判断是否可预占
   $.get("https://400cha.cn/tenant/book/isBooked?calleeNumber=" + calleeNumber, function (res) {
     if (res.code === 0) {
-      $("#calleeNumber").val(calleeNumber);
-      $("#price").val(selectedSuitePrice);
-      $("#suiteType").val(selectedSuiteType);
+      $("#calleeNumber").html(calleeNumber);
+      $("#guidePrice").html(selectedSuitePrice + " 元/年");
+      $("#suiteType").html(selectedSuiteType);
 
       $("#occcupyDiv").fadeIn(200);
       $("#occcupyDialog").addClass("weui-half-screen-dialog_show");
@@ -110,10 +110,11 @@ $(function () {
   });
   // 提交号码预占
   $(document).on("click", "#submitOccupy", function () {
-    var calleeNumber = $("#calleeNumber").val();
+    var calleeNumber = $("#calleeNumber").html();
     var companyName = $("input[name='companyName']").val();
     var contactor = $("input[name='contactor']").val();
     var mobile = $("input[name='mobile']").val();
+    var suiteType = $("#suiteType").html();
 
     if (!companyName || companyName === "") {
       weui.topTips("请填写有效的公司名称", 5000);
@@ -133,7 +134,7 @@ $(function () {
     $(this).parents(".js_dialog").fadeOut(200);
     $("#occcupyDialog").removeClass("weui-half-screen-dialog_show");
 
-    var occupyName = [companyName, contactor, mobile].join(",");
+    var occupyName = [suiteType, companyName, contactor, mobile].join(",");
     var loading = weui.loading("loading");
     $.get("https://4001.cn/api/tenant/bookRepo/occupy?calleeNumber=" + calleeNumber + "&companyName=" + occupyName, function (res) {
       loading.hide();
