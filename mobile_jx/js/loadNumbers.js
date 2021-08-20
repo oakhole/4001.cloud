@@ -36,7 +36,7 @@ function getSuiteNumberListFromPrice(pageNum, pageSize) {
   var tplSuiteNumberList = Handlebars.compile($("#suiteNumberList").html());
   $.get("https://400cha.cn/tenant/book/findBookListFromTag?pageNum=" + pageNum + "&pageSize=" + pageSize + "&memo=" + price, function (res) {
     if (res.code === 0) {
-      if (res.rows.length < pageSize) {
+      if (res.rows.length > 0) {
         res.rows.map((row) => {
           row.privateCalleeNumber = row.calleeNumber.replace(/400\d(\d{6})/, "400*$1");
         });
