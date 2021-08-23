@@ -84,12 +84,8 @@ function openOccupyPage(calleeNumber, guidePrice) {
   // 首先判断是否可预占
   $.get("https://400cha.cn/tenant/book/isBooked?calleeNumber=" + calleeNumber, function (res) {
     if (res.code === 0) {
-      $("#calleeNumber").html(calleeNumber);
-      $("#guidePrice").html(selectedSuitePrice + " 元/年");
-      $("#suiteType").html(selectedSuiteType);
-
-      $("#occcupyDiv").fadeIn(200);
-      $("#occcupyDialog").addClass("weui-half-screen-dialog_show");
+      // 跳转到预占表单
+      location.href = "./occupyForm.html?calleeNumber=" + calleeNumber + "&guidePrice=" + selectedSuitePrice + "&suiteType=" + selectedSuiteType;
     } else {
       $("#errorToast").fadeIn(100);
       setTimeout(function () {
@@ -107,42 +103,5 @@ $(function () {
   $(document).on("click", ".weui-mask", function () {
     $(this).parents(".js_dialog").fadeOut(200);
     $("#occcupyDialog").removeClass("weui-half-screen-dialog_show");
-  });
-  // 提交号码预占
-  $(document).on("click", "#submitOccupy", function () {
-    var calleeNumber = $("#calleeNumber").html();
-    var companyName = $("input[name='companyName']").val();
-    var contactor = $("input[name='contactor']").val();
-    var mobile = $("input[name='mobile']").val();
-    var suiteType = $("#suiteType").html();
-
-    if (!companyName || companyName === "") {
-      weui.topTips("请填写有效的公司名称", 5000);
-      return;
-    }
-
-    if (!contactor || contactor === "") {
-      weui.topTips("请填写有效的联系人", 5000);
-      return;
-    }
-
-    if (!mobile || mobile === "") {
-      weui.topTips("请填写有效的联系电话", 5000);
-      return;
-    }
-
-    $(this).parents(".js_dialog").fadeOut(200);
-    $("#occcupyDialog").removeClass("weui-half-screen-dialog_show");
-
-    var occupyName = [suiteType, companyName, contactor, mobile].join(",");
-    var loading = weui.loading("loading");
-    $.get("https://4001.cn/api/tenant/bookRepo/occupy?calleeNumber=" + calleeNumber + "&companyName=" + occupyName, function (res) {
-      loading.hide();
-      if (res.code === 0) {
-        weui.toast("预占成功", 3000);
-      } else {
-        weui.topTips(res.msg, 5000);
-      }
-    });
   });
 });
