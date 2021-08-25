@@ -382,7 +382,7 @@
 		});
 
 		function getSuiteNumberListFromPrice(price) {
-			$.get('https://400cha.cn/tenant/book/findBookListFromTag?pageNum=1&pageSize=6&memo=' + price, function (res) {
+			$.get('https://400cha.cn/tenant/book/findBookListFromTag?pageNum=1&pageSize=6&status=可用&memo=' + price, function (res) {
 				if (res.code === 0) {
 					res.rows.map(row => {
 						row.privateCalleeNumber = row.calleeNumber.replace(/400\d(\d{6})/, '400*$1');
