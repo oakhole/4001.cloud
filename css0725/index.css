@@ -3421,14 +3421,14 @@ h2.tit::after {
 .process .tex {
   float: left;
   width: 160px;
-  margin-top: 22px;
+  margin-top: 36px;
   font-style: italic;
 }
 
 .process .tex .tit {
   color: #ff0000;
-  font-weight: bold;
   margin-bottom: 4px;
+  font-size: 28px;
 }
 
 .process .tex p {
