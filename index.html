@@ -672,7 +672,6 @@
 			$(".tab ul li").mouseenter(function (e) {
 				console.log(e);
 				var $this = $(this).index();
-				console.log($this);
 				$(this).addClass("active").siblings().removeClass("active");
 				console.log($(".tab-con .tab-div").eq($this));
 				$(".tab-con .tab-div").eq($this).show().siblings().hide();
