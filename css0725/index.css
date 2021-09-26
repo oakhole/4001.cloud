@@ -6337,3 +6337,19 @@ h2.tit::after {
 		font-size: 14px;
 		line-height: 1.42857143;
 	}
+
+  .tab-con p.more {
+    text-align: center; 
+    font-size: 12px; 
+    margin-right: 2rem;
+    margin-top: 2rem; 
+    margin-bottom: -2rem; 
+    padding-top: 2rem;
+  }
+  
+  .tab-con a.more {
+    border: 1px solid #ff3203;
+    padding: 5px 1rem;
+    color: white;
+    background-color: #ff3203;
+  }
