@@ -4399,7 +4399,7 @@ h2.tit::after {
   top: 8px;
   right: 0px;
   height: 35px;
-  width: 1px;
+  /* width: 1px; */
   background-color: #e5e5e5;
 }
 
