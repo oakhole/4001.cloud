@@ -18,6 +18,8 @@
 	<link rel="stylesheet" href="css0725/table.css" type="text/css" />
 	<link rel="shortcut icon" href="./favicon.ico" />
 
+	<link rel="stylesheet" type="text/css" href="rside/css/style.css" />
+
 	<script src="js0725/city.js" type="text/javascript"></script>
 	<script src="js0725/app.js"></script>
 	<style>
@@ -583,6 +585,30 @@
 		</div>
 	</div>
 
+	<!-- 右侧边栏 -->
+	<div class="rSide">
+		<ul>
+			<li id="qqonline">
+				<a href="https://4001.cn/number.html"><i class="bgs1"></i>快速办理</a>
+			</li>
+			<li class="shangqiao">
+				<a href="javascript:;" rel="nofollow">
+					<a href="https://1761229.s4.udesk.cn/im_client/?web_plugin_id=14953" target="_blank">
+						<i class="bgs2"></i>在线咨询</a>
+				</a>
+			</li>
+			<li class="sideewm"><i class="bgs3"></i>微信咨询<div class="ewBox son"></div>
+			</li>
+			<li class="sideetel"><i class="bgs4"></i>联系电话
+				<div class="telBox son">
+					<a href="tel:4007777400">
+						<dd class="bgs1"><span>热线电话</span> 400-7777-400</dd>
+					</a>
+				</div>
+			</li>
+		</ul>
+	</div>
+
 	<script src="./js0725/jquery.min.js"></script>
 	<script src="./js0725/jquery.SuperSlide.2.1.1.js"></script>
 	<script src="./js0725/index.js"></script>
@@ -638,6 +664,12 @@
 	</script>
 	<script>
 		$(function () {
+
+			// 2s 后自动打开聊天对话框
+			setTimeout(() => {
+				$('.udesk-client-btn').trigger('click');
+			}, 2000);
+
 			// 选项卡功能
 			$(".tab ul li").mouseenter(function (e) {
 				console.log(e);
