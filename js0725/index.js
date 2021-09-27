@@ -150,6 +150,11 @@ var base_url = "https://4001.cn";
 // }
 
 $(function () {
+  // 5s 后自动打开聊天对话框
+  setTimeout(() => {
+    $(".udesk-client-btn").trigger("click");
+  }, 5000);
+
   //    导航栏效果
   $(".nav a").crossNav();
   $(".how-tems .tem").oBJClass("active");
