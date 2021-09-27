@@ -72,7 +72,7 @@ function showCaleeNumberList(pattern) {
       pattern = $(".m8 input").val();
     }
   }
-  var isEnd = 1;
+  var isEnd = 0;
 
   $.ajax({
     url: BASE_URL + "/api/xuanhao",
