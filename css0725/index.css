@@ -6392,3 +6392,23 @@ h2.tit::after {
   margin-top: 40px;
   z-index: 100;
  }
+
+ .top .title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 2rem;
+}
+
+.top .time {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 12px;
+}
+
+.top .time small {
+  margin-left: 2rem;
+}
+
+.content p {
+  text-indent: 4ch;
+}
