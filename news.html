@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="css0725/bootstrap.css">
 	<link rel="stylesheet" href="css0725/index.css" />
 	<link rel="stylesheet" href="css0725/table.css" type="text/css" />
+	<link rel="stylesheet" type="text/css" href="rside/css/style.css" />
 	<script src="js0725/city.js" type="text/javascript"></script>
 	<style>
 		.slideBox {
@@ -112,8 +113,8 @@
 					<span>公司介绍</span>
 				</a>
 
-				<a href="https://400cha.cn" target="_blank" style="float: right;">
-					<span style="font-size: 12px;">商户登录</span>
+				<a href="https://400cha.cn" target="_blank" style="float: right; background-color: rgba(0,0,0,.75);">
+					<span>商户平台</span>
 				</a>
 			</div>
 		</div>
@@ -316,7 +317,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="LRdiv0" style="display: block;">
+	<div id="LRdiv0" style="display: block;" class="hidden">
 		<div id="LRfloater0" style="
 	          z-index: 2147483647;
 	          right: 10px;
@@ -340,6 +341,39 @@
 			</a>
 		</div>
 	</div>
+
+	<!-- 左侧边栏 -->
+	<div class="lSide">
+		<a href="https://1761229.s4.udesk.cn/im_client/?web_plugin_id=14953" target="_blank">
+			<img src="./img0725/hongbao.jpg" alt="" srcset="">
+		</a>
+	</div>
+
+	<!-- 右侧边栏 -->
+	<div class="rSide">
+		<ul>
+			<li id="qqonline">
+				<a href="https://4001.cn/number.html"><i class="bgs1"></i>快速办理</a>
+			</li>
+			<li class="shangqiao">
+				<a href="javascript:;" rel="nofollow">
+					<a href="https://1761229.s4.udesk.cn/im_client/?web_plugin_id=14953" target="_blank">
+						<i class="bgs2"></i>在线咨询</a>
+				</a>
+			</li>
+			<li class="sideewm"><i class="bgs3"></i>微信咨询<div class="ewBox son"></div>
+			</li>
+			<li class="sideetel"><i class="bgs4"></i>联系电话
+				<div class="telBox son">
+					<a href="tel:4007777400">
+						<dd class="bgs1"><span>热线电话</span> 400-7777-400</dd>
+					</a>
+				</div>
+			</li>
+			<li class="sidetop" onclick="goTop()"><i class="bgs6"></i>返回顶部</li>
+		</ul>
+	</div>
+
 	<div class="goTo"></div>
 	<script src="https://4001.cn/vendor/layui/layui.all.js"></script>
 	<script src="https://cdn.bootcss.com/handlebars.js/4.1.2/handlebars.min.js"></script>

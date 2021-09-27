@@ -281,11 +281,6 @@ img {
   font-weight: bold;
 }
 
-.nav a:hover:after {
-  top: 0;
-  transition: all 0.3s;
-}
-
 .nav a span {
   position: relative;
   z-index: 2;
@@ -1026,7 +1021,7 @@ h2.meal {
 }
 
 .guide .best-section2 .num-bd > .item .sub:hover {
-  background: #fd6f12;
+  background: #ff3203;
   color: #ffffff;
   opacity: 1;
 }
@@ -1489,6 +1484,17 @@ h2.meal {
   width: 53px;
   height: 53px;
   background: url(../image/ht3.png) no-repeat center center;
+}
+
+.meal-hot .meal-hot-group .item.ht4::after {
+  position: absolute;
+  display: block;
+  content: "";
+  right: 24px;
+  top: -8px;
+  width: 53px;
+  height: 53px;
+  background: url(../image/ht4.jpg) no-repeat center center;
 }
 
 .meal-hot .meal-hot-group .item .top {
