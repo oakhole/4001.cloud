@@ -1,4 +1,5 @@
 .lunbo_div {
+  display: none;
   width: 250px;
   height: 365px;
   background-color: #db3b3a;
@@ -7,6 +8,10 @@
   left: 10px;
   top: 270px;
   bottom: 0;
+}
+
+#LRfloater0 {
+  display: none;
 }
 
 .cup {
