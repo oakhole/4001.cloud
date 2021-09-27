@@ -370,3 +370,13 @@ function clickKefu() {
     window.open("https://1761229.s4.udesk.cn/im_client/?web_plugin_id=11665", "_blank");
   }
 }
+
+// 返回顶部
+function goTop() {
+  $("html,body").animate(
+    {
+      scrollTop: 0,
+    },
+    500
+  );
+}
