@@ -3665,6 +3665,7 @@ h2.tit::after {
 /*客户服务 E*/
 /*客服靠边*/
 #LRfloater0 {
+	display: none;
 	top: 270px !important;
 	right: 0 !important;
 }
