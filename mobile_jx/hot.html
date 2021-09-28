@@ -19,7 +19,6 @@
 	<link rel="stylesheet" href="./css/weui.css">
 	<script src="./js/rem.js"></script>
 	<script type="text/javascript">
-		console.log('navigator.userAgent: ' + navigator.userAgent);
 		if (!/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 			window.location.href = "https://4001.cn";
 		}
@@ -61,10 +60,11 @@
 			<div class="tc">
 				<div class="top">
 					<div class="tit clearfix">
-						<span class="fl je">998</span>
-						<sapn class="fl dw">元/年</sapn><!-- <span class="fl ps">(合约3年)</span> -->
+						<span class="fl je"><b style="font-size:14px;color: #e9ff6f;">限时活动</b><br />现价 360</span>
+						<sapn class="fl dw">元/年</sapn>
+						<!-- <span class="fl ps">(合约3年)</span> -->
 						<div class="tip">
-							经济套餐
+							无合约
 						</div>
 					</div>
 				</div>
@@ -80,8 +80,8 @@
 						<div class="icon fl">
 							<div class="ic-3 fl"></div>
 							<div class="sha fl">
-								<p class="p1">送200元</p>
-								<p class="p2">400话费</p>
+								<p class="p1">领50元</p>
+								<p class="p2">手机话费</p>
 							</div>
 						</div>
 					</div>
@@ -101,10 +101,10 @@
 			<div class="tc">
 				<div class="top">
 					<div class="tit clearfix">
-						<span class="fl je">1700</span>
+						<span class="fl je"><s style="font-size:14px;color: #fff;">原价 998</s><br />现价 599</span>
 						<sapn class="fl dw">元/年</sapn>
 						<div class="tip">
-							热销套餐
+							无合约
 						</div>
 					</div>
 				</div>
@@ -120,8 +120,8 @@
 						<div class="icon fl">
 							<div class="ic-3 fl"></div>
 							<div class="sha fl">
-								<p class="p1">送500元</p>
-								<p class="p2">400话费</p>
+								<p class="p1">领50元</p>
+								<p class="p2">手机话费</p>
 							</div>
 						</div>
 					</div>
@@ -141,10 +141,10 @@
 			<div class="tc">
 				<div class="top">
 					<div class="tit clearfix">
-						<span class="fl je">2400</span>
+						<span class="fl je"><s style="font-size:14px;color: #fff;">原价 1700</s><br />现价 999</span>
 						<sapn class="fl dw">元/年</sapn>
 						<div class="tip">
-							精选套餐
+							无合约
 						</div>
 					</div>
 				</div>
@@ -160,8 +160,8 @@
 						<div class="icon fl">
 							<div class="ic-3 fl"></div>
 							<div class="sha fl">
-								<p class="p1">送1000元</p>
-								<p class="p2">400话费</p>
+								<p class="p1">领50元</p>
+								<p class="p2">手机话费</p>
 							</div>
 						</div>
 					</div>
@@ -170,53 +170,6 @@
 							<a href="./priceC.html" class="more fr">更多 >></a>
 						</div>
 						<div class="num-itmes clearfix" id="price2400">
-						</div>
-						<div class="longBtn"
-							onclick="window.open('https://1761229.s4.udesk.cn/im_client/?web_plugin_id=22491')">
-							点击咨询套餐详情，获取更多优惠
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="tc">
-				<div class="top">
-					<div class="tit clearfix">
-						<span class="fl je">4800</span>
-						<sapn class="fl dw">元/年</sapn>
-						<div class="tip">
-							集团套餐
-						</div>
-					</div>
-				</div>
-				<div class="bottom">
-					<div class="icons clearfix">
-						<div class="icon fl">
-							<div class="ic-1 fl"></div>
-							<div class="sha fl">
-								<p class="p1">送全套</p>
-								<p class="p2">基础功能</p>
-							</div>
-						</div>
-						<div class="icon fl">
-							<div class="ic-2 fl"></div>
-							<div class="sha fl">
-								<p class="p1">送5项</p>
-								<p class="p2">增值功能</p>
-							</div>
-						</div>
-						<div class="icon fl">
-							<div class="ic-3 fl"></div>
-							<div class="sha fl">
-								<p class="p1">送2000元</p>
-								<p class="p2">400话费</p>
-							</div>
-						</div>
-					</div>
-					<div class="numShow">
-						<div class="tp clearfix">
-							<a href="./priceD.html" class="more fr">更多 >></a>
-						</div>
-						<div class="num-itmes clearfix" id="price4800">
 						</div>
 						<div class="longBtn"
 							onclick="window.open('https://1761229.s4.udesk.cn/im_client/?web_plugin_id=22491')">
@@ -291,7 +244,7 @@
 			</script>
 		</p>
 		<p>
-			<a target="_blank" href="http://www.miitbeian.gov.cn/">苏ICP备19006211号</a>
+			<a target="_blank" href="http://www.miitbeian.gov.cn/">苏ICP备19006211号-2</a>
 		</p>
 		<p></p>
 	</footer>
@@ -411,10 +364,9 @@
 
 		var tplSuiteNumberList = Handlebars.compile($("#suiteNumberList").html());
 		$(function () {
-			getSuiteNumberListFromPrice('998');
-			getSuiteNumberListFromPrice('1700');
-			getSuiteNumberListFromPrice('2400');
-			getSuiteNumberListFromPrice('4800');
+			getSuiteNumberListFromPrice('360');
+			getSuiteNumberListFromPrice('599');
+			getSuiteNumberListFromPrice('999');
 		});
 	</script>
 	<section class="Customer clearfix">

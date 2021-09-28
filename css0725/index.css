@@ -4372,7 +4372,7 @@ h2.tit::after {
 
 .tab ul li {
   float: left;
-  width: 244.5px;
+  width: 25%;
   height: 50px;
   background-color: #ff3203;
   border-bottom: 1px solid #e5e5e5;
@@ -4560,16 +4560,15 @@ h2.tit::after {
   width: 130px;
   height: 37px;
   line-height: 37px;
-  border-radius: 4px;
   color: #ffffff !important;
   font-size: 16px;
   font-weight: bold;
   box-shadow: 0px 0px 10px 5px #bce2fb;
-  background: linear-gradient(top, #5256ff, #419aff);
-  background: -webkit-linear-gradient(top, #5256ff, #419aff);
-  background: -o-linear-gradient(top, #5256ff, #419aff);
-  background: -moz-linear-gradient(top, #5256ff, #419aff);
-  background: -ms-linear-gradient(top, #5256ff, #419aff);
+  background: inear-gradient(#ff3203, #ff5f03fd);
+  background: -webkit-linear-gradient(#ff3203, #ff5f03fd);
+  background: -o-linear-gradient(#ff3203, #ff5f03fd);
+  background: -moz-linear-gradient(#ff3203, #ff5f03fd);
+  background: -ms-linear-gradient(#ff3203, #ff5f03fd);
   display: none;
 }
 
@@ -6447,19 +6446,30 @@ h2.tit::after {
 	}
 
   .tab-con p.more {
-    text-align: center; 
     font-size: 12px; 
     margin-right: 2rem;
     margin-top: 2rem; 
     margin-bottom: -2rem; 
     padding-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   
   .tab-con a.more {
     border: 1px solid #ff3203;
     padding: 5px 1rem;
     color: white;
-    background-color: #ff3203;
+    background: linear-gradient(#ff3203, #ff5f03fd);
+  }
+
+  .tab-con a.more:hover {
+    background: white;
+    color: red;
+  }
+
+  .tab-con a.contact {
+    margin-left: 2rem;
   }
 
  .lSide {
