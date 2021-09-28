@@ -18,6 +18,12 @@
 	<link rel="stylesheet" href="./css/swiper-bundle.min.css">
 	<link rel="stylesheet" href="./css/weui.css">
 	<script src="./js/rem.js"></script>
+	<script type="text/javascript">
+		console.log('navigator.userAgent: ' + navigator.userAgent);
+		if (!/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+			window.location.href = "https://4001.cn";
+		}
+	</script>
 </head>
 
 <body style="background: #fff !important;">
