@@ -2645,12 +2645,9 @@ h2.tit::after {
 
 /*实用功能*/
 /*400必选增值功能 B*/
-.mustPrower {
-}
-
 .mustPrower .prower-group .item {
   float: left;
-  width: 262px;
+  width: 280px;
   height: 100px;
   margin-right: 12px;
   margin-bottom: 20px;
@@ -2665,6 +2662,86 @@ h2.tit::after {
   box-shadow: 0 0 18px 0px #ff8690;
   border: 1px solid #ff8690;
   transition: all 0.3s;
+}
+
+.mustPrower .prower-group .item.xzl-100 {
+  position: relative;
+}
+
+.mustPrower .prower-group .item.xzl-100:after {
+  content: "选择率100%";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 80px;
+  height: 24px;
+  color: #ffffff;
+  font-size: 10px;
+  line-height: 24px;
+  text-align: center;
+  background: #ff6a00;
+  border-bottom-left-radius: 12px;
+}
+
+.mustPrower .prower-group .item.xzl-90 {
+  position: relative;
+}
+
+.mustPrower .prower-group .item.xzl-90:after {
+  content: "选择率90%";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 80px;
+  height: 24px;
+  color: #ffffff;
+  font-size: 10px;
+  line-height: 24px;
+  text-align: center;
+  background: #ff6a00;
+  border-bottom-left-radius: 12px;
+}
+
+.mustPrower .prower-group .item.xzl-80 {
+  position: relative;
+}
+
+.mustPrower .prower-group .item.xzl-80:after {
+  content: "选择率80%";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 80px;
+  height: 24px;
+  color: #ffffff;
+  font-size: 10px;
+  line-height: 24px;
+  text-align: center;
+  background: #ff6a00;
+  border-bottom-left-radius: 12px;
+}
+
+.mustPrower .prower-group .item.xzl-50 {
+  position: relative;
+}
+
+.mustPrower .prower-group .item.xzl-50:after {
+  content: "选择率50%";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 80px;
+  height: 24px;
+  color: #ffffff;
+  font-size: 10px;
+  line-height: 24px;
+  text-align: center;
+  background: #ff6a00;
+  border-bottom-left-radius: 12px;
 }
 
 .mustPrower .prower-group .item:hover .btn {
