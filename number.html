@@ -29,59 +29,7 @@
 	button,
 	a {
 		outline: 0 none !important;
-		blr: expression(this.onFocus=this.blur());
-	}
-
-
-	.slideBox {
-		height: 400px;
-		width: 100%;
-		overflow: hidden;
-		position: relative;
-	}
-
-	.slideBox .hd {
-		height: 15px;
-		overflow: hidden;
-		position: absolute;
-		left: 50%;
-		margin-left: -30px;
-		bottom: 10px;
-		z-index: 1;
-	}
-
-	.slideBox .hd ul {
-		overflow: hidden;
-		zoom: 1;
-		float: left;
-	}
-
-	.slideBox .hd ul li {
-		float: left;
-		margin-right: 4px;
-		width: 8px;
-		height: 8px;
-		line-height: 14px;
-		text-align: center;
-		background: #fff;
-		cursor: pointer;
-		border-radius: 50%;
-	}
-
-	.slideBox .hd ul li.on {
-		background: #f00;
-		color: #fff;
-	}
-
-	.slideBox .bd {
-		position: relative;
-		height: 100%;
-		z-index: 0;
-	}
-
-	.slideBox .bd .banner {
-		zoom: 1;
-		vertical-align: middle;
+		blur: expression(this.onFocus=this.blur());
 	}
 
 	/* 弹出二维码 */
