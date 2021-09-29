@@ -51,14 +51,14 @@
 
 		.slideBox .hd ul li {
 			float: left;
-			margin-right: 4px;
-			width: 8px;
-			height: 8px;
+			margin-right: 6px;
+			width: 64px;
+			height: 6px;
 			line-height: 14px;
 			text-align: center;
 			background: #fff;
 			cursor: pointer;
-			border-radius: 50%;
+			/* border-radius: 50%; */
 		}
 
 		.slideBox .hd ul li.on {
@@ -75,6 +75,12 @@
 		.slideBox .bd .banner {
 			zoom: 1;
 			vertical-align: middle;
+		}
+
+		#udesk_panel {
+			margin-right: 20px;
+			margin-bottom: 50px;
+			z-index: 1 !important;
 		}
 	</style>
 	<script type="text/javascript">
@@ -196,8 +202,8 @@
 								<div class="open-gift">
 									<span class="gift-tt">开户好礼</span>
 									<p>
-										号码开通无合约<span class="orange">送全套基础功能</span> ，开通成功赠送<span
-											class="orange">50元</span> 手机话费。（不限充值手机号）
+										号码开通无合约<span class="orange"> 送全套基础功能</span><br />
+										开通成功赠送<span class="orange"> 50元 手机话费。（不限充值手机号）</span>
 									</p>
 								</div>
 								<div class="exp-num">
@@ -231,8 +237,8 @@
 								<div class="open-gift">
 									<span class="gift-tt">开户好礼</span>
 									<p>
-										号码开通无合约<span class="orange">送全套基础功能</span> ，开通成功赠送<span
-											class="orange">50元</span> 手机话费。（不限充值手机号）
+										号码开通无合约<span class="orange"> 送全套基础功能</span><br />
+										开通成功赠送<span class="orange"> 80元 手机话费。（不限充值手机号）</span>
 									</p>
 								</div>
 								<div class="exp-num">
@@ -265,8 +271,8 @@
 								<div class="open-gift">
 									<span class="gift-tt">开户好礼</span>
 									<p>
-										号码开通无合约<span class="orange">送全套基础功能</span> ，开通成功赠送<span
-											class="orange">50元</span> 手机话费。（不限充值手机号）
+										号码开通无合约<span class="orange"> 送全套基础功能</span><br />
+										开通成功赠送<span class="orange"> 100元 手机话费。（不限充值手机号）</span>
 									</p>
 								</div>
 								<div class="exp-num">
@@ -928,7 +934,7 @@
 		jQuery(".slideBox").slide({
 			mainCell: ".bd .banner-box",
 			autoPlay: true,
-			interTime: 10000,
+			interTime: 5000,
 		});
 	</script>
 	<!-- sweetAlert 提示 -->
@@ -958,6 +964,10 @@
 	<!-- 页面初始化脚本信息 -->
 	<script>
 		$(function () {
+
+			// 初始化表单验证码
+			randCode();
+
 			// 选项卡功能
 			$(".tab ul li").mouseenter(function (e) {
 				console.log(e);
