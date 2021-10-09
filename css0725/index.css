@@ -309,7 +309,6 @@ a[title="站长统计"] {
   background: #ff0303;
   overflow: hidden;
   position: relative;
-  z-index: 2;
 }
 
 .nav a {

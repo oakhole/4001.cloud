@@ -268,7 +268,6 @@ img {
   background: #ff0303;
   overflow: hidden;
   position: relative;
-  z-index: 2;
 }
 
 .nav a {

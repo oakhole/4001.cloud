@@ -153,7 +153,7 @@ $(function () {
   // 5s 后自动打开聊天对话框
   setTimeout(() => {
     $(".udesk-client-btn").trigger("click");
-  }, 5000);
+  }, 15000);
 
   //    导航栏效果
   $(".nav a").crossNav();
