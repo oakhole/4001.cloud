@@ -6553,5 +6553,5 @@ h2.tit::after {
 #udesk_panel {
   margin-right: 20px;
   margin-bottom: 50px;
-  z-index: 1 !important;
+  z-index: 3 !important;
 }
