@@ -1,0 +1,52 @@
+* {
+  font-family: "Microsoft YaHei";
+}
+
+input {
+  outline: none;
+}
+
+::selection {
+  color: #fff;
+  background-color: #fb6326;
+}
+
+body {
+  background-color: #f4f4f5;
+}
+
+.page {
+  font-family: "Microsoft YaHei";
+  line-height: 2em;
+  background: #fff;
+  padding: 1em 5em;
+  margin: 2em auto;
+}
+
+.module {
+  font-family: Microsoft YaHei;
+  padding: 1rem;
+  background-color: #172e63;
+  color: #fff;
+  letter-spacing: 0.2em;
+}
+
+.module-border {
+  width: 6rem;
+  border: solid #333 0.3rem;
+  border-radius: 0.3rem;
+  margin: 1rem auto;
+}
+
+.module-desc {
+  text-indent: 2em;
+  line-height: 2em;
+}
+
+.h5 {
+  font-family: "Microsoft YaHei";
+  font-weight: 600;
+  font-size: 2rem;
+  color: #000;
+  margin: 3rem auto 2rem;
+}
