@@ -87,8 +87,16 @@
 		</div>
 	</div>
 	<div class="slideBox">
+		<div class="hd">
+			<ul>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
 		<div class="bd">
 			<div class="banner-box banner-kf">
+				<div class="banner banner1"
+					style="background: url(./fangfenghao/images/fangfenghao.jpg) no-repeat center top;"></div>
 				<div class="banner banner2"
 					style="background: url(https://4001.cn/cms/banner/view/1) no-repeat center top;"></div>
 			</div>
@@ -99,23 +107,23 @@
 
 	<div class="_1EBnc_QcEi1JtyUI_X5b5z">
 		<div>
-			<p>您的企业是否面临以下难题？</p>
+			<p>外呼防封电话优点</p>
 			<div>
 				<div>
 					<img src="./fangfenghao/img/undraw_unlock_24mb.png" />
-					<p>外呼数量多<br />号码频繁被封</p>
+					<p style="font-weight: 600;">外呼次数无限制</p>
 				</div>
 				<div>
 					<img src="./fangfenghao/img/undraw_personal_notebook_sobb.png" />
-					<p>号码接通率低<br />电话时常被标记</p>
+					<p style="font-weight: 600;">外呼时长无限制</p>
 				</div>
 				<div>
 					<img src="./fangfenghao/img/undraw_ideas_flow_cy7b.png" />
-					<p>无法自动录音<br />有效信息,沉淀慢</p>
+					<p style="font-weight: 600;">外呼号码无限制</p>
 				</div>
 				<div>
 					<img src="./fangfenghao/img/undraw_wallet_aym5.png" />
-					<p>话费越来越贵<br />成本日益增高</p>
+					<p style="font-weight: 600;">外呼手机无型号限制</p>
 				</div>
 			</div>
 		</div>
@@ -343,7 +351,7 @@
 	</div>
 
 	<!-- 提交信息立即试用 -->
-	<div class="four-fix" style="z-index: 999">
+	<div class="four-fix" style="z-index: 999;display: none;">
 		<div class="four-fix-bg">
 			<div class="bd four-bd">
 				<div class="floatLeft bd-text mt-35">
@@ -454,6 +462,13 @@
 	<script src="./js0725/sweetalert.min.js" type="text/jscript"></script>
 	<script src="js0725/index.js"></script>
 	<script src="./js0725/jquery.SuperSlide.2.1.1.js"></script>
+	<script>
+		jQuery(".slideBox").slide({
+			mainCell: ".bd .banner-box",
+			autoPlay: true,
+			interTime: 5000,
+		});
+	</script>
 	<script>
 		var _hmt = _hmt || [];
 		(function () {
