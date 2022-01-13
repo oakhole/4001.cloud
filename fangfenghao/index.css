@@ -50,3 +50,82 @@ body {
   color: #000;
   margin: 3rem auto 2rem;
 }
+
+.industry {
+  line-height: 1em;
+  font-size: 1.6rem;
+}
+
+.industry span {
+  display: inline-flex;
+  padding: 1em;
+  margin: 0.8rem;
+  border-bottom: 1px solid #fb6326;
+}
+
+.industry span:hover {
+  background-color: #fff;
+  box-shadow: 5px 9px 20px 0 rgb(0 0 0 / 10%);
+}
+
+.industry .zixun {
+  display: flex;
+  margin-top: 2em;
+  align-items: center;
+  justify-content: center;
+}
+
+.call-out-method > p:first-child {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: Microsoft YaHei;
+  color: #333;
+  margin: 40px 0;
+}
+
+.clients {
+  padding: 60px 0 40px;
+}
+
+.clients h1 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: Microsoft YaHei;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.clients h2 {
+  font-size: 20px;
+  color: #000;
+  border-left: 5px solid #c7000b;
+  padding-left: 5px;
+}
+
+.clients .img-box {
+  padding: 40px 0 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.clients .img-box img {
+  width: 200px;
+}
+
+.clients .img-box img:hover {
+  box-shadow: 5px 9px 20px 0 rgb(0 0 0 / 10%);
+}
+
+.btn {
+  background: #ff3203;
+  border-radius: 0;
+  padding: 1rem 6rem;
+  text-indent: 8px;
+  letter-spacing: 8px;
+}
+
+.contact-online {
+  margin-top: 5rem;
+}
