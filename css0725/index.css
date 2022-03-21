@@ -6622,3 +6622,48 @@ h2.tit::after {
 .contact-online {
   margin-top: 0 !important;
 }
+
+/* Footer 底部提示信息 */
+.warn_tips {
+      width: 1030px;
+      position: fixed;
+      bottom: 0;
+      z-index: 10000;
+      background: #DFEDFD;
+      height: 72px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      opacity: 0.9;
+  }
+
+  .warn_content {
+      position: relative;
+  }
+
+  p.tips_content {
+      width: 900px;
+      margin: auto;
+      line-height: 21px;
+      font-family: PingFangSC-Regular, PingFang SC;
+      font-size: 14px;
+      color: #3A5484;
+      font-weight: 300;
+      padding-top: 2em;
+      box-sizing: border-box;
+  }
+
+  img#warn_remind {
+    position: absolute;
+    width: 18px;
+    left: 35px;
+    top: 2.1em;
+}
+
+  img#close_warn_tips {
+      right: 9px;
+      position: absolute;
+      width: 18px;
+      top: 8px;
+      cursor: pointer;
+  }

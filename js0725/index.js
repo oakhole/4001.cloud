@@ -155,6 +155,13 @@ $(function () {
     $(".udesk-client-btn").trigger("click");
   }, 15000);
 
+  $(".rside").after("");
+
+  // 关闭提示
+  $(document).on("click", "#close_warn_tips", function () {
+    $(this).parents(".warn_tips").hide();
+  });
+
   //    导航栏效果
   $(".nav a").crossNav();
   $(".how-tems .tem").oBJClass("active");
