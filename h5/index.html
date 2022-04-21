@@ -1,0 +1,366 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="applicable-device" content="mobile" />
+    <title>呼叫中心|呼叫中心系统|在线客服|呼叫中心软件提供商|合力亿捷</title>
+    <meta name="description" content="呼叫中心,呼叫中心系统,呼叫中心软件供应商合力亿捷拥有自主产权的、完整的呼叫中心（CallCenter）解决方案，为客户提供从咨询到实施培训的一站式呼叫中心解决方案" />
+    <meta name="keywords" content="呼叫中心,呼叫中心系统,合力亿捷呼叫中心,呼叫中心软件,电信级呼叫中心" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=no" />
+    <link rel="canonical" href="https://www.hollycrm.com" />
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/jquery.mmenu.all.css" />
+    <link rel="stylesheet" href="./assets/css/iconfont/iconfont.css" />
+    <link rel="stylesheet" href="./assets/css/layouts.css" />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+    <script src="./assets/js/vue.min.js"></script>
+    <script src="./assets/js/jquery-3.2.1.min.js"></script>
+  </head>
+
+  <body>
+    <div class="page" id="app">
+      <!-- 头部导航...............................头部导航 -->
+      <header class="flex-box items-center fixed" :class="{'scrollHeader':scrolllHeader}">
+        <a class="logo" href="/">
+          <img :src="'./assets/images/'+logoImg" v-cloak />
+        </a>
+        <a class="button-apply ml-auto" @click="toWebchat" href="javascript:void(0);">免费试用</a>
+        <a class="header-menu" href="#menu">
+          <img :src="'./assets/images/'+menuImg" />
+        </a>
+      </header>
+      <!-- 头部导航end...............................头部导航end -->
+      <div class="content">
+        <div class="banner-box">
+          <h1>智能呼叫中心系统</h1>
+          <p>敏捷部署，快速上线 ，开通即享优质通话体验</p>
+          <a class="tryout" href="/register.html">免费试用</a>
+          <img class="banner-index" src="./assets/images/index_banner.png" alt="一站式客服营销系统" />
+        </div>
+        <div class="pro-callcenter">
+          <h1 class="part-title">
+            服务与营销<br />
+            全场景智能客服系统
+          </h1>
+          <div class="aicenter-ins">
+            <a href="/callcenter">
+              <div class="aicenter-inner-ins">
+                <img src="./assets/images/m11.png" alt="云呼叫中心系统" />
+                <h3>云呼叫中心</h3>
+                <p>电信级通话体验,10000+呼叫并发/大容量,系统稳定安全</p>
+              </div>
+            </a>
+            <a href="/webchat">
+              <div class="aicenter-inner-ins">
+                <img src="./assets/images/m12.png" alt="A.I.语音智慧平台" />
+                <h3>在线客服系统</h3>
+                <p>官网/微信/APP等渠道整合,全场景客户服务助力提效</p>
+              </div>
+            </a>
+          </div>
+          <div class="aicenter-ins">
+            <a href="/order">
+              <div class="aicenter-inner-ins">
+                <img src="./assets/images/m13.png" alt="智能在线客服系统" />
+                <h3>工单管理系统</h3>
+                <p>内外部高效协同,CRM服务工单流程线上化,有管理</p>
+              </div>
+            </a>
+            <a href="/aivoice">
+              <div class="aicenter-inner-ins">
+                <img src="./assets/images/m14.png" alt="企业级项目管理平台" />
+                <h3>AI.语音智慧平台</h3>
+                <p>智能客服+智能质检,AI智慧服务,辅助管理决策</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- <div class="more-way">
+        <h2 class="part-title-sec white">智能云呼叫中心系统</h2>
+        <p class="part-ins">智能云呼叫中心系统满足您的不同业务需求</p>
+        <img src="./assets/images/mcall.png" alt="智能云呼叫中心系统" />
+        <div class="apply-box">
+          <a class="apply-detail" href="/callcenter/">查看详情</a>
+          <a href="/register.html">免费体验</a>
+        </div>
+      </div>
+      <div class="more-way more-way-white">
+        <h2 class="part-title-sec white">A.I.语音智慧平台</h2>
+        <p class="part-ins">呼叫中心服务跃然升级的动力引擎</p>
+        <img src="./assets/images/mai.png" alt="A.I.语音智慧平台" />
+        <div class="apply-box">
+          <a class="apply-detail" href="/callcenter/">查看详情</a>
+          <a href="/register.html">免费体验</a>
+        </div>
+      </div>
+      <div class="more-way">
+        <h2 class="part-title-sec white">智能在线客服系统</h2>
+        <p class="part-ins">全渠道整合,智能机器人+人工客服,化繁为简,沟通一步到位</p>
+        <img src="./assets/images/mwebchat.png" alt="智能在线客服系统" />
+        <div class="apply-box">
+          <a class="apply-detail" href="/webchat/">查看详情</a>
+          <a href="/register.html?type=webchat">免费体验</a>
+        </div>
+      </div>
+      <div class="more-way more-way-white">
+        <h2 class="part-title-sec white">企业级项目管理平台</h2>
+        <p class="part-ins">小秘,搭建企业级项目管理架构</p>
+        <img src="./assets/images/mxiaomi.png" alt="企业级项目管理平台" />
+        <div class="apply-box">
+          <a class="apply-detail" href="/project/">查看详情</a>
+          <a href="/register.html?type=project">免费体验</a>
+        </div>
+      </div> -->
+        <!-- 经典行业解决方案................经典行业解决方案 -->
+        <div class="solve-wrap">
+          <h2 class="part-title-sec">解决方案覆盖20+领域</h2>
+          <div class="solve-box">
+            <a href="/solution/newretail/">
+              <img src="./assets/images/solu_ele_banner.png" alt="智能增值应用方案" />
+              <p>电商行业</p>
+            </a>
+            <a href="/solution/finance/">
+              <img src="./assets/images/solu_fina_banner.png" alt="智能客服解决方案" />
+              <p>金融保险</p>
+            </a>
+            <a href="/solution/education/">
+              <img src="./assets/images/solu_edu_banner.png" alt="政企业务解决方案" />
+              <p>教育培训</p>
+            </a>
+            <a href="/solution/lifeservice/">
+              <img src="./assets/images/solu_life_banner.png" alt="智能营销解决方案" />
+              <p>生活服务</p>
+            </a>
+            <a href="/solution/enterpriseservice/">
+              <img src="./assets/images/solu_com_banner.png" alt="容服和催收催缴解决方案" />
+              <p>企业服务</p>
+            </a>
+            <a href="/solution/automobile/">
+              <img src="./assets/images/solu_car_banner.png" alt="CRM解决方案" />
+              <p>汽车出行</p>
+            </a>
+          </div>
+          <div class="solve-more-wrap">
+            <a class="tryout mt-0" id="weixin-chat" href="javascript:void(0)">了解更多 <i class="iconfont icondanbianjiantou"></i></a>
+            <a class="tryout mt-0" href="/register.html">免费试用</a>
+          </div>
+        </div>
+        <div class="why-wrap">
+          <h3 class="part-title">为什么选择合力亿捷？</h3>
+          <p class="title-p">智能客服领域上市公司,专业更值得信赖</p>
+          <div class="why-box">
+            <div class="why">
+              <img src="./assets/images/index_why1.png" alt="" />
+              <p>
+                近20年技术积累<br />
+                自主知识产权
+              </p>
+            </div>
+            <div class="why">
+              <img src="./assets/images/index_why2.png" alt="" />
+              <p>
+                全国服务体系<br />
+                覆盖30+重点省市
+              </p>
+            </div>
+            <div class="why">
+              <img src="./assets/images/index_why3.png" alt="" />
+              <p>
+                27项核心技术<br />
+                成熟的系统开发
+              </p>
+            </div>
+            <div class="why">
+              <img src="./assets/images/index_why4.png" alt="" />
+              <p>
+                安全资源平台<br />
+                国际信息安全标准认证
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- 世界500强企业依赖的选择 -->
+        <!-- <div class="choice-wrap">
+        <h2 class="part-title-sec">世界500强企业信赖的选择</h2>
+        <div class="choice-box">
+          <a href="/wincase/">
+            <img src="./assets/images/m-choice1.png" alt="中国联通">
+            <h3>中国联通主要业务合作伙伴之一</h3>
+            <p>承接20个省份联通分公司的客服中心业务系统,在线客服系统搭建</p>
+          </a>
+          <a href="/wincase/">
+            <img src="./assets/images/m-choice2.png" alt="中石化">
+            <h3>中石化统一客服系统项目</h3>
+            <p>支持95388、400等多号码接入分布式部署，实现语音、在线等多渠道接入，统一客户服务</p>
+          </a>
+          <a href="/wincase/">
+            <img src="./assets/images/m-choice3.png" alt="联想移动">
+            <h3>联想移动呼叫中心项目</h3>
+            <p>满足其7*24小时不间断服务运营体系，以及联想移动新的业务扩展需求</p>
+          </a>
+          <a href="/wincase/">
+            <img src="./assets/images/m-choice4.png" alt="三菱">
+            <h3>三菱海尔中央空调售后客服项目</h3>
+            <p>与客户CRM对接，提供通话和在线服务，为大客户售后维护提供支撑</p>
+          </a>
+        </div>
+      </div> -->
+        <!-- 数千家知名企业正在使用合力亿捷的产品和服务 -->
+        <div class="logo-banner">
+          <h3 class="part-title">
+            <span>10000+</span>知名企业<br />
+            正在使用合力亿捷产品与服务
+          </h3>
+          <img class="logo-img" src="./assets/images/index_com.png" alt="知名企业" />
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <p>合力亿捷系统不仅实现数据的本地化，还将咨询用户统一管理，有效提升了客服的工作效率。</p>
+                <div class="slide-img">
+                  <img class="slide-img-other" src="./assets/images/index_slide_img1.png" alt="" />
+                  <p>—— 信息部</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <p>合力系统使用非常便捷，稳定性很高，同时，系统将全国各地来咨询的用户统一管理，避免了重复沟通。</p>
+                <div class="slide-img">
+                  <img src="./assets/images/index_slide_img2.png" alt="" />
+                  <p>—— 客服部</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <p>引入合力亿捷客户系统，也是希望让服务进一步提升。合力没让我们失望，无论是从系统稳定性还是提供的服务都很不错。</p>
+                <div class="slide-img">
+                  <img src="./assets/images/index_slide_img3.png" alt="" />
+                  <p>—— 公关部</p>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <p>合力亿捷优秀的技术实力完美实现了我们的需求，确保了我们坐席第一时间能立足客户痛点，解决实际问题。</p>
+                <div class="slide-img">
+                  <img src="./assets/images/index_slide_img4.png" alt="" />
+                  <p>—— 产品经理</p>
+                </div>
+              </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-tryout">
+        <p>
+          平均每天，至少有&nbsp;&nbsp;<i>8000万人</i><br />
+          通过合力亿捷产品和技术获取服务
+        </p>
+        <a href="/register.html">免费试用</a>
+      </div>
+      <div class="footer">
+        <p>
+          <a href="/callcenter">
+            <span>呼叫中心<img src="./assets/images/hot_new.png" /></span>
+          </a>
+          <a href="/webchat">
+            <span>在线客服<img src="./assets/images/hot_new.png" /></span>
+          </a>
+          <a href="/order">
+            <span>工单系统</span>
+          </a>
+          <a href="/aivoice">
+            <span>AI智慧语音平台</span>
+          </a>
+        </p>
+        <p>
+          <a href="/solution">
+            <span>解决方案</span>
+          </a>
+          <a href="/aboutus">
+            <span>关于我们</span>
+          </a>
+          <a href="/register.html">
+            <span>免费试用</span>
+          </a>
+        </p>
+        <div class="footer-power-box">
+          <h3>权威认证</h3>
+          <img src="./assets/images/footer_power.png" />
+        </div>
+        <div class="footer-tel-box">
+          <h3>联系我们</h3>
+          <div class="telNum-box">售前电话：<a class="telNum" href="tel:4006-819-525">4006-819-525</a></div>
+        </div>
+        <div class="footer-bottom">
+          <p class="footer-com">北京合力亿捷科技股份有限公司</p>
+          <p>
+            Copyright © 2022 HOLLYCRM SOFTWARE <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow">京ICP备09032423号</a><br />
+            <a href="http://www.beian.gov.cn/" target="_blank" rel="nofollow">京公网安备110108002742号</a>
+          </p>
+        </div>
+      </div>
+      <div class="contact-wrap">
+        <div class="contact-button fixed flex items-center justify-center rounded-full" @click="vm.contactShow=!vm.contactShow">
+          <div class="fix-chat-box">
+            <div class="fix-chat-img-box">
+              <img class="fix-chat-img" src="./assets/images/fix_chat_man.png" alt="在线客服图标" />
+            </div>
+          </div>
+        </div>
+        <div class="fixed flex juscity-center items-center contact-box" v-show="contactShow">
+          <a class="telNumber" href="tel:4006-819-525"> <img src="./assets/images/contact_tel2.png" alt="电话图标" />电话咨询 </a>
+          <a id="get_chat" href="javascript:void(0)"> <img src="./assets/images/contact_chat2.png" alt="微信咨询图标" />微信咨询 </a>
+          <div class="contact-close rounded-full" @click="contactClose">
+            <img src="./assets/images/contact_close.png" alt="咨询关闭按钮" />
+          </div>
+        </div>
+      </div>
+      <nav id="menu">
+        <ul>
+          <a class="menu-logo" href="/">
+            <img src="./assets/images/logo.png" alt="主页" />
+          </a>
+          <li class="menu-second">
+            <h3>产品</h3>
+            <a href="/callcenter">呼叫中心 <img src="./assets/images/HOT.png" alt="热点" /></a>
+            <a href="/webchat">在线客服 <img src="./assets/images/HOT.png" alt="热点" /></a>
+            <a href="/order">工单系统</a>
+            <a href="/aivoice">Al语音智慧平台</a>
+          </li>
+          <li class="menu-second">
+            <h3>解决方案</h3>
+            <a href="/solution/newretail/">电商行业</a>
+            <a href="/solution/finance/">金融保险</a>
+            <a href="/solution/education/">教育培训</a>
+            <a href="/solution/lifeservice/">生活服务</a>
+            <a href="/solution/enterpriseservice/">企业服务</a>
+            <a href="/solution/automobile/">汽车出行</a>
+          </li>
+          <li>
+            <a href="/register.html">免费试用</a>
+          </li>
+          <!-- <li>
+              <a href="/wincase">成功案例</a>
+            </li> -->
+          <li>
+            <a href="/aboutus">关于我们</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <!-- 这是百家号文章入口 -->
+    <!-- <div style="padding-left: 17px; padding-right: 17px;margin-bottom: 66px;">
+    <script>
+      cambrian.render('tail')
+    </script>
+  </div> -->
+    <script src="./assets/js/jquery.mmenu.min.all.js"></script>
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+    <script src="./assets/js/flexable.js"></script>
+    <script src="./assets/js/axios.js"></script>
+    <script src="./assets/js/axios.js"></script>
+    <script src="./assets/js/kefu.js"></script>
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>

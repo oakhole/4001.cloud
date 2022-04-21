@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="applicable-device" content="mobile" />
+  <title>呼叫中心|呼叫中心系统|在线客服|呼叫中心软件提供商|合力亿捷</title>
+  <meta name="description"
+    content="呼叫中心,呼叫中心系统,呼叫中心软件供应商合力亿捷拥有自主产权的、完整的呼叫中心（CallCenter）解决方案，为客户提供从咨询到实施培训的一站式呼叫中心解决方案" />
+  <meta name="keywords" content="呼叫中心,呼叫中心系统,合力亿捷呼叫中心,呼叫中心软件,电信级呼叫中心" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=no" />
+  <link rel="canonical" href="https://www.hollycrm.com" />
+  <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="/assets/css/jquery.mmenu.all.css" />
+  <link rel="stylesheet" href="/assets/css/layouts.css" />
+  <link rel="stylesheet" href="/assets/css/order.css" />
+  <script src="/assets/js/vue.min.js"></script>
+  <script src="/assets/js/jquery-3.2.1.min.js"></script>
+  <script src="/assets/js/tongji.js"></script>
+</head>
+
+<body>
+  <div class="page" id="app">
+    <!-- 头部导航...............................头部导航 -->
+    <header class="flex-box items-center fixed" :class="{'scrollHeader':scrolllHeader}">
+      <a class="logo" href="/">
+        <img :src="'/assets/images/'+logoImg" v-cloak>
+      </a>
+      <a class="button-apply ml-auto" @click="toWebchat" href="javascript:void(0);">免费试用</a>
+      <a class="header-menu" href="#menu">
+        <img :src="'/assets/images/'+menuImg" />
+      </a>
+    </header>
+    <!-- 头部导航end...............................头部导航end -->
+    <div class="content">
+      <div class="banner-box">
+        <h1>工单系统</h1>
+        <p>驱动企业内外高效协作,流程自动化解决体验断点<br>实现跨部门协作、有承诺、线上化、有管理</p>
+        <a class="tryout" href="/register.html">免费试用</a>
+        <img class="banner-index" src="/assets/images/order_banner_img.png" alt="一站式客服营销系统" />
+      </div>
+      <div class="order-mana-wrap wow animate__animated animate__fadeInUp animate__slow">
+        <h2 class="title">打破部门壁垒，流程化跨部门协作</h2>
+        <ul class="order-mana-tab">
+          <li @mouseover="teleMana(1)" :class="{active:teleManaI==1}">自定义配置
+            <span><i></i><i></i></span>
+          </li>
+          <li @mouseover="teleMana(2)" :class="{active:teleManaI==2}">灵活流转<span><i></i><i></i></span></li>
+          <li @mouseover="teleMana(4)" :class="{active:teleManaI==4}">全流程管理<span><i></i><i></i></span></li>
+          <li @mouseover="teleMana(5)" :class="{active:teleManaI==5}">统计报表<span><i></i><i></i></span></li>
+        </ul>
+        <div class="order-mana" v-show="teleManaI==1">
+          <div class="order-mana-img">
+            <img src="/assets/images/order_mana1.png" alt="轻松搭建工单流程">
+          </div>
+          <div class="order-mana-right">
+            <h5>轻松搭建工单流程</h5>
+            <div class="order-mana-block">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <p>自定义工单流程，模版支持拖拽快速布局，帮助企业快速搭出内部协作流程</p>
+            <div class="order-mana-apply">
+              <a href="/register.html">免费体验</a>
+            </div>
+          </div>
+        </div>
+        <div class="order-mana" v-show="teleManaI==2">
+          <div class="order-mana-img">
+            <img src="/assets/images/order_mana2.png" alt="工单高效流转">
+          </div>
+          <div class="order-mana-right">
+            <h5>工单高效流转</h5>
+            <div class="order-mana-block">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <p>系统可按照流程实现自动流转，也支持客服指派到个人或部门，实现跨部门高效协作</p>
+            <div class="order-mana-apply">
+              <a href="/register.html">免费体验</a>
+            </div>
+          </div>
+        </div>
+        <div class="order-mana" v-show="teleManaI==3">
+          <div class="order-mana-img order-mana-img-big">
+            <img src="/assets/images/order_mana3.png" alt="移动工作台">
+          </div>
+          <div class="order-mana-right">
+            <h5>移动工作台</h5>
+            <div class="order-mana-block">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <p>实时消息/邮件提醒工单处理，并支持在APP上进行工单的受理、处理、完结全流程，随时随地处理用户问题</p>
+            <div class="order-mana-apply">
+              <a href="/register.html">免费体验</a>
+            </div>
+          </div>
+        </div>
+        <div class="order-mana" v-show="teleManaI==4">
+          <div class="order-mana-img">
+            <img src="/assets/images/order_mana4.png" alt="协作流程可视化">
+          </div>
+          <div class="order-mana-right">
+            <h5>协作流程可视化</h5>
+            <div class="order-mana-block">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <p>从工单创建、流转、到解决时效全程监控，工单流转中每个步骤、节点状态都清晰可见</p>
+            <div class="order-mana-apply">
+              <a href="/register.html">免费体验</a>
+            </div>
+          </div>
+        </div>
+        <div class="order-mana" v-show="teleManaI==5">
+          <div class="order-mana-img">
+            <img src="/assets/images/order_mana5.png" alt="工单统计报表">
+          </div>
+          <div class="order-mana-right">
+            <h5>工单统计报表</h5>
+            <div class="order-mana-block">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <p>完整分析工单处理情况，掌握工单处理工作量，助力优化服务流程</p>
+            <div class="order-mana-apply">
+              <a href="/register.html">免费体验</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="order-price-wrap wow animate__animated animate__fadeInUp animate__slow">
+        <h2 class="title">一站式响应服务需求，高效连接客户</h2>
+        <p class="order-price-p">工单系统与合力云客服产品打通，选择客户自动将客户信息带入工单，并关联电话、在线全部联络历史</p>
+        <img src="/assets/images/order_price_img.png" alt="">
+        <!-- <div class="price-box wow animate__animated animate__fadeInUp animate__slow">
+          <a href="/register.html">预约演示</a>
+        </div> -->
+      </div>
+      <div class="order-video-wrap box wow animate__animated animate__fadeInUp">
+        <h2 class="title">工单灵活创建，满足不同服务场景</h2>
+        <div class="order-video-box">
+          <div class="order-video">
+            <div><img src="/assets/images/order_video1.png" alt=""></div>
+            <h3>客服创建</h3>
+            <div class="order-video-line"></div>
+            <p>系统提供非常方便的模版导入功能一键批量导入</p>
+          </div>
+          <div class="order-video">
+            <div><img src="/assets/images/order_video2.png" alt=""></div>
+            <h3>客户提交</h3>
+            <div class="order-video-line"></div>
+            <p>支持客户在网站、微信公众号、APP等入口自助发起工单</p>
+          </div>
+          <div class="order-video">
+            <div><img src="/assets/images/order_video3.png" alt=""></div>
+            <h3>扫码创建</h3>
+            <div class="order-video-line"></div>
+            <p>支持生成二维码，客户微信扫码，在线发起工单</p>
+          </div>
+          <div class="order-video">
+            <div><img src="/assets/images/order_video4.png" alt=""></div>
+            <h3>自动获取</h3>
+            <div class="order-video-line"></div>
+            <p>API对接小程序商城及H5商城，客户下单，自动获取订单信息</p>
+          </div>
+        </div>
+      </div>
+      <div class="order-more-wrap gray wow animate__animated animate__fadeInUp animate__slow">
+        <h2 class="title">工单功能列表</h2>
+        <div class="order-more-box">
+          <div class="order-more">
+            <img src="/assets/images/order_more1.png" alt="">
+            <p>自定义字段</p>
+            <div class="order-hover">
+              支持自定义<br>工单填写字段
+            </div>
+          </div>
+          <div class="order-more">
+            <img src="/assets/images/order_more2.png" alt="">
+            <p>自定义流程</p>
+            <div class="order-hover">
+              自定义流转流程<br>可实现自动流转
+            </div>
+          </div>
+          <div class="order-more">
+            <img src="/assets/images/order_more3.png" alt="">
+            <p>短信通知</p>
+            <div class="order-hover">
+              多种通知模版<br>实时短信通知
+            </div>
+          </div>
+          <div class="order-more">
+            <img src="/assets/images/order_more4.png" alt="">
+            <p>地图派单</p>
+            <div class="order-hover">
+              基于LBS位置定位实现地图派单
+            </div>
+          </div>
+          <div class="order-more">
+            <img src="/assets/images/order_more5.png" alt="">
+            <p>工单委托</p>
+            <div class="order-hover">
+              支持工单委托到个人或部门协助处理
+            </div>
+          </div>
+          <div class="order-more">
+            <img src="/assets/images/order_more6.png" alt="">
+            <p>工单池</p>
+            <div class="order-hover">
+              支持派单至工单池供处理人领取
+            </div>
+          </div>
+          <div class="order-more">
+            <img src="/assets/images/order_more7.png" alt="">
+            <p>SLA</p>
+            <div class="order-hover">
+              工单承载SLA，全过程服务质量管理
+            </div>
+          </div>
+          <div class="order-more">
+            <img src="/assets/images/order_more8.png" alt="">
+            <p>角色权限</p>
+            <div class="order-hover">
+              设定每个人的增、删、改、查等权限
+            </div>
+          </div>
+          <div class="order-more">
+            <img src="/assets/images/order_more9.png" alt="">
+            <p>库存管理</p>
+            <div class="order-hover">
+              支持用户来电、在线咨询时，客服创建工单
+            </div>
+          </div>
+          <div class="order-more">
+            <img src="/assets/images/order_more10.png" alt="">
+            <p>工单回执</p>
+            <div class="order-hover">
+              支持客户在网站、微信公众号、APP等入口自助发起工单
+            </div>
+          </div>
+          <div class="order-more">
+            <img src="/assets/images/order_more11.png" alt="">
+            <p>客户签名</p>
+            <div class="order-hover">
+              支持生成二维码，客户微信扫码，在线发起工单
+            </div>
+          </div>
+          <div class="order-more">
+            <img src="/assets/images/order_more12.png" alt="">
+            <p>API</p>
+            <div class="order-hover">
+              API对接小程序商<br>城及H5商城，客<br>户下单，自动<br>获取订单信息
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-tryout">
+      <p>
+        平均每天，至少有&nbsp;&nbsp;<i>8000万人</i><br />
+        通过合力亿捷产品和技术获取服务
+      </p>
+      <a href="/register.html">免费试用</a>
+    </div>
+    <!-- ---------------------- 底部导航 ----------------------- -->
+    <!-- ---------------------- 底部导航 ----------------------- -->
+    <div class="footer">
+      <p>
+        <a href="/callcenter">
+          <span>呼叫中心<img src="/assets/images/hot_new.png"></span>
+        </a>
+        <a href="/webchat">
+          <span>在线客服<img src="/assets/images/hot_new.png"></span>
+        </a>
+        <a href="/order">
+          <span>工单系统</span>
+        </a>
+        <a href="/aivoice">
+          <span>AI智慧语音平台</span>
+        </a>
+      </p>
+      <p>
+        <a href="/solution">
+          <span>解决方案</span>
+        </a>
+        <a href="/aboutus">
+          <span>关于我们</span>
+        </a>
+        <a href="/register.html">
+          <span>免费试用</span>
+        </a>
+      </p>
+      <div class="footer-power-box">
+        <h3>权威认证</h3>
+        <img src="/assets/images/footer_power.png">
+      </div>
+      <div class="footer-tel-box">
+        <h3>联系我们</h3>
+        <div class="telNum-box">
+          售前电话：<a class="telNum" href="tel:4006-819-525">4006-819-525</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-com">北京合力亿捷科技股份有限公司</p>
+        <p>Copyright © 2022 HOLLYCRM SOFTWARE
+          <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow">京ICP备09032423号</a><br>
+          <a href="http://www.beian.gov.cn/" target="_blank" rel="nofollow">京公网安备110108002742号</a>
+        </p>
+      </div>
+    </div>
+    <!-- ---------------------- 悬浮咨询框 ---------------------- -->
+    <div class="contact-wrap">
+      <div class="contact-button fixed flex items-center justify-center rounded-full"
+        @click="vm.contactShow=!vm.contactShow">
+        <div class="fix-chat-box">
+          <div class="fix-chat-img-box">
+            <img class="fix-chat-img" src="/assets/images/fix_chat_man.png" alt="在线客服图标" />
+          </div>
+        </div>
+      </div>
+      <div class="fixed flex juscity-center items-center contact-box" v-show="contactShow">
+        <a class="telNumber" href="tel:4006-819-525">
+          <img src="/assets/images/contact_tel2.png" alt="电话图标">电话咨询
+        </a>
+        <a id="get_chat" href="javascript:void(0)">
+          <img src="/assets/images/contact_chat2.png" alt="微信咨询图标">微信咨询
+        </a>
+        <div class="contact-close rounded-full" @click="contactClose">
+          <img src="/assets/images/contact_close.png" alt="咨询关闭按钮">
+        </div>
+      </div>
+    </div>
+    <!-- ---------------------- 侧栏导航菜单 ----------------------- -->
+    <nav id="menu">
+      <ul>
+        <a class="menu-logo" href="/">
+          <img src="/assets/images/logo.png" alt="主页">
+        </a>
+        <li class="menu-second">
+          <h3>产品</h3>
+          <a href="/callcenter">呼叫中心 <img src="/assets/images/HOT.png" alt="热点"></a>
+          <a href="/webchat">在线客服 <img src="/assets/images/HOT.png" alt="热点"></a>
+          <a href="/order">工单系统</a>
+          <a href="/aivoice">Al语音智慧平台</a>
+        </li>
+        <li class="menu-second">
+          <h3>解决方案</h3>
+          <a href="/solution/newretail/">电商行业</a>
+          <a href="/solution/finance/">金融保险</a>
+          <a href="/solution/education/">教育培训</a>
+          <a href="/solution/lifeservice/">生活服务</a>
+          <a href="/solution/enterpriseservice/">企业服务</a>
+          <a href="/solution/automobile/">汽车出行</a>
+        </li>
+        <li>
+          <a href="/register.html">免费试用</a>
+        </li>
+        <!-- <li>
+                  <a href="/wincase">成功案例</a>
+                </li> -->
+        <li>
+          <a href="/aboutus">关于我们</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <script src="/assets/js/jquery.mmenu.min.all.js"></script>
+  <script src="/assets/js/swiper-bundle.min.js"></script>
+  <script src="/assets/js/flexable.js"></script>
+  <script src="/assets/js/axios.js"></script>
+  <script src="/assets/js/kefu.js"></script>
+  <script src="/assets/js/order.js"></script>
+</body>
+
+</html>

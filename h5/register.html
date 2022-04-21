@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="applicable-device" content="mobile" />
+    <title>呼叫中心|呼叫中心系统|在线客服|呼叫中心软件提供商|合力亿捷</title>
+    <meta name="description" content="呼叫中心,呼叫中心系统,呼叫中心软件供应商合力亿捷拥有自主产权的、完整的呼叫中心（CallCenter）解决方案，为客户提供从咨询到实施培训的一站式呼叫中心解决方案" />
+    <meta name="keywords" content="呼叫中心,呼叫中心系统,合力亿捷呼叫中心,呼叫中心软件,电信级呼叫中心" />
+    <link rel="canonical" href="https://www.hollycrm.com/apply/" />
+    <link rel="stylesheet" href="/assets/css/element-ui/lib/theme-chalk/index.css" />
+    <link rel="stylesheet" href="/assets/css/element-ui/lib/theme-chalk/display.css" />
+    <link rel="stylesheet" href="/assets/css/jquery.mmenu.all.css" />
+    <link rel="stylesheet" href="/assets/css/layouts.css" />
+    <link rel="stylesheet" href="/assets/css/apply.css" />
+    <script src="/assets/js/vue.min.js"></script>
+    <script src="/assets/js/jquery-3.2.1.min.js"></script>
+    <script src="/assets/js/element.js"></script>
+  </head>
+
+  <body>
+    <div class="page" id="app">
+      <!-- 头部导航...............................头部导航 -->
+      <header class="flex-box items-center fixed" :class="{'scrollHeader':scrolllHeader}">
+        <a class="logo" href="/">
+          <img :src="'/assets/images/'+logoImg" alt="合力亿捷logo" v-cloak />
+        </a>
+        <!-- <a class="button-apply ml-auto" href="/register.html?btn=top">免费试用</a> -->
+        <a class="header-menu" href="#menu">
+          <img :src="'/assets/images/'+menuImg" />
+        </a>
+      </header>
+      <!-- 头部导航end...............................头部导航end -->
+      <div class="header-blank"></div>
+      <div id="apply">
+        <el-row type="flex" class="apply-wrap">
+          <el-col class="apply-right-wrap">
+            <h2>7天免费注册体验</h2>
+            <p class="apply-note">{{titleText}}</p>
+            <el-form :model="form" status-icon :rules="rules" ref="form" label-width="70px" class="apply">
+              <!--手机号.........................................手机号-->
+              <el-form-item label="手机号" prop="tel">
+                <el-input v-model="form.tel" placeholder="请输入联系人电话" autocomplete="on"></el-input>
+              </el-form-item>
+              <!--短信验证码...................................短信验证码-->
+              <el-form-item class="apply-code-wrap" label="验证码" prop="code">
+                <el-input class="apply-code" v-model="form.code" placeholder="请输入验证码" @blur="checkSmsCode" autocomplete="on"></el-input>
+                <el-button type="danger" @click="getCode" :disabled="able">{{codeText}}</el-button>
+              </el-form-item>
+              <!--企业.........................................企业-->
+              <el-form-item label="企业" prop="com">
+                <label slot="label">企&nbsp;&nbsp;&nbsp;业</label>
+                <el-input v-model="form.com" placeholder="请输入企业名称" autocomplete="on"></el-input>
+              </el-form-item>
+              <!--城市.........................................城市-->
+              <el-form-item label="城市" prop="city">
+                <label slot="label">城&nbsp;&nbsp;&nbsp;市</label>
+                <el-input v-model="form.city" placeholder="公司所在城市方便联系"></el-input>
+              </el-form-item>
+              <!--提交.........................................提交-->
+              <el-form-item class="apply-submit-wrap">
+                <el-button type="primary" @click="submitForm('form')" class="apply-submit" :disabled="checked==true?false:true">提交</el-button>
+                <div class="little-tips-wrap">
+                  <span class="little-tips">注册即代表同意合力亿捷<a target="_blank" href="//www.hollycrm.com/policy/">《隐私政策》</a></span>
+                </div>
+              </el-form-item>
+              <!-- <div class="success-tips">
+              <h3>注册成功后您将获得</h3>
+              <p>● &nbsp;智能云客服产品白皮书</p>
+              <p>● &nbsp;加入2000+客服电销高管社群</p>
+            </div> -->
+            </el-form>
+          </el-col>
+        </el-row>
+      </div>
+      <nav id="menu">
+        <ul>
+          <a class="menu-logo" href="/">
+            <img src="/assets/images/logo.png" alt="主页" />
+          </a>
+          <li class="menu-second">
+            <h3>产品</h3>
+            <a href="/callcenter">呼叫中心 <img src="/assets/images/HOT.png" alt="热点" /></a>
+            <a href="/webchat">在线客服 <img src="/assets/images/HOT.png" alt="热点" /></a>
+            <a href="/order">工单系统</a>
+            <a href="/aivoice">Al语音智慧平台</a>
+          </li>
+          <li class="menu-second">
+            <h3>解决方案</h3>
+            <a href="/solution/newretail/">电商行业</a>
+            <a href="/solution/finance/">金融保险</a>
+            <a href="/solution/education/">教育培训</a>
+            <a href="/solution/lifeservice/">生活服务</a>
+            <a href="/solution/enterpriseservice/">企业服务</a>
+            <a href="/solution/automobile/">汽车出行</a>
+          </li>
+          <li>
+            <a href="/register.html">免费试用</a>
+          </li>
+          <!-- <li>
+                  <a href="/wincase">成功案例</a>
+                </li> -->
+          <li>
+            <a href="/aboutus">关于我们</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <script src="/assets/js/jquery.mmenu.min.all.js"></script>
+    <script src="/assets/js/fastclick.js"></script>
+    <script src="/assets/js/axios.min.js"></script>
+    <script src="/assets/js/flexable.js"></script>
+    <script src="/assets/js/kefu.js"></script>
+    <script src="/assets/js/apply.js"></script>
+  </body>
+</html>

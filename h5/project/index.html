@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="applicable-device" content="mobile">
+  <title>即时通讯,即时通讯软件,企业即时通讯,互联网工作平台-合力亿捷</title>
+  <meta name="description"
+    content="企业即时通讯软件-小秘,是专为企业打造的移动协同办公平台,实现整个公司无缝协同,让团队之间随时随地移动办公,迅速展开协作.无论在公司、家里,还是路上,都能随时随地应付自如." />
+  <meta name="keywords" content="即时通讯,企业沟通,即时通讯软件,企业即时通讯" />
+  <link rel="canonical" href="https://www.hollycrm.com/project/" />
+  <link rel="stylesheet" href="/assets/css/jquery.mmenu.all.css" />
+  <link rel="stylesheet" href="/assets/css/layouts.css">
+  <link rel="stylesheet" href="/assets/css/xiaomi.css" />
+  <script src="/assets/js/vue.min.js"></script>
+  <script src="/assets/js/jquery-3.2.1.min.js"></script>
+  <script src="/assets/js/tongji.js"></script>
+  <!-- <script src="//msite.baidu.com/sdk/c.js?appid=1584757362458662"></script>
+          <script type="application/ld+json">
+              {
+                "@context": "https://ziyuan.baidu.com/contexts/cambrian.jsonld",
+                "@id": "http://m.hollycrm.com",
+                "appid": "1584757362458662",
+                "title": "呼叫中心,呼叫中心系统,在线客服,呼叫中心软件提供商-合力亿捷",
+                "images": ["http://m.hollycrm.com/img/logo.png"],
+                "pubDate": "2017-06-15T08:00:01"
+              }
+            </script> -->
+</head>
+
+<body>
+  <div class="page" id="app">
+    <!-- 头部导航...............................头部导航 -->
+    <header class="flex-box items-center fixed" :class="{'scrollHeader':scrolllHeader}">
+      <a class="logo" href="/">
+        <img :src="'/assets/images/'+logoImg" alt="合力亿捷logo" v-cloak>
+      </a>
+      <a class="button-apply ml-auto" @click="toWebchat" href="javascript:void(0);">免费试用</a>
+      <a class="header-menu" href="#menu">
+        <img :src="'/assets/images/'+menuImg" />
+      </a>
+    </header>
+    <!-- 头部导航end...............................头部导航end -->
+    <div class="im_content">
+      <div class="banner-box">
+        <h1>企业级项目管理平台</h1>
+        <p>
+          涉及项目管理5大过程组，云服务模式+移动端<br />
+          支撑项目团队高效协作
+        </p>
+        <a class="tryout" href="/register.html?type=xiaomi">免费试用</a>
+        <img class="banner-index" src="/assets/images/project-banner.jpg" alt="">
+      </div>
+
+      <div class="banner_container">
+        <div class="text_center">
+          <div class="text_container">
+            <div class="text_title">
+              企业级项目管理工具
+            </div>
+            <div>
+              <div class="title2_icon_container">
+                <img class="title2_icon" src="/img/xiaomi/banner2/1-1.png" />
+                <p>合同管理</p>
+              </div>
+              <div class="title2_icon_container">
+                <img class="title2_icon" src="/img/xiaomi/banner2/2-1.png" />
+                <p>进度管理</p>
+              </div>
+              <div class="title2_icon_container">
+                <img class="title2_icon" src="/img/xiaomi/banner2/3-1.png" />
+                <p>费用管理</p>
+              </div>
+            </div>
+            <div>
+              <div class="title2_icon_container">
+                <img class="title2_icon" src="/img/xiaomi/banner2/4-1.png" />
+                <p>文档管理</p>
+              </div>
+              <div class="title2_icon_container">
+                <img class="title2_icon" src="/img/xiaomi/banner2/5-1.png" />
+                <p>工时管理</p>
+              </div>
+              <div class="title2_icon_container">
+                <img class="title2_icon" src="/img/xiaomi/banner2/6-1.png" />
+                <p>项目监控</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="banner_container gray_back">
+        <div class="text_center">
+          <div class="text_container">
+            <div class="text_title">
+              合同管理简洁实用
+            </div>
+            <div class="text_content">
+              <p>自动生成合同编号、合同分类存储入合同库</p>
+              <p>及时了解合同进度及回款情况</p>
+              <p>合同变更、历史版本和变更记录自动留存，有据可查</p>
+            </div>
+          </div>
+          <img class="wide_img" src="/img/xiaomi/banner3.png" style="width: 60%;">
+        </div>
+      </div>
+      <div class="banner_container">
+        <div class="text_center">
+          <div class="text_container">
+            <div class="text_title">
+              费用管理电子化
+            </div>
+            <div class="text_content">
+              <p>借款、报销、审批等环节全部电子化</p>
+              <p>并自动归集为项目成本</p>
+              <p>项目经理、财务人员，实时查看项目借款及还款状态</p>
+            </div>
+          </div>
+          <img class="wide_img" src="/img/xiaomi/banner4.png" style="width: 78%;">
+        </div>
+      </div>
+      <div class="banner_container gray_back">
+        <div class="text_center">
+          <div class="text_container">
+            <div class="text_title">
+              进度管理公开透明
+            </div>
+            <div class="text_content">
+              <p>项目经理随时分派任务，成员随时了解个人任务清单</p>
+              <p>任务创建、进展和责任人等信息直观展现</p>
+              <p>发现问题，群组内即时沟通，针对任务作评论</p>
+            </div>
+          </div>
+          <img class="wide_img" src="/img/xiaomi/banner5.png" style="width: 60%;">
+        </div>
+      </div>
+      <div class="banner_container">
+        <div class="text_center">
+          <div class="text_container">
+            <div class="text_title">
+              立体式项目报工
+            </div>
+            <div class="text_content">
+              <p>报工信息公开透明，项目成员工作轨迹清晰一览</p>
+              <p>报工支持成员自查，项目经理驳回，管理员实时监控</p>
+              <p>及时纠正异动的报工项目，确保工时准确</p>
+            </div>
+          </div>
+          <img class="wide_img" src="/img/xiaomi/banner6.png" style="width: 60%;">
+        </div>
+      </div>
+      <div class="banner_container gray_back">
+        <div class="text_center">
+          <div class="text_container">
+            <div class="text_title">
+              上市公司级人力成本核算
+            </div>
+            <div class="text_content">
+              <p>支持总公司、分公司、部门和项目的多核算单元</p>
+              <p>人力成本核算精确到项目和部门</p>
+              <p>利于应用完工百分比法，对阶段项目成本进行可靠估计</p>
+            </div>
+          </div>
+          <img class="wide_img" src="/img/xiaomi/banner7.png" style="width: 85%;">
+        </div>
+      </div>
+      <div class="banner_container">
+        <div class="text_center">
+          <div class="text_container">
+            <div class="text_title">
+              项目监控实时保障
+            </div>
+            <div class="text_content">
+              <p>项目交付物对应于具体任务，执行过程重点监控</p>
+              <p>通过设置等级、检查项、审查等质量保证工具</p>
+              <p>保障其符合项目要求，有效规避项目风险</p>
+            </div>
+          </div>
+          <img class="wide_img" src="/img/xiaomi/banner8.png" style="width: 70%;">
+        </div>
+      </div>
+      <div class="banner_container gray_back">
+        <div class="text_center">
+          <div class="text_container">
+            <div class="text_title">
+              文档管理
+            </div>
+            <div class="text_content">
+              <p>多层级企业文档目录，便于检索和权限控制</p>
+              <p>项目文件方便成员共享、评论和管理</p>
+              <p>安全有效地管理项目阶段交付物</p>
+            </div>
+          </div>
+          <img class="wide_img" src="/img/xiaomi/banner9.png" style="width: 55%;">
+        </div>
+      </div>
+      <div class="banner_container">
+        <div class="text_center">
+          <div class="text_container">
+            <div class="text_title">
+              支持手机移动端
+            </div>
+            <div class="text_content">
+              <p>基于云模式，持续升级，具有更好的易用性</p>
+              <p>随时随地开启互联网办公模式</p>
+              <p>支持多终端（Wins、Mac、Web、Android、IOS）</p>
+            </div>
+          </div>
+          <img class="wide_img" src="/img/xiaomi/banner10.png">
+        </div>
+      </div>
+      <div class="banner_container gray_back">
+        <div class="text_center">
+          <div class="text_container" style="padding-bottom: 20px;">
+            <div class="text_title" style="margin-bottom: 20px;">
+              企业级办公应用
+            </div>
+            <div class="third_div clearfloat">
+              <div class="third_content_container">
+                <div class="third_content">
+                  <img src="/img/xiaomi/1.png">
+                  <p class="third_content_title">群聊/私聊</p>
+                </div>
+              </div>
+              <div class="third_content_container">
+                <div class="third_content">
+                  <img src="/img/xiaomi/2.png">
+                  <p class="third_content_title">全员通讯录</p>
+                </div>
+              </div>
+              <div class="third_content_container">
+                <div class="third_content">
+                  <img src="/img/xiaomi/3.png">
+                  <p class="third_content_title">考勤签到</p>
+                </div>
+              </div>
+              <div class="third_content_container">
+                <div class="third_content">
+                  <img src="/img/xiaomi/4.png">
+                  <p class="third_content_title">流程审批</p>
+                </div>
+              </div>
+            </div>
+            <div class="third_div clearfloat">
+              <div class="third_content_container">
+                <div class="third_content">
+                  <img src="/img/xiaomi/5.png">
+                  <p class="third_content_title">任务管理</p>
+                </div>
+              </div>
+              <div class="third_content_container">
+                <div class="third_content">
+                  <img src="/img/xiaomi/6.png">
+                  <p class="third_content_title">人事档案管理</p>
+                </div>
+              </div>
+              <div class="third_content_container">
+                <div class="third_content">
+                  <img src="/img/xiaomi/7.png">
+                  <p class="third_content_title">电话会议</p>
+                </div>
+              </div>
+              <div class="third_content_container">
+                <div class="third_content">
+                  <img src="/img/xiaomi/8.png">
+                  <p class="third_content_title">知识库</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-tryout">
+      <p>
+        平均每天，至少有&nbsp;&nbsp;<i>8000万人</i><br />
+        通过合力亿捷产品和技术获取服务
+      </p>
+      <a href="/register.html">免费试用</a>
+    </div>
+    <!-- ---------------------- 底部导航 ----------------------- -->
+    <!-- ---------------------- 底部导航 ----------------------- -->
+    <div class="footer">
+      <p>
+        <a href="/callcenter">
+          <span>呼叫中心<img src="/assets/images/hot_new.png"></span>
+        </a>
+        <a href="/webchat">
+          <span>在线客服<img src="/assets/images/hot_new.png"></span>
+        </a>
+        <a href="/order">
+          <span>工单系统</span>
+        </a>
+        <a href="/aivoice">
+          <span>AI智慧语音平台</span>
+        </a>
+      </p>
+      <p>
+        <a href="/solution">
+          <span>解决方案</span>
+        </a>
+        <a href="/aboutus">
+          <span>关于我们</span>
+        </a>
+        <a href="/register.html">
+          <span>免费试用</span>
+        </a>
+      </p>
+      <div class="footer-power-box">
+        <h3>权威认证</h3>
+        <img src="/assets/images/footer_power.png">
+      </div>
+      <div class="footer-tel-box">
+        <h3>联系我们</h3>
+        <div class="telNum-box">
+          售前电话：<a class="telNum" href="tel:4006-819-525">4006-819-525</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-com">北京合力亿捷科技股份有限公司</p>
+        <p>Copyright © 2022 HOLLYCRM SOFTWARE
+          <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow">京ICP备09032423号</a><br>
+          <a href="http://www.beian.gov.cn/" target="_blank" rel="nofollow">京公网安备110108002742号</a>
+        </p>
+      </div>
+    </div>
+    <!-- ---------------------- 悬浮咨询框 ---------------------- -->
+    <div class="contact-wrap">
+      <div class="contact-button fixed flex items-center justify-center rounded-full"
+        @click="vm.contactShow=!vm.contactShow">
+        <div class="fix-chat-box">
+          <div class="fix-chat-img-box">
+            <img class="fix-chat-img" src="/assets/images/fix_chat_man.png" alt="在线客服图标" />
+          </div>
+        </div>
+      </div>
+      <div class="fixed flex juscity-center items-center contact-box" v-show="contactShow">
+        <a class="telNumber" href="tel:4006-819-525">
+          <img src="/assets/images/contact_tel2.png" alt="电话图标">电话咨询
+        </a>
+        <a id="get_chat" href="javascript:void(0)">
+          <img src="/assets/images/contact_chat2.png" alt="微信咨询图标">微信咨询
+        </a>
+        <div class="contact-close rounded-full" @click="contactClose">
+          <img src="/assets/images/contact_close.png" alt="咨询关闭按钮">
+        </div>
+      </div>
+    </div>
+    <!-- ---------------------- 侧栏导航菜单 ----------------------- -->
+    <nav id="menu">
+      <ul>
+        <a class="menu-logo" href="/">
+          <img src="/assets/images/logo.png" alt="主页">
+        </a>
+        <li class="menu-second">
+          <h3>产品</h3>
+          <a href="/callcenter">呼叫中心 <img src="/assets/images/HOT.png" alt="热点"></a>
+          <a href="/webchat">在线客服 <img src="/assets/images/HOT.png" alt="热点"></a>
+          <a href="/order">工单系统</a>
+          <a href="/aivoice">Al语音智慧平台</a>
+        </li>
+        <li class="menu-second">
+          <h3>解决方案</h3>
+          <a href="/solution/newretail/">电商行业</a>
+          <a href="/solution/finance/">金融保险</a>
+          <a href="/solution/education/">教育培训</a>
+          <a href="/solution/lifeservice/">生活服务</a>
+          <a href="/solution/enterpriseservice/">企业服务</a>
+          <a href="/solution/automobile/">汽车出行</a>
+        </li>
+        <li>
+          <a href="/register.html">免费试用</a>
+        </li>
+        <!-- <li>
+                  <a href="/wincase">成功案例</a>
+                </li> -->
+        <li>
+          <a href="/aboutus">关于我们</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <script>
+    function downloadXM () {
+      window.location.href = "http://download.xiaomilaile.com/install-guide.html";
+    }
+    $('.first_banner_btn').on('touchstart', function (e) {
+      e.preventDefault();
+      window.location.href = "/register.html?option=xiaomi";
+    });
+  </script>
+  <script src="/assets/js/jquery.mmenu.min.all.js"></script>
+  <script src="/assets/js/flexable.js"></script>
+  <script src="/assets/js/axios.js"></script>
+  <script src="/assets/js/kefu.js"></script>
+  <script src="/assets/js/public.js"></script>
+</body>
+
+</html>

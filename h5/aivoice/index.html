@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="applicable-device" content="mobile" />
+  <title>呼叫中心|呼叫中心系统|在线客服|呼叫中心软件提供商|合力亿捷</title>
+  <meta name="description"
+    content="呼叫中心,呼叫中心系统,呼叫中心软件供应商合力亿捷拥有自主产权的、完整的呼叫中心（CallCenter）解决方案，为客户提供从咨询到实施培训的一站式呼叫中心解决方案" />
+  <meta name="keywords" content="呼叫中心,呼叫中心系统,合力亿捷呼叫中心,呼叫中心软件,电信级呼叫中心" />
+  <meta name="applicable-device" content="mobile">
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=no" />
+  <link rel="canonical" href="https://www.hollycrm.com" />
+  <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="/assets/css/jquery.mmenu.all.css" />
+  <link rel="stylesheet" href="/assets/css/layouts.css" />
+  <link rel="stylesheet" href="/assets/css/aivoice.css" />
+  <script src="/assets/js/vue.min.js"></script>
+  <script src="/assets/js/jquery-3.2.1.min.js"></script>
+  <script src="/assets/js/tongji.js"></script>
+</head>
+
+<body>
+  <div class="page" id="app">
+    <!-- 头部导航...............................头部导航 -->
+    <header class="flex-box items-center fixed" :class="{'scrollHeader':scrolllHeader}">
+      <a class="logo" href="/">
+        <img :src="'/assets/images/'+logoImg" v-cloak>
+      </a>
+      <a class="button-apply ml-auto" @click="toWebchat" href="javascript:void(0);">免费试用</a>
+      <a class="header-menu" href="#menu">
+        <img :src="'/assets/images/'+menuImg" />
+      </a>
+    </header>
+    <!-- 头部导航end...............................头部导航end -->
+    <div class="content">
+      <div class="banner-box">
+        <h1>A.I.语音智慧平台</h1>
+        <p>呼叫中心服务跃然升级的动力引擎</p>
+        <a class="tryout" href="/register.html">免费试用</a>
+        <img class="banner-index" src="/assets/images/aivoice_banner.png" alt="一站式客服营销系统" />
+      </div>
+      <div class="pro-callcenter">
+        <h1 class="part-title">AI工作带来的改变</h1>
+        <div class="aicenter-ins">
+          <a href="/callcenter">
+            <div class="aicenter-inner-ins">
+              <img src="/assets/images/aivoice-ins11.png" alt="云呼叫中心系统" />
+              <h3>问题解决率提升</h3>
+            </div>
+          </a>
+          <div class="aicenter-inner-ins">
+            <img src="/assets/images/aivoice-ins12.png" alt="A.I.语音智慧平台" />
+            <h3>客户满意度提升</h3>
+          </div>
+        </div>
+        <div class="aicenter-ins">
+          <a href="/webchat">
+            <div class="aicenter-inner-ins">
+              <img src="/assets/images/aivoice-ins13.png" alt="智能在线客服系统" />
+              <h3>人力成本降低</h3>
+            </div>
+          </a>
+          <a href="/project">
+            <div class="aicenter-inner-ins">
+              <img src="/assets/images/aivoice-ins14.png" alt="企业级项目管理平台" />
+              <h3>管理效率提升</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="order-price-wrap wow animate__animated animate__fadeInUp animate__slow">
+        <h2 class="title">完备的AI核心技术</h2>
+        <p class="title-p">依托阿里云、百度智能云AI能力,帮助企业节省人力成本投入、提升服务质量,实现客服营销智能化升级</p>
+        <img src="/assets/images/aivoice-cons.png" alt="">
+        <!-- <div class="price-box wow animate__animated animate__fadeInUp animate__slow">
+          <a href="/register.html">预约演示</a>
+        </div> -->
+      </div>
+      <div class="aivoice-main-wrap">
+        <h3 class="part-title">4大AI产品矩阵</h3>
+        <div class="aivoice-main">
+          <img src="/assets/images/aivoice_main1.png" alt="">
+          <h3>智能语音机器人</h3>
+          <p>针对某些业务全权由机器人服<br>务,人工全身心处理更复杂业务</p>
+        </div>
+        <div class="aivoice-main">
+          <img src="/assets/images/aivoice_main2.png" alt="">
+          <h3>智能客服机器人</h3>
+          <p>智能匹配机器人解决常见问题<br>回复,随时响应各类在线咨询<br></p>
+        </div>
+        <div class="aivoice-main">
+          <img src="/assets/images/aivoice_main3.png" alt="">
+          <h3>智能质检</h3>
+          <p>机器人自动质检+人工复检,<br>人机配合提升服务质量<br></p>
+        </div>
+        <div class="aivoice-main">
+          <img src="/assets/images/aivoice_main4.png" alt="">
+          <h3>智能坐席助手</h3>
+          <p>精准客户画像+实时话术推<br>荐等,辅助人工快速解答问题<br></p>
+        </div>
+      </div>
+      <div class="aivoice-function-wrap">
+        <h2 class="title">打造卓越的客户服务体验</h2>
+        <p class="title-p">合力亿捷近20年的产品钻研与精细服务,为客户提供更高效、灵活、快速的服务体验</p>
+        <div class="aivoice-fun-box">
+          <div class="aivoice-fun-img">
+            <img src="/assets/images/aivoice_fun_img1.png" alt="">
+          </div>
+          <div class="aivoice-fun-text">
+            <h3>AI训练</h3>
+            <p>AI训练师对机器人进行服务配置调优,辅助上线 ,1v1跟进服务</p>
+          </div>
+        </div>
+        <div class="aivoice-fun-box">
+          <div class="aivoice-fun-img">
+            <img src="/assets/images/aivoice_fun_img2.png" alt="">
+          </div>
+          <div class="aivoice-fun-text">
+            <h3>专业培训</h3>
+            <p>配备专属客服经理提供远程/本地培训服务,帮助客户掌握产品使用</p>
+          </div>
+        </div>
+        <div class="aivoice-fun-box">
+          <div class="aivoice-fun-img">
+            <img src="/assets/images/aivoice_fun_img3.png" alt="">
+          </div>
+          <div class="aivoice-fun-text">
+            <h3>定期产品迭代</h3>
+            <p>产品版本迭代稳定,根据客户需求每6-8周定期升级</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="bottom-tryout">
+      <p>
+        平均每天,至少有&nbsp;&nbsp;<i>8000万人</i><br />
+        通过合力亿捷产品和技术获取服务
+      </p>
+      <a href="/register.html">免费试用</a>
+    </div>
+    <!-- ---------------------- 底部导航 ----------------------- -->
+    <div class="footer">
+      <p>
+        <a href="/callcenter">
+          <span>呼叫中心<img src="/assets/images/hot_new.png"></span>
+        </a>
+        <a href="/webchat">
+          <span>在线客服<img src="/assets/images/hot_new.png"></span>
+        </a>
+        <a href="/order">
+          <span>工单系统</span>
+        </a>
+        <a href="/aivoice">
+          <span>AI智慧语音平台</span>
+        </a>
+      </p>
+      <p>
+        <a href="/solution">
+          <span>解决方案</span>
+        </a>
+        <a href="/aboutus">
+          <span>关于我们</span>
+        </a>
+        <a href="/register.html">
+          <span>免费试用</span>
+        </a>
+      </p>
+      <div class="footer-power-box">
+        <h3>权威认证</h3>
+        <img src="/assets/images/footer_power.png">
+      </div>
+      <div class="footer-tel-box">
+        <h3>联系我们</h3>
+        <div class="telNum-box">
+          售前电话：<a class="telNum" href="tel:4006-819-525">4006-819-525</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-com">北京合力亿捷科技股份有限公司</p>
+        <p>Copyright © 2022 HOLLYCRM SOFTWARE
+          <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow">京ICP备09032423号</a><br>
+          <a href="http://www.beian.gov.cn/" target="_blank" rel="nofollow">京公网安备110108002742号</a>
+        </p>
+      </div>
+    </div>
+    <!-- 悬浮咨询框 -->
+    <div class="contact-wrap">
+      <div class="contact-button fixed flex items-center justify-center rounded-full"
+        @click="vm.contactShow=!vm.contactShow">
+        <div class="fix-chat-box">
+          <div class="fix-chat-img-box">
+            <img class="fix-chat-img" src="/assets/images/fix_chat_man.png" alt="在线客服图标" />
+          </div>
+        </div>
+      </div>
+      <div class="fixed flex juscity-center items-center contact-box" v-show="contactShow">
+        <a class="telNumber" href="tel:4006-819-525">
+          <img src="/assets/images/contact_tel2.png" alt="电话图标">电话咨询
+        </a>
+        <a id="get_chat" href="javascript:void(0)">
+          <img src="/assets/images/contact_chat2.png" alt="微信咨询图标">微信咨询
+        </a>
+        <div class="contact-close rounded-full" @click="contactClose">
+          <img src="/assets/images/contact_close.png" alt="咨询关闭按钮">
+        </div>
+      </div>
+    </div>
+    <!-- ---------------------- 导航菜单 ----------------------- -->
+    <nav id="menu">
+      <ul>
+        <a class="menu-logo" href="/">
+          <img src="/assets/images/logo.png" alt="主页">
+        </a>
+        <li class="menu-second">
+          <h3>产品</h3>
+          <a href="/callcenter">呼叫中心 <img src="/assets/images/HOT.png" alt="热点"></a>
+          <a href="/webchat">在线客服 <img src="/assets/images/HOT.png" alt="热点"></a>
+          <a href="/order">工单系统</a>
+          <a href="/aivoice">Al语音智慧平台</a>
+        </li>
+        <li class="menu-second">
+          <h3>解决方案</h3>
+          <a href="/solution/newretail/">电商行业</a>
+          <a href="/solution/finance/">金融保险</a>
+          <a href="/solution/education/">教育培训</a>
+          <a href="/solution/lifeservice/">生活服务</a>
+          <a href="/solution/enterpriseservice/">企业服务</a>
+          <a href="/solution/automobile/">汽车出行</a>
+        </li>
+        <li>
+          <a href="/register.html">免费试用</a>
+        </li>
+        <!-- <li>
+                  <a href="/wincase">成功案例</a>
+                </li> -->
+        <li>
+          <a href="/aboutus">关于我们</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <script src="/assets/js/jquery.mmenu.min.all.js"></script>
+  <script src="/assets/js/swiper-bundle.min.js"></script>
+  <script src="/assets/js/flexable.js"></script>
+  <script src="/assets/js/axios.js"></script>
+  <script src="/assets/js/kefu.js"></script>
+  <script src="/assets/js/aivoice.js"></script>
+</body>
+
+</html>
